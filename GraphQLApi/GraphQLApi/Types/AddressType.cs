@@ -13,5 +13,7 @@ public class AddressType : ObjectType<Address>
         descriptor.Field(a => a.State).Type<StringType>();
         descriptor.Field(a => a.ZipCode).Type<StringType>();
         descriptor.Field(a => a.User).Type<UserType>();
+
+        
     }
 }

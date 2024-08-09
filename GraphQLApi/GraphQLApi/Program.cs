@@ -18,8 +18,6 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("Constr")));
 builder.Services
     .AddGraphQLServer()
     .AddQueryType<Query>()
-    .AddType<AddressType>()
-    .AddType<UserType>()
     .AddFiltering()
     .AddSorting()
     .AddProjections();

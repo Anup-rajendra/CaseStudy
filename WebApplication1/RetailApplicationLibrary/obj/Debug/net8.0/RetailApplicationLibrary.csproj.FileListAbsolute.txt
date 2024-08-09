@@ -1,0 +1,15 @@
+C:\Users\MusthaffaShaik\casestudymain\CaseStudy\WebApplication1\RetailApplicationLibrary\bin\Debug\net8.0\RetailApplicationLibrary.deps.json
+C:\Users\MusthaffaShaik\casestudymain\CaseStudy\WebApplication1\RetailApplicationLibrary\bin\Debug\net8.0\RetailApplicationLibrary.runtimeconfig.json
+C:\Users\MusthaffaShaik\casestudymain\CaseStudy\WebApplication1\RetailApplicationLibrary\bin\Debug\net8.0\RetailApplicationLibrary.dll
+C:\Users\MusthaffaShaik\casestudymain\CaseStudy\WebApplication1\RetailApplicationLibrary\bin\Debug\net8.0\RetailApplicationLibrary.pdb
+C:\Users\MusthaffaShaik\casestudymain\CaseStudy\WebApplication1\RetailApplicationLibrary\obj\Debug\net8.0\RetailApplicationLibrary.csproj.AssemblyReference.cache
+C:\Users\MusthaffaShaik\casestudymain\CaseStudy\WebApplication1\RetailApplicationLibrary\obj\Debug\net8.0\RetailApplicationLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MusthaffaShaik\casestudymain\CaseStudy\WebApplication1\RetailApplicationLibrary\obj\Debug\net8.0\RetailApplicationLibrary.AssemblyInfoInputs.cache
+C:\Users\MusthaffaShaik\casestudymain\CaseStudy\WebApplication1\RetailApplicationLibrary\obj\Debug\net8.0\RetailApplicationLibrary.AssemblyInfo.cs
+C:\Users\MusthaffaShaik\casestudymain\CaseStudy\WebApplication1\RetailApplicationLibrary\obj\Debug\net8.0\RetailApplicationLibrary.csproj.CoreCompileInputs.cache
+C:\Users\MusthaffaShaik\casestudymain\CaseStudy\WebApplication1\RetailApplicationLibrary\obj\Debug\net8.0\RetailApplicationLibrary.sourcelink.json
+C:\Users\MusthaffaShaik\casestudymain\CaseStudy\WebApplication1\RetailApplicationLibrary\obj\Debug\net8.0\RetailApplicationLibrary.dll
+C:\Users\MusthaffaShaik\casestudymain\CaseStudy\WebApplication1\RetailApplicationLibrary\obj\Debug\net8.0\refint\RetailApplicationLibrary.dll
+C:\Users\MusthaffaShaik\casestudymain\CaseStudy\WebApplication1\RetailApplicationLibrary\obj\Debug\net8.0\RetailApplicationLibrary.pdb
+C:\Users\MusthaffaShaik\casestudymain\CaseStudy\WebApplication1\RetailApplicationLibrary\obj\Debug\net8.0\RetailApplicationLibrary.genruntimeconfig.cache
+C:\Users\MusthaffaShaik\casestudymain\CaseStudy\WebApplication1\RetailApplicationLibrary\obj\Debug\net8.0\ref\RetailApplicationLibrary.dll

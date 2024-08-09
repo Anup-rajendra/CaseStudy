@@ -11,6 +11,17 @@ public class Query
         return context.Addresses.Include(a => a.User);
     }
 
+    public Address GetAddress(int id)
+    {
+        List<Address>addresses = new List<Address>();
+        for(int i=0; i<addresses.Count; i++)
+        {
+            if (addresses[i].AddressId == id)
+                    return addresses[i];
+        }
+        return null;
+    }
+
     // Query for Users
     public IQueryable<User> GetUsers([Service] RetailApplicationContext context)
     {
