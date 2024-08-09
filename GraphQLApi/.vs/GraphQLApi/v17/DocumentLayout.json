@@ -1,30 +1,158 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\MusthaffaShaik\\CaseStudyGraphQL\\GraphQLApi\\",
+  "WorkspaceRootPath": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudygraphql\\graphqlapi\\graphqlapi\\types\\usertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\types\\usertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\types\\addresstype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\types\\addresstype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudygraphql\\graphqlapi\\graphqlapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\types\\query.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\types\\query.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudygraphql\\graphqlapi\\graphqlapi\\models\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\models\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudygraphql\\graphqlapi\\graphqlapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudygraphql\\graphqlapi\\graphqlapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\types\\wishlistitemtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\types\\wishlistitemtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\types\\wishlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\types\\wishlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\types\\usertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\types\\usertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\types\\suppliertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\types\\suppliertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\types\\shipmenttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\types\\shipmenttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\types\\reviewtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\types\\reviewtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\types\\producttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\types\\producttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\types\\paymenttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\types\\paymenttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\types\\ordertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\types\\ordertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\types\\orderitemtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\types\\orderitemtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\types\\inventorytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\types\\inventorytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\types\\notificationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\types\\notificationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\types\\categorytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\types\\categorytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\types\\carttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\types\\carttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\types\\cartitemtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\types\\cartitemtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\models\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\models\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\MusthaffaShaik\\CaseStudyGraphQL\\GraphQLApi\\GraphQLApi\\Models\\RetailApplicationContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GraphQLApi\\Models\\RetailApplicationContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\graphqlapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\graphqlapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\models\\wishlistitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\models\\wishlistitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\models\\wishlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\models\\wishlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\models\\shipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\models\\shipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\models\\retailapplicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\models\\retailapplicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\models\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\models\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\models\\cartitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|c:\\users\\musthaffashaik\\casestudymain\\casestudy\\graphqlapi\\graphqlapi\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC407F15-0309-469E-8E35-97C5988A8948}|GraphQLApi\\GraphQLApi.csproj|solutionrelative:graphqlapi\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +162,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,81 +170,461 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserType.cs",
-              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\CaseStudyGraphQL\\GraphQLApi\\GraphQLApi\\Types\\UserType.cs",
-              "RelativeDocumentMoniker": "GraphQLApi\\Types\\UserType.cs",
-              "ToolTip": "C:\\Users\\MusthaffaShaik\\CaseStudyGraphQL\\GraphQLApi\\GraphQLApi\\Types\\UserType.cs",
-              "RelativeToolTip": "GraphQLApi\\Types\\UserType.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAA6wCAAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T15:59:48.778Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\CaseStudyGraphQL\\GraphQLApi\\GraphQLApi\\Models\\User.cs",
-              "RelativeDocumentMoniker": "GraphQLApi\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\MusthaffaShaik\\CaseStudyGraphQL\\GraphQLApi\\GraphQLApi\\Models\\User.cs",
-              "RelativeToolTip": "GraphQLApi\\Models\\User.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAkwCoAAAABAAAA",
+              "Title": "Query.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\Query.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Types\\Query.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\Query.cs",
+              "RelativeToolTip": "GraphQLApi\\Types\\Query.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T15:58:57.992Z",
+              "WhenOpened": "2024-08-09T04:10:16.567Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Address.cs",
-              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\CaseStudyGraphQL\\GraphQLApi\\GraphQLApi\\Models\\Address.cs",
-              "RelativeDocumentMoniker": "GraphQLApi\\Models\\Address.cs",
-              "ToolTip": "C:\\Users\\MusthaffaShaik\\CaseStudyGraphQL\\GraphQLApi\\GraphQLApi\\Models\\Address.cs",
-              "RelativeToolTip": "GraphQLApi\\Models\\Address.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAxwAAAAAAAAAAA",
+              "DocumentIndex": 8,
+              "Title": "ReviewType.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\ReviewType.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Types\\ReviewType.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\ReviewType.cs",
+              "RelativeToolTip": "GraphQLApi\\Types\\ReviewType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T15:58:51.272Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-09T04:05:29.624Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\CaseStudyGraphQL\\GraphQLApi\\GraphQLApi\\appsettings.json",
-              "RelativeDocumentMoniker": "GraphQLApi\\appsettings.json",
-              "ToolTip": "C:\\Users\\MusthaffaShaik\\CaseStudyGraphQL\\GraphQLApi\\GraphQLApi\\appsettings.json",
-              "RelativeToolTip": "GraphQLApi\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-08-08T15:39:33.571Z",
-              "EditorCaption": ""
+              "DocumentIndex": 7,
+              "Title": "ShipmentType.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\ShipmentType.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Types\\ShipmentType.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\ShipmentType.cs",
+              "RelativeToolTip": "GraphQLApi\\Types\\ShipmentType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T04:05:49.128Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\CaseStudyGraphQL\\GraphQLApi\\GraphQLApi\\Program.cs",
-              "RelativeDocumentMoniker": "GraphQLApi\\Program.cs",
-              "ToolTip": "C:\\Users\\MusthaffaShaik\\CaseStudyGraphQL\\GraphQLApi\\GraphQLApi\\Program.cs",
-              "RelativeToolTip": "GraphQLApi\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "DocumentIndex": 6,
+              "Title": "SupplierType.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\SupplierType.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Types\\SupplierType.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\SupplierType.cs",
+              "RelativeToolTip": "GraphQLApi\\Types\\SupplierType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T15:38:03.493Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-09T04:06:18.52Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "UserType.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\UserType.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Types\\UserType.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\UserType.cs",
+              "RelativeToolTip": "GraphQLApi\\Types\\UserType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAkwAIAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T04:06:41.279Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Wishlist.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\Wishlist.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Types\\Wishlist.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\Wishlist.cs",
+              "RelativeToolTip": "GraphQLApi\\Types\\Wishlist.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T04:07:14.699Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WishlistItemType.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\WishlistItemType.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Types\\WishlistItemType.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\WishlistItemType.cs",
+              "RelativeToolTip": "GraphQLApi\\Types\\WishlistItemType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T04:07:39.997Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Program.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Program.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Program.cs",
+              "RelativeToolTip": "GraphQLApi\\Program.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAAEAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-08T15:38:03.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddressType.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\AddressType.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Types\\AddressType.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\AddressType.cs",
+              "RelativeToolTip": "GraphQLApi\\Types\\AddressType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T03:59:49.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProductType.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\ProductType.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Types\\ProductType.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\ProductType.cs",
+              "RelativeToolTip": "GraphQLApi\\Types\\ProductType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T04:04:23.275Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PaymentType.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\PaymentType.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Types\\PaymentType.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\PaymentType.cs",
+              "RelativeToolTip": "GraphQLApi\\Types\\PaymentType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T04:03:42.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "OrderType.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\OrderType.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Types\\OrderType.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\OrderType.cs",
+              "RelativeToolTip": "GraphQLApi\\Types\\OrderType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T04:02:49.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "OrderItemType.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\OrderItemType.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Types\\OrderItemType.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\OrderItemType.cs",
+              "RelativeToolTip": "GraphQLApi\\Types\\OrderItemType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T04:03:12.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "InventoryType.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\InventoryType.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Types\\InventoryType.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\InventoryType.cs",
+              "RelativeToolTip": "GraphQLApi\\Types\\InventoryType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T04:01:42.515Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "NotificationType.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\NotificationType.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Types\\NotificationType.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\NotificationType.cs",
+              "RelativeToolTip": "GraphQLApi\\Types\\NotificationType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T04:02:05.017Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CategoryType.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\CategoryType.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Types\\CategoryType.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\CategoryType.cs",
+              "RelativeToolTip": "GraphQLApi\\Types\\CategoryType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T04:01:21.622Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CartType.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\CartType.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Types\\CartType.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\CartType.cs",
+              "RelativeToolTip": "GraphQLApi\\Types\\CartType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T04:00:17.141Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CartItemType.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\CartItemType.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Types\\CartItemType.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Types\\CartItemType.cs",
+              "RelativeToolTip": "GraphQLApi\\Types\\CartItemType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T04:00:41.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Models\\Category.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\Category.cs",
+              "RelativeToolTip": "GraphQLApi\\Models\\Category.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T03:54:52.688Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Address.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\Address.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Models\\Address.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\Address.cs",
+              "RelativeToolTip": "GraphQLApi\\Models\\Address.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAmwBUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-08T15:58:51.272Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "GraphQLApi\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T04:50:04.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "GraphQLApi.csproj",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\GraphQLApi.csproj",
+              "RelativeDocumentMoniker": "GraphQLApi\\GraphQLApi.csproj",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\GraphQLApi.csproj",
+              "RelativeToolTip": "GraphQLApi\\GraphQLApi.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-09T04:22:12.708Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\appsettings.json",
+              "RelativeDocumentMoniker": "GraphQLApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\appsettings.json",
+              "RelativeToolTip": "GraphQLApi\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-08T15:39:33.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "WishlistItem.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\WishlistItem.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Models\\WishlistItem.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\WishlistItem.cs",
+              "RelativeToolTip": "GraphQLApi\\Models\\WishlistItem.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T03:56:44.274Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Wishlist.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\Wishlist.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Models\\Wishlist.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\Wishlist.cs",
+              "RelativeToolTip": "GraphQLApi\\Models\\Wishlist.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T03:56:36.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Supplier.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\Supplier.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Models\\Supplier.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\Supplier.cs",
+              "RelativeToolTip": "GraphQLApi\\Models\\Supplier.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T03:56:05.594Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Shipment.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\Shipment.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Models\\Shipment.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\Shipment.cs",
+              "RelativeToolTip": "GraphQLApi\\Models\\Shipment.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T03:55:57.831Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Review.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\Review.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Models\\Review.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\Review.cs",
+              "RelativeToolTip": "GraphQLApi\\Models\\Review.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAiwBcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T03:55:51.625Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\Product.cs",
+              "RelativeToolTip": "GraphQLApi\\Models\\Product.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAiwCEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T03:55:44.479Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Payment.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\Payment.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Models\\Payment.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\Payment.cs",
+              "RelativeToolTip": "GraphQLApi\\Models\\Payment.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T03:55:37.58Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\OrderItem.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Models\\OrderItem.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\OrderItem.cs",
+              "RelativeToolTip": "GraphQLApi\\Models\\OrderItem.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAmwBUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T03:55:29.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\Order.cs",
+              "RelativeToolTip": "GraphQLApi\\Models\\Order.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAiwBcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T03:55:21.451Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\Notification.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Models\\Notification.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\Notification.cs",
+              "RelativeToolTip": "GraphQLApi\\Models\\Notification.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T03:55:11.958Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Inventory.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\Inventory.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Models\\Inventory.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\Inventory.cs",
+              "RelativeToolTip": "GraphQLApi\\Models\\Inventory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T03:55:03.197Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\User.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\User.cs",
+              "RelativeToolTip": "GraphQLApi\\Models\\User.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAiwCsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-08T15:58:57.992Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "CartItem.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\CartItem.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Models\\CartItem.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\CartItem.cs",
+              "RelativeToolTip": "GraphQLApi\\Models\\CartItem.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T03:54:38.942Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\Cart.cs",
+              "RelativeDocumentMoniker": "GraphQLApi\\Models\\Cart.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\Cart.cs",
+              "RelativeToolTip": "GraphQLApi\\Models\\Cart.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-09T03:54:31.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
               "Title": "RetailApplicationContext.cs",
-              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\CaseStudyGraphQL\\GraphQLApi\\GraphQLApi\\Models\\RetailApplicationContext.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\RetailApplicationContext.cs",
               "RelativeDocumentMoniker": "GraphQLApi\\Models\\RetailApplicationContext.cs",
-              "ToolTip": "C:\\Users\\MusthaffaShaik\\CaseStudyGraphQL\\GraphQLApi\\GraphQLApi\\Models\\RetailApplicationContext.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\casestudymain\\CaseStudy\\GraphQLApi\\GraphQLApi\\Models\\RetailApplicationContext.cs",
               "RelativeToolTip": "GraphQLApi\\Models\\RetailApplicationContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T15:14:40.082Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-08T15:14:40.082Z"
             }
           ]
         }

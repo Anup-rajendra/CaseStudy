@@ -1,31 +1,27 @@
 ﻿using HotChocolate.Types;
 using GraphQLApi.Models;
-using Microsoft.VisualBasic;
-
-namespace GraphQLApi.Types
+namespace GraphQLApi.Types;
+public class UserType : ObjectType<User>
 {
-    public class UserType:ObjectType<User>
+    protected override void Configure(IObjectTypeDescriptor<User> descriptor)
     {
-        protected override void Configure(IObjectTypeDescriptor<User> descriptor)
-        {
-            descriptor.Field(x => x.UserId).Type<NonNullType<IdType>>();
-            descriptor.Field(x => x.Username).Type<NonNullType<StringType>>();
-            descriptor.Field(x => x.Firstname).Type<StringType>();
-            descriptor.Field(x => x.Lastname).Type<StringType>();
-            descriptor.Field(x => x.Email).Type<NonNullType<StringType>>();
-            descriptor.Field(x => x.Token).Type<StringType>();
-            descriptor.Field(x => x.EmailVerified).Type<NonNullType<BooleanType>>();
-            descriptor.Field(x => x.Upassword).Type<NonNullType<StringType>>();
-            descriptor.Field(x => x.Urole).Type<StringType>();
-            descriptor.Field(x => x.TokenExpiry).Type<DateTimeType>();
-            descriptor.Field(x => x.PhoneNumber).Type<StringType>();
-            descriptor.Field(x => x.ProfilePicture).Type<StringType>();
-            descriptor.Field(x => x.Addresses).Type<ListType<AddressType>>();
-            descriptor.Field(x => x.Notifications).Type<ListType<NotificationType>>();
-            descriptor.Field(x => x.Carts).Type<ListType<CartType>>();
-            descriptor.Field(x => x.Orders).Type<ListType<OrderType>>();
-            descriptor.Field(x => x.Reviews).Type<ListType<ReviewType>>();
-            descriptor.Field(x => x.Wishlist).Type<WishlistType>().Nullable();
-        }
+        descriptor.Field(u => u.UserId).Type<NonNullType<IdType>>();
+        descriptor.Field(u => u.Username).Type<NonNullType<StringType>>();
+        descriptor.Field(u => u.Firstname).Type<StringType>();
+        descriptor.Field(u => u.Lastname).Type<StringType>();
+        descriptor.Field(u => u.Email).Type<NonNullType<StringType>>();
+        descriptor.Field(u => u.Token).Type<StringType>();
+        descriptor.Field(u => u.EmailVerified).Type<BooleanType>();
+        descriptor.Field(u => u.Upassword).Type<NonNullType<StringType>>();
+        descriptor.Field(u => u.Urole).Type<StringType>();
+        descriptor.Field(u => u.TokenExpiry).Type<DateTimeType>();
+        descriptor.Field(u => u.PhoneNumber).Type<StringType>();
+        descriptor.Field(u => u.ProfilePicture).Type<StringType>();
+        descriptor.Field(u => u.Addresses).Type<ListType<AddressType>>();
+        descriptor.Field(u => u.Carts).Type<ListType<CartType>>();
+        descriptor.Field(u => u.Notifications).Type<ListType<NotificationType>>();
+        descriptor.Field(u => u.Orders).Type<ListType<OrderType>>();
+        descriptor.Field(u => u.Reviews).Type<ListType<ReviewType>>();
+        descriptor.Field(u => u.Wishlist).Type<WishlistType>();
     }
 }

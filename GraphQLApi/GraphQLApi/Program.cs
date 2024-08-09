@@ -1,6 +1,5 @@
 using GraphQLApi.Models;
-
-
+using GraphQLApi.Types;
 using Microsoft.EntityFrameworkCore;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
@@ -16,6 +15,15 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContextFactory<RetailApplicationContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("Constr")));
+builder.Services
+    .AddGraphQLServer()
+    .AddQueryType<Query>()
+    .AddType<AddressType>()
+    .AddType<UserType>()
+    .AddFiltering()
+    .AddSorting()
+    .AddProjections();
+
 
 
 var app = builder.Build();
@@ -26,7 +34,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseRouting();
+app.UseEndpoints(endpoints => { endpoints.MapGraphQL(); });
 app.UseAuthorization();
 
 app.MapControllers();

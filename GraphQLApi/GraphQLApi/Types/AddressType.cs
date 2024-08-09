@@ -1,17 +1,17 @@
-﻿using GraphQLApi.Models;
+﻿using HotChocolate.Types;
+using GraphQLApi.Models;
 
-namespace GraphQLApi.Types
+namespace GraphQLApi.Types;
+public class AddressType : ObjectType<Address>
 {
-    public class AddressType :ObjectType<Address>
+    protected override void Configure(IObjectTypeDescriptor<Address> descriptor)
     {
-        protected override void Configure(IObjectTypeDescriptor<Address> descriptor)
-        {
-            descriptor.Field(x => x.AddressId).Type<NonNullType<IdType>>();
-            descriptor.Field(x => x.UserId).Type<IdType>();
-            descriptor.Field(x => x.Street).Type<StringType>();
-            descriptor.Field(x => x.City).Type<StringType>();
-            descriptor.Field(x => x.State).Type<StringType>();
-            descriptor.Field(x => x.ZipCode).Type<StringType>();
-        }
+        descriptor.Field(a => a.AddressId).Type<NonNullType<IdType>>();
+        descriptor.Field(a => a.UserId).Type<IntType>();
+        descriptor.Field(a => a.Street).Type<StringType>();
+        descriptor.Field(a => a.City).Type<StringType>();
+        descriptor.Field(a => a.State).Type<StringType>();
+        descriptor.Field(a => a.ZipCode).Type<StringType>();
+        descriptor.Field(a => a.User).Type<UserType>();
     }
 }
