@@ -1,0 +1,118 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\RohithKV\\Documents\\CasestudyTeam1\\Microservices\\ReviewWishlistMicroService\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{798BCEA3-1244-4A8A-854E-02BB5E030CD5}|ReviewWishlistMicroService.csproj|c:\\users\\rohithkv\\documents\\casestudyteam1\\microservices\\reviewwishlistmicroservice\\controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{798BCEA3-1244-4A8A-854E-02BB5E030CD5}|ReviewWishlistMicroService.csproj|solutionrelative:controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{798BCEA3-1244-4A8A-854E-02BB5E030CD5}|ReviewWishlistMicroService.csproj|c:\\users\\rohithkv\\documents\\casestudyteam1\\microservices\\reviewwishlistmicroservice\\models\\reviewproductuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{798BCEA3-1244-4A8A-854E-02BB5E030CD5}|ReviewWishlistMicroService.csproj|solutionrelative:models\\reviewproductuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{798BCEA3-1244-4A8A-854E-02BB5E030CD5}|ReviewWishlistMicroService.csproj|c:\\users\\rohithkv\\documents\\casestudyteam1\\microservices\\reviewwishlistmicroservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{798BCEA3-1244-4A8A-854E-02BB5E030CD5}|ReviewWishlistMicroService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{798BCEA3-1244-4A8A-854E-02BB5E030CD5}|ReviewWishlistMicroService.csproj|c:\\users\\rohithkv\\documents\\casestudyteam1\\microservices\\reviewwishlistmicroservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{798BCEA3-1244-4A8A-854E-02BB5E030CD5}|ReviewWishlistMicroService.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{798BCEA3-1244-4A8A-854E-02BB5E030CD5}|ReviewWishlistMicroService.csproj|c:\\users\\rohithkv\\documents\\casestudyteam1\\microservices\\reviewwishlistmicroservice\\reviewwishlistmicroservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{798BCEA3-1244-4A8A-854E-02BB5E030CD5}|ReviewWishlistMicroService.csproj|solutionrelative:reviewwishlistmicroservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{798BCEA3-1244-4A8A-854E-02BB5E030CD5}|ReviewWishlistMicroService.csproj|c:\\users\\rohithkv\\documents\\casestudyteam1\\microservices\\reviewwishlistmicroservice\\models\\retailapplicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{798BCEA3-1244-4A8A-854E-02BB5E030CD5}|ReviewWishlistMicroService.csproj|solutionrelative:models\\retailapplicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ReviewProductUserDTO.cs",
+              "DocumentMoniker": "C:\\Users\\RohithKV\\Documents\\CasestudyTeam1\\Microservices\\ReviewWishlistMicroService\\Models\\ReviewProductUserDTO.cs",
+              "RelativeDocumentMoniker": "Models\\ReviewProductUserDTO.cs",
+              "ToolTip": "C:\\Users\\RohithKV\\Documents\\CasestudyTeam1\\Microservices\\ReviewWishlistMicroService\\Models\\ReviewProductUserDTO.cs",
+              "RelativeToolTip": "Models\\ReviewProductUserDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T14:17:48.514Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReviewsController.cs",
+              "DocumentMoniker": "C:\\Users\\RohithKV\\Documents\\CasestudyTeam1\\Microservices\\ReviewWishlistMicroService\\Controllers\\ReviewsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ReviewsController.cs",
+              "ToolTip": "C:\\Users\\RohithKV\\Documents\\CasestudyTeam1\\Microservices\\ReviewWishlistMicroService\\Controllers\\ReviewsController.cs",
+              "RelativeToolTip": "Controllers\\ReviewsController.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAkwEMAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T13:44:46.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\RohithKV\\Documents\\CasestudyTeam1\\Microservices\\ReviewWishlistMicroService\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\RohithKV\\Documents\\CasestudyTeam1\\Microservices\\ReviewWishlistMicroService\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAACOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T13:42:18.469Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\RohithKV\\Documents\\CasestudyTeam1\\Microservices\\ReviewWishlistMicroService\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\RohithKV\\Documents\\CasestudyTeam1\\Microservices\\ReviewWishlistMicroService\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-25T13:41:47.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RetailApplicationContext.cs",
+              "DocumentMoniker": "C:\\Users\\RohithKV\\Documents\\CasestudyTeam1\\Microservices\\ReviewWishlistMicroService\\Models\\RetailApplicationContext.cs",
+              "RelativeDocumentMoniker": "Models\\RetailApplicationContext.cs",
+              "ToolTip": "C:\\Users\\RohithKV\\Documents\\CasestudyTeam1\\Microservices\\ReviewWishlistMicroService\\Models\\RetailApplicationContext.cs",
+              "RelativeToolTip": "Models\\RetailApplicationContext.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T13:38:16.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ReviewWishlistMicroService.csproj",
+              "DocumentMoniker": "C:\\Users\\RohithKV\\Documents\\CasestudyTeam1\\Microservices\\ReviewWishlistMicroService\\ReviewWishlistMicroService.csproj",
+              "RelativeDocumentMoniker": "ReviewWishlistMicroService.csproj",
+              "ToolTip": "C:\\Users\\RohithKV\\Documents\\CasestudyTeam1\\Microservices\\ReviewWishlistMicroService\\ReviewWishlistMicroService.csproj",
+              "RelativeToolTip": "ReviewWishlistMicroService.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-25T13:34:07.688Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
