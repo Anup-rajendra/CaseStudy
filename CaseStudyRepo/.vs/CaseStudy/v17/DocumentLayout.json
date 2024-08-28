@@ -1,0 +1,233 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\MusthaffaShaik\\Project\\CaseStudy\\CaseStudyRepo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FA2E76E0-748B-4121-AA2C-9FA000928023}|RetailRestAPI\\RetailRestAPI.csproj|c:\\users\\musthaffashaik\\project\\casestudy\\casestudyrepo\\retailrestapi\\controllers\\retailapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA2E76E0-748B-4121-AA2C-9FA000928023}|RetailRestAPI\\RetailRestAPI.csproj|solutionrelative:retailrestapi\\controllers\\retailapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08AFC425-0027-4780-8079-F5C8F860C34E}|Repository\\Repository.csproj|c:\\users\\musthaffashaik\\project\\casestudy\\casestudyrepo\\repository\\repo\\iretailimplementation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08AFC425-0027-4780-8079-F5C8F860C34E}|Repository\\Repository.csproj|solutionrelative:repository\\repo\\iretailimplementation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08AFC425-0027-4780-8079-F5C8F860C34E}|Repository\\Repository.csproj|c:\\users\\musthaffashaik\\project\\casestudy\\casestudyrepo\\repository\\extensions\\serviceextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08AFC425-0027-4780-8079-F5C8F860C34E}|Repository\\Repository.csproj|solutionrelative:repository\\extensions\\serviceextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08AFC425-0027-4780-8079-F5C8F860C34E}|Repository\\Repository.csproj|c:\\users\\musthaffashaik\\project\\casestudy\\casestudyrepo\\repository\\models\\usercredentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08AFC425-0027-4780-8079-F5C8F860C34E}|Repository\\Repository.csproj|solutionrelative:repository\\models\\usercredentials.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA2E76E0-748B-4121-AA2C-9FA000928023}|RetailRestAPI\\RetailRestAPI.csproj|c:\\users\\musthaffashaik\\project\\casestudy\\casestudyrepo\\retailrestapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FA2E76E0-748B-4121-AA2C-9FA000928023}|RetailRestAPI\\RetailRestAPI.csproj|solutionrelative:retailrestapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA2E76E0-748B-4121-AA2C-9FA000928023}|RetailRestAPI\\RetailRestAPI.csproj|c:\\users\\musthaffashaik\\project\\casestudy\\casestudyrepo\\retailrestapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA2E76E0-748B-4121-AA2C-9FA000928023}|RetailRestAPI\\RetailRestAPI.csproj|solutionrelative:retailrestapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA2E76E0-748B-4121-AA2C-9FA000928023}|RetailRestAPI\\RetailRestAPI.csproj|c:\\users\\musthaffashaik\\project\\casestudy\\casestudyrepo\\retailrestapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA2E76E0-748B-4121-AA2C-9FA000928023}|RetailRestAPI\\RetailRestAPI.csproj|solutionrelative:retailrestapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA2E76E0-748B-4121-AA2C-9FA000928023}|RetailRestAPI\\RetailRestAPI.csproj|c:\\users\\musthaffashaik\\project\\casestudy\\casestudyrepo\\retailrestapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA2E76E0-748B-4121-AA2C-9FA000928023}|RetailRestAPI\\RetailRestAPI.csproj|solutionrelative:retailrestapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08AFC425-0027-4780-8079-F5C8F860C34E}|Repository\\Repository.csproj|c:\\users\\musthaffashaik\\project\\casestudy\\casestudyrepo\\repository\\repo\\iretailapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08AFC425-0027-4780-8079-F5C8F860C34E}|Repository\\Repository.csproj|solutionrelative:repository\\repo\\iretailapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA2E76E0-748B-4121-AA2C-9FA000928023}|RetailRestAPI\\RetailRestAPI.csproj|c:\\users\\musthaffashaik\\project\\casestudy\\casestudyrepo\\retailrestapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FA2E76E0-748B-4121-AA2C-9FA000928023}|RetailRestAPI\\RetailRestAPI.csproj|solutionrelative:retailrestapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08AFC425-0027-4780-8079-F5C8F860C34E}|Repository\\Repository.csproj|c:\\users\\musthaffashaik\\project\\casestudy\\casestudyrepo\\repository\\repository.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{08AFC425-0027-4780-8079-F5C8F860C34E}|Repository\\Repository.csproj|solutionrelative:repository\\repository.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA2E76E0-748B-4121-AA2C-9FA000928023}|RetailRestAPI\\RetailRestAPI.csproj|c:\\users\\musthaffashaik\\project\\casestudy\\casestudyrepo\\retailrestapi\\retailrestapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FA2E76E0-748B-4121-AA2C-9FA000928023}|RetailRestAPI\\RetailRestAPI.csproj|solutionrelative:retailrestapi\\retailrestapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08AFC425-0027-4780-8079-F5C8F860C34E}|Repository\\Repository.csproj|c:\\users\\musthaffashaik\\project\\casestudy\\casestudyrepo\\repository\\models\\retailapplicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08AFC425-0027-4780-8079-F5C8F860C34E}|Repository\\Repository.csproj|solutionrelative:repository\\models\\retailapplicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\Project\\CaseStudy\\CaseStudyRepo\\RetailRestAPI\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "RetailRestAPI\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\Project\\CaseStudy\\CaseStudyRepo\\RetailRestAPI\\Properties\\launchSettings.json",
+              "RelativeToolTip": "RetailRestAPI\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-27T09:25:02.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserCredentials.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\Project\\CaseStudy\\CaseStudyRepo\\Repository\\Models\\UserCredentials.cs",
+              "RelativeDocumentMoniker": "Repository\\Models\\UserCredentials.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\Project\\CaseStudy\\CaseStudyRepo\\Repository\\Models\\UserCredentials.cs",
+              "RelativeToolTip": "Repository\\Models\\UserCredentials.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T16:48:19.794Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RetailAPI.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\Project\\CaseStudy\\CaseStudyRepo\\RetailRestAPI\\Controllers\\RetailAPI.cs",
+              "RelativeDocumentMoniker": "RetailRestAPI\\Controllers\\RetailAPI.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\Project\\CaseStudy\\CaseStudyRepo\\RetailRestAPI\\Controllers\\RetailAPI.cs",
+              "RelativeToolTip": "RetailRestAPI\\Controllers\\RetailAPI.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAADEAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T15:55:52.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IRetailImplementation.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\Project\\CaseStudy\\CaseStudyRepo\\Repository\\Repo\\IRetailImplementation.cs",
+              "RelativeDocumentMoniker": "Repository\\Repo\\IRetailImplementation.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\Project\\CaseStudy\\CaseStudyRepo\\Repository\\Repo\\IRetailImplementation.cs",
+              "RelativeToolTip": "Repository\\Repo\\IRetailImplementation.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T15:55:11.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ServiceExtension.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\Project\\CaseStudy\\CaseStudyRepo\\Repository\\Extensions\\ServiceExtension.cs",
+              "RelativeDocumentMoniker": "Repository\\Extensions\\ServiceExtension.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\Project\\CaseStudy\\CaseStudyRepo\\Repository\\Extensions\\ServiceExtension.cs",
+              "RelativeToolTip": "Repository\\Extensions\\ServiceExtension.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAqwA8AAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T15:50:10.172Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IRetailApplication.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\Project\\CaseStudy\\CaseStudyRepo\\Repository\\Repo\\IRetailApplication.cs",
+              "RelativeDocumentMoniker": "Repository\\Repo\\IRetailApplication.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\Project\\CaseStudy\\CaseStudyRepo\\Repository\\Repo\\IRetailApplication.cs",
+              "RelativeToolTip": "Repository\\Repo\\IRetailApplication.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T15:42:05.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RetailRestAPI.csproj",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\Project\\CaseStudy\\CaseStudyRepo\\RetailRestAPI\\RetailRestAPI.csproj",
+              "RelativeDocumentMoniker": "RetailRestAPI\\RetailRestAPI.csproj",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\Project\\CaseStudy\\CaseStudyRepo\\RetailRestAPI\\RetailRestAPI.csproj",
+              "RelativeToolTip": "RetailRestAPI\\RetailRestAPI.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-21T14:19:53.606Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\Project\\CaseStudy\\CaseStudyRepo\\RetailRestAPI\\Program.cs",
+              "RelativeDocumentMoniker": "RetailRestAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\Project\\CaseStudy\\CaseStudyRepo\\RetailRestAPI\\Program.cs",
+              "RelativeToolTip": "RetailRestAPI\\Program.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAIBJwEAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T14:27:21.798Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\Project\\CaseStudy\\CaseStudyRepo\\RetailRestAPI\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "RetailRestAPI\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\Project\\CaseStudy\\CaseStudyRepo\\RetailRestAPI\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "RetailRestAPI\\Controllers\\ProductsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T08:54:55.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\Project\\CaseStudy\\CaseStudyRepo\\RetailRestAPI\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "RetailRestAPI\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\Project\\CaseStudy\\CaseStudyRepo\\RetailRestAPI\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "RetailRestAPI\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T15:19:25.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\Project\\CaseStudy\\CaseStudyRepo\\RetailRestAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "RetailRestAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\Project\\CaseStudy\\CaseStudyRepo\\RetailRestAPI\\appsettings.json",
+              "RelativeToolTip": "RetailRestAPI\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAACLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-21T14:19:18.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RetailApplicationContext.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\Project\\CaseStudy\\CaseStudyRepo\\Repository\\Models\\RetailApplicationContext.cs",
+              "RelativeDocumentMoniker": "Repository\\Models\\RetailApplicationContext.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\Project\\CaseStudy\\CaseStudyRepo\\Repository\\Models\\RetailApplicationContext.cs",
+              "RelativeToolTip": "Repository\\Models\\RetailApplicationContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T14:19:08.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Repository.csproj",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\Project\\CaseStudy\\CaseStudyRepo\\Repository\\Repository.csproj",
+              "RelativeDocumentMoniker": "Repository\\Repository.csproj",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\Project\\CaseStudy\\CaseStudyRepo\\Repository\\Repository.csproj",
+              "RelativeToolTip": "Repository\\Repository.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-21T14:18:15.219Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
