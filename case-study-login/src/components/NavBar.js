@@ -19,6 +19,9 @@ const NavBar = () => {
                     <Link to="/cart" style={styles.navLink}>Cart</Link>
                 </li>
                 <li style={styles.navItem}>
+                    <Link to="/orders" style={styles.navLink}>My Orders</Link>
+                </li>
+                <li style={styles.navItem}>
                     <button onClick={handleLogout} style={styles.navLinkButton}>Logout</button>
                 </li>
             </ul>
