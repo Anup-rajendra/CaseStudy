@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RetailRestAPI.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
@@ -21,6 +22,9 @@ namespace YourNamespace.Repositories
 
         //only for user entities
         Task<T> AuthenticateAsync(string username, string password);
+        Task<IEnumerable<ProductDto>> GetProductsWithDetailsAsync();
+
+        Task<object> GetUserDetails(string username, string password);
 
     }
 }

@@ -66,10 +66,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors("policy");
 app.UseAuthentication();
 app.UseAuthorization();
-app.UseCors("policy");
+
 app.MapControllers();
 
 app.Run();

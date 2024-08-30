@@ -21,12 +21,16 @@ namespace RetailRestAPI.Controllers
 
         private readonly IRetailApplication<User> _interfaceUser;
         private readonly IRetailApplication<Product> _product;
+        private readonly IRetailApplication<Inventory> _inventory;
+        private readonly IRetailApplication<Category> _category;
         private readonly IConfiguration _config;
 
-        public RetailAPI(IRetailApplication<User> retailApplicationinterface, IRetailApplication<Product> product,IConfiguration config)
+        public RetailAPI(IRetailApplication<User> retailApplicationinterface, IRetailApplication<Product> product, IRetailApplication<Category> category, IRetailApplication<Inventory> inventory, IConfiguration config)
         {
             _interfaceUser=retailApplicationinterface;
             _product = product;
+            _category = category;
+            _inventory = inventory;
             _config = config;
         }
 
@@ -72,12 +76,14 @@ namespace RetailRestAPI.Controllers
         {
             return _interfaceUser.GetAllAsync();  
         }
+
         [AllowAnonymous]
         [HttpGet("products")]
-        public Task<IEnumerable<Product>> GetProducts()
+        public async Task<IEnumerable<Models.ProductDto>> GetProducts()
         {
-            return _product.GetAllAsync();
+            return await _product.GetProductsWithDetailsAsync();
         }
+
 
         // GET api/<RetailAPI>/5
         [HttpGet("{id}")]
@@ -116,6 +122,13 @@ namespace RetailRestAPI.Controllers
             {
                 await _interfaceUser.DeleteAsync(user);
             }
+        }
+        [AllowAnonymous]
+        [HttpGet("{username}/{password}")]
+
+        public async Task<object> GetUserID(string username,string password)
+        {
+            return await _interfaceUser.GetUserDetails(username, password);
         }
     }
 }

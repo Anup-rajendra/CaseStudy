@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Repository.Models;
+using RetailRestAPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -79,6 +80,36 @@ namespace Repository.Repo
         public async Task<T> SingleOrDefaultAsync(Expression<Func<T, bool>> predicate)
         {
             return await _dbSet.SingleOrDefaultAsync(predicate);
+        }
+        public async Task<IEnumerable<ProductDto>> GetProductsWithDetailsAsync()
+        {
+            if (typeof(T) == typeof(Product))
+            {
+                var products = await _context.Set<Product>()
+                    .Include(p => p.Category)
+                    .Include(p => p.Inventory)
+                    .Select(p => new ProductDto
+                    {
+                        ProductID = p.ProductId,
+                        Name = p.Name,
+                        Price = (decimal)p.Price,
+                        CategoryName = p.Category.CategoryName,
+                        StockQuantity = (int)p.Inventory.StockQuantity
+                    })
+                    .ToListAsync();
+
+                return products as IEnumerable<ProductDto>;
+            }
+            throw new NotSupportedException("This method is only supported for Product entity.");
+        }
+        public async Task<object> GetUserDetails(string username, string password)
+        {
+            var user = await _context.Set<User>()
+       .Where(u => u.Username == username && u.Upassword == password)
+       .Select(u => new { u.UserId })
+       .FirstOrDefaultAsync();
+
+            return user;
         }
     }
 }
