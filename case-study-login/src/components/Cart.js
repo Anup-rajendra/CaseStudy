@@ -2,8 +2,10 @@ import React, {useEffect, useState }  from 'react';
 import "../css/Cart.css";
 import { useQuery } from '@apollo/client';
 import { GET_CARTDETAILS } from '../Apollo/queries';
+import { useNavigate } from 'react-router-dom';
 const Cart=()=>{
-    const [user,setUser]=useState(1);
+  const Navigate=useNavigate();
+    const [user,setUser]=useState(null);
     useEffect(()=>{
         const userId=localStorage.getItem("userData")
         setUser(parseInt(userId, 10));
@@ -14,18 +16,20 @@ const Cart=()=>{
         variables: { "userId": userId },
       });
       console.log(userId);
-      console.error(error);
+      console.log(data);
+     
       
       if (loading) return <p>Loading...</p>;
       if (error) return <p>Error: {error.message}</p>;
-
+      
       const cartItemsArray = data.userById.carts[0].cartItems.map(item => ({
         productName: item.product.name,
         productPrice: item.product.price,
-        quantity: item.quantity
+        quantity: item.quantity,
+        price: item.product.price*item.quantity
       }));
       const handleOrder=()=>{
-            
+            Navigate("/orders");
       }
     return (
     <div className='card-component'>
@@ -38,12 +42,13 @@ const Cart=()=>{
             <p>Name: {item.productName}</p>
             <p>Price: ${item.productPrice}</p>
             <p>Quantity: {item.quantity}</p>
+            <p>Price: {item.price}</p>
           </div>
         ))}
       </div>
     </div>
     <div className='order-button'>
-    <button onClick={handleOrder} className='button'>Order Now</button> 
+    <button onClick={handleOrder} className='button'>Buy Now</button> 
     </div>
     </div>
     );

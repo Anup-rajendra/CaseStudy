@@ -75,4 +75,48 @@ mutation UpdateCart($cartId:Int!,$productId:Int!){
   }
 }
 `;
+
+export const GET_DETAILS_FOR_ORDERS=gql`
+query GetUserByID($userId: Int!) {
+  userById(id: $userId) {
+    email
+    firstname
+    lastname
+    phoneNumber
+    username
+    addresses {
+      addressId
+      city
+      state
+      street
+      zipCode
+    }
+    carts {
+      cartId
+      userId
+      cartItems {
+        cartId
+        cartItemId
+        productId
+        quantity
+        product {
+          categoryId
+          inventoryId
+          name
+          price
+          productId
+          supplierId
+          inventory{
+            inventoryId
+            stockQuantity
+          }
+          supplier{
+            supplierId
+            name
+          }
+        }
+      }
+    }
+  }
+}`;
   
