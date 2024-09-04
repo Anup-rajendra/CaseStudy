@@ -1,7 +1,8 @@
 import React, {  useState } from 'react';
-import './signing.css'; // Import the CSS file for styling
+import '../css/signing.css'; // Import the CSS file for styling
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { Button } from './ui/button';
 
 const Signing = () => {
   const [username, setUsername] = useState('');
@@ -121,7 +122,7 @@ const Signing = () => {
             required
           />
         </div>
-        <button type="submit" className="submit-button">Sign Up</button>
+        <Button type="submit" className="submit-button">Sign Up</Button>
       </form>
     </div>
   );
