@@ -1,0 +1,92 @@
+.cart-card {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 12px;
+}
+
+.cart-item {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px 10px 10px 10px;
+}
+
+.cart-heading {
+    text-align: center;
+    font-weight: bold;
+}
+
+.card-component {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    gap: 100px;
+}
+
+.order-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.order-button:hover {
+    background-color: #0056b3;
+}
+
+.qty-input-box {
+    max-width: 70px;
+    padding: 0px 5px;
+    min-height: 40px;
+    border-radius: 4px;
+    text-align: center;
+    margin: 0px 5px;
+    color: #475F7B;
+    background-color: #FFF;
+    border: 1px solid #DFE3E7;
+    transition: 0.3s;
+}
+
+.qty-input-box:focus {
+    color: #475F7B;
+    background-color: #FFF;
+    border-color: #5A8DEE;
+    outline: 0;
+    box-shadow: 0 3px 8px 0 rgb(0 0 0 / 10%);
+}
+
+.prdct-qty-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    background-color: #5a8dee2e;
+    color: #5a8dee;
+    font-size: 11px;
+    transition: 0.3s;
+}
+
+.prdct-qty-btn:hover {
+    background-color: #5a8dee;
+    color: #fff;
+}
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .quantity-container button {
+    padding: 5px 10px;
+    font-size: 16px;
+  }
+  
