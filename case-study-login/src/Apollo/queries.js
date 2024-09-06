@@ -7,6 +7,7 @@ export const GET_PRODUCTS = gql`
     categoryId
     name
     price
+    photoUrl
     productId
     supplierId
     inventory {
@@ -37,6 +38,7 @@ query GetCartDetails($userId: Int!) {
             productId
             name
             price
+            photoUrl
           }
         }
       }
@@ -76,47 +78,27 @@ mutation UpdateCart($cartId:Int!,$productId:Int!){
 }
 `;
 
-export const GET_DETAILS_FOR_ORDERS=gql`
-query GetUserByID($userId: Int!) {
-  userById(id: $userId) {
-    email
-    firstname
-    lastname
-    phoneNumber
-    username
-    addresses {
-      addressId
+export const GET_ADDRESS_BY_USERID = gql`
+  query GetAddressByID($userId: Int!) {
+    addressesByUserId(userId: $userId) {
+      street
       city
       state
-      street
       zipCode
     }
-    carts {
-      cartId
+  }
+`;
+export const ADD_TO_ADDRESS = gql`
+  mutation AddToAddress($userId: Int!, $city: String!, $state: String!, $street: String!, $zipcode: String!) {
+    addToAddress(userId: $userId, city: $city, state: $state, street: $street, zipcode: $zipcode) {
+      addressId
       userId
-      cartItems {
-        cartId
-        cartItemId
-        productId
-        quantity
-        product {
-          categoryId
-          inventoryId
-          name
-          price
-          productId
-          supplierId
-          inventory{
-            inventoryId
-            stockQuantity
-          }
-          supplier{
-            supplierId
-            name
-          }
-        }
-      }
+      city
+      street
+      state
+      zipCode
     }
   }
-}`;
+`;
+
   

@@ -1,8 +1,8 @@
 import { fontFamily } from "tailwindcss/defaultTheme"
-
+import tailwindcssAnimate from "tailwindcss-animate"
 /** @type {import('tailwindcss').Config} */
 export const darkMode = ["class"]
-export const content = ["public/**/*.{js,jsx,ts,tsx,html}", "src/**/*.{js,jsx,ts,tsx}"]
+export const content = ["public/**/*.{js,jsx,ts,tsx,html}", "src/**/*.{js,jsx,ts,tsx,css}"]
 export const theme = {
   container: {
     center: true,
@@ -64,11 +64,17 @@ export const theme = {
         from: { height: "var(--radix-accordion-content-height)" },
         to: { height: "0" },
       },
+      gradient: {
+        '0%': { backgroundPosition: '0% 50%' },
+        '50%': { backgroundPosition: '100% 50%' },
+        '100%': { backgroundPosition: '0% 50%' },
+      },
     },
     animation: {
       "accordion-down": "accordion-down 0.2s ease-out",
       "accordion-up": "accordion-up 0.2s ease-out",
+      "gradient": 'gradient 8s ease infinite',
     },
   },
 }
-export const plugins = [require("tailwindcss-animate")]
+export const plugins = [tailwindcssAnimate]

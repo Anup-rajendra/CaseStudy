@@ -12,7 +12,7 @@
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
-    --primary: 142.1 76.2% 36.3%;
+    --primary: 142.1 76.2% 36.3% ;
     --primary-foreground: 355.7 100% 97.3%;
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
@@ -63,13 +63,38 @@
 
 
 
+
+
+
+
+
 @layer base {
   * {
-    @apply border-border ;
-    
+    @apply border-border ; 
   }
-  div {
-   @apply bg-background text-foreground;
+  body{
+    @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+    font-family:"Plus Jakarta Sans",sans-serif;
+  }
+ 
+}
+
+.animated-background {
+  background-size: 400%;
+
+  -webkit-animation: animation 3s ease infinite;
+  -moz-animation: animation 3s ease infinite;
+  animation: animation 3s ease infinite;
+}
+
+@keyframes animation {
+  0%,
+  100% {
+      background-position: 0% 50%;
+  }
+  
+  50% {
+      background-position: 100% 50%;
   }
 }
