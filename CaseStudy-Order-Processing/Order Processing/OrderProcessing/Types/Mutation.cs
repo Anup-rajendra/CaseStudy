@@ -63,4 +63,12 @@ public class Mutation
             return await orderItemRepository.AddOrderItem(orderId, productId, quantity);
         }
 
+        public async Task<CartItem> RemoveCartItem([Service] IRetailApplication<CartItem> cartItemRepository,
+        int cartItemId)
+        {
+            return await cartItemRepository.RemoveCartItem(cartItemId);
+        }
+
+
+
 }

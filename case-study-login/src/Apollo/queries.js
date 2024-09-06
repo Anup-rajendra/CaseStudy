@@ -161,4 +161,16 @@ export const ADD_ORDER_ITEM = gql`
 `;
 
 
+export const REMOVE_CART_ITEM = gql`
+  mutation RemoveCartItem($cartItemId: Int!) {
+    removeCartItem(cartItemId: $cartItemId) {
+      cartItemId
+      product {
+        name
+      }
+    }
+  }
+`;
+
+
   

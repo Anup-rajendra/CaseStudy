@@ -244,6 +244,19 @@ namespace RepositoryLayer.Repo
             await _context.SaveChangesAsync();
             return orderItem;
         }
+
+        public async Task<CartItem> RemoveCartItem(int cartItemId)
+        {
+            var cartItem = await _context.CartItems.FirstOrDefaultAsync(u => u.CartItemId == cartItemId);
+
+            if (cartItem != null)
+            {
+                _context.CartItems.Remove(cartItem);
+                await _context.SaveChangesAsync();
+            }
+
+            return cartItem;
+        }
     }
 }
  

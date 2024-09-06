@@ -32,6 +32,9 @@ namespace RepositoryLayer.Repo
 
         Task<OrderItem> AddOrderItem(int userId, int productId, int quantity);
 
+        Task<CartItem> RemoveCartItem(int cartItemId);
+
+
     }
 
 

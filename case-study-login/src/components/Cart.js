@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "../css/Cart.css";
 import { useQuery, useMutation } from '@apollo/client';
-import { GET_CARTDETAILS, UPDATE_CART_ITEM_QUANTITY } from '../Apollo/queries';
+import { GET_CARTDETAILS, UPDATE_CART_ITEM_QUANTITY,REMOVE_CART_ITEM } from '../Apollo/queries';
 import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
@@ -9,13 +9,14 @@ const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
   const navigate = useNavigate();
   const [updateCartItemByCartId] = useMutation(UPDATE_CART_ITEM_QUANTITY);
+  const [removeCartItem]=useMutation(REMOVE_CART_ITEM);
 
   useEffect(() => {
     const userId = localStorage.getItem("userData");
     setUser(parseInt(userId, 10));
   }, []);
 
-  const { loading, error, data } = useQuery(GET_CARTDETAILS, {
+  const { loading, error, data,refetch } = useQuery(GET_CARTDETAILS, {
     variables: { userId: user },
     onCompleted: (data) => {
       const initialCartItems = data.userById.carts[0].cartItems.map(item => ({
@@ -77,6 +78,28 @@ const Cart = () => {
     console.log('Hello World');
   };
 
+  // Handle item removal
+  const handleRemoveItem = async (cartItemId) => {
+    // Optimistically update the UI
+    setCartItems(prevItems => prevItems.filter(item => item.cartItemId !== cartItemId));
+
+    try {
+        await removeCartItem({
+            variables: { cartItemId },
+        });
+
+        // Optionally refetch to ensure data is up-to-date with backend
+        refetch(); 
+    } catch (err) {
+        console.error("Failed to remove cart item:", err.message);
+
+        // Revert the optimistic update on error
+        setCartItems(prevItems => [...prevItems, cartItems.find(item => item.cartItemId === cartItemId)]);
+    }
+};
+
+
+
   return (
     <div className='card-component'>
       <div>
@@ -98,6 +121,9 @@ const Cart = () => {
                 <button onClick={() => handleQuantityChange(item.cartItemId, -1)}>-</button>
                 <span>{item.quantity}</span>
                 <button onClick={() => handleQuantityChange(item.cartItemId, 1)}>+</button>
+                <button className='remove-button' onClick={() => handleRemoveItem(item.cartItemId)}>
+                                Remove
+                            </button>
               </div>
             </div>
           ))}
