@@ -90,3 +90,27 @@
     font-size: 16px;
   }
   
+/* Centers the button and adds margin */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem; /* Adds a small space from the upper element */
+  }
+  
+  /* Styles for the 'Continue Shopping' button */
+  .continue-shopping {
+    background-color: #ffcc99; /* Light orange color */
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect for the button */
+  .continue-shopping:hover {
+    background-color: #ffa64d; /* Darker shade on hover */
+  }
+      

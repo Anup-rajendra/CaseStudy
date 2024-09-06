@@ -10,7 +10,7 @@ import client from './Apollo/ApolloClient';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+
      
     <AuthProvider>
     <ApolloProvider client={client}>
@@ -18,7 +18,7 @@ root.render(
     </ApolloProvider>
     </AuthProvider>
    
-  </React.StrictMode>
+  
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -22,6 +22,16 @@ namespace RepositoryLayer.Repo
 
         Task<CartItem> UpdateCartByCartItemId(int cartItemId, int quantityChange);
 
+        Task<Order>AddNewOrder(int userId,int totalprice);
+
+        Task<List<ProductAndQuantity>> DeleteByCartId(int cartId);
+
+        Task<Inventory> UpdateInventory(int inventoryId,int quantity);
+
+        Task<Shipment> AddShipment(int orderId);
+
+        Task<OrderItem> AddOrderItem(int userId, int productId, int quantity);
+
     }
 
 

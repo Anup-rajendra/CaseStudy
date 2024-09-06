@@ -165,6 +165,85 @@ namespace RepositoryLayer.Repo
             }
             else return null;
         }
+
+        public async Task<Order> AddNewOrder(int userId, int totalprice)
+        {
+            Random random = new Random();
+
+            // Generate a small random number 
+            int randomNumber = random.Next(1, 10000);
+            Order order = new Order();
+            order.UserId = userId;
+            order.OrderId = randomNumber;
+            order.TotalAmount = totalprice;
+            order.OrderDate = DateTime.Now;
+
+            await _context.Orders.AddAsync(order);
+            await _context.SaveChangesAsync();
+            return order;
+        }
+
+        public async Task<List<ProductAndQuantity>> DeleteByCartId(int cartId)
+        {
+            List<ProductAndQuantity> list = new List<ProductAndQuantity>();
+            List<CartItem> cartItems=_context.CartItems.Where(item=>item.CartId == cartId).ToList();
+
+            foreach (var cartitem in cartItems) {
+                ProductAndQuantity productAndQuantity = new ProductAndQuantity();
+                productAndQuantity.ProductId = (int)cartitem.ProductId;
+                productAndQuantity.ProductQuantity = (int)cartitem.Quantity;
+                list.Add(productAndQuantity);
+                _context.Remove(cartitem);
+                await _context.SaveChangesAsync();
+            }
+            return list;
+        }
+
+        public async Task<Inventory> UpdateInventory(int inventoryId, int quantity)
+        {
+            Inventory inventory =await  _context.Inventories.FirstOrDefaultAsync(u => u.InventoryId == inventoryId);
+            
+            inventory.StockQuantity -= quantity;
+
+            _context.Inventories.Update(inventory);
+            await _context.SaveChangesAsync();
+            return inventory;
+            
+        }
+
+        public async Task<Shipment> AddShipment(int orderId)
+        {
+            Shipment shipment = new Shipment();
+            List<Shipment> shipmentItems = _context.Shipments.ToList();
+            shipment.ShipmentId = shipmentItems.Count + 1;
+            shipment.OrderId = orderId;
+            shipment.ShipmentDate = DateOnly.FromDateTime(DateTime.Now);
+
+            const string prefix = "TRACK";
+            Random random = new Random();
+            int number = random.Next(100, 1000); // Generates a number between 100 and 999
+            shipment.TrackingNumber= $"{prefix}{number}";
+
+
+            _context.Shipments.Add(shipment);
+            await  _context.SaveChangesAsync();
+            return shipment;
+        }
+
+        public async Task<OrderItem> AddOrderItem(int userId, int productId, int quantity)
+        {
+            List<OrderItem> oitem=_context.OrderItems.ToList();
+            OrderItem orderItem = new OrderItem();
+            orderItem.OrderItemId = oitem.Count + 1;
+            orderItem.OrderId = userId;
+            orderItem.ProductId = productId;
+            orderItem.Quantity=quantity;
+            Product product = await _context.Products.FirstOrDefaultAsync(u => u.ProductId==productId);
+            orderItem.Price=product.Price*quantity;
+            _context.OrderItems.Add(orderItem);
+            await _context.SaveChangesAsync();
+            return orderItem;
+        }
     }
 }
  

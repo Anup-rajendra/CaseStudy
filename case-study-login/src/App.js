@@ -11,6 +11,7 @@ import ChangeAddress from './components/ChangeAddress';
 import AddAddress from './components/AddAddress';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
+import Checkout from './components/Checkout';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
                         <Route path="/order" element={<Order/>}/>
                         <Route path="/add-address" element={<AddAddress />} />
                         <Route path="/changeaddress" element={<ChangeAddress/>}/>
+                        <Route path="/checkout" element={<Checkout/>}/>
                     </Route>
                 </Routes>
             </div>
