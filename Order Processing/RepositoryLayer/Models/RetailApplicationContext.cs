@@ -215,6 +215,10 @@ public partial class RetailApplicationContext : DbContext
             entity.Property(e => e.Name)
                 .HasMaxLength(255)
                 .IsUnicode(false);
+            entity.Property(e => e.PhotoUrl)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("PhotoURL");
             entity.Property(e => e.Price).HasColumnType("decimal(10, 3)");
             entity.Property(e => e.SupplierId).HasColumnName("SupplierID");
 
@@ -362,5 +366,4 @@ public partial class RetailApplicationContext : DbContext
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
-
 }

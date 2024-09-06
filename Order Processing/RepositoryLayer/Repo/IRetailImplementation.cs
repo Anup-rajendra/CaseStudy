@@ -130,6 +130,20 @@ namespace RepositoryLayer.Repo
             return cartItemDetails;
         }
 
+        public async Task<Address> AddAddress(int userId, string street ,string city,string state,string zipcode)
+        {
+            int num = _context.Addresses.Count();
+            Address address = new Address();
+            address.UserId = userId;
+            address.AddressId = num + 1;
+            address.City = city;
+            address.State = state; 
+            address.ZipCode=zipcode;
+            address.Street = street;  
+            _context.Addresses.Add(address);
+            await _context.SaveChangesAsync();
+            return address;
+        }
     }
 }
  

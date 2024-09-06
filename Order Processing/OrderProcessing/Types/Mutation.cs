@@ -22,4 +22,9 @@ public class Mutation
         {
             return await cartItemRepository.UpdateCartItem(cartId, productId);
         }
+
+        public async Task<Address> AddToAddress([Service] IRetailApplication<Address> addressRepository, int userId,string street,string city,string state,string zipcode)
+        {
+            return await addressRepository.AddAddress(userId,street,city,state,zipcode);
+        }
 }

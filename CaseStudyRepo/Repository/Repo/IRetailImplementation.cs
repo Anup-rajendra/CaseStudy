@@ -104,12 +104,16 @@ namespace Repository.Repo
         }
         public async Task<object> GetUserDetails(string username, string password)
         {
-            var user = await _context.Set<User>()
-       .Where(u => u.Username == username && u.Upassword == password)
-       .Select(u => new { u.UserId })
-       .FirstOrDefaultAsync();
+            var existingUser = await _context.Users.SingleOrDefaultAsync(u => u.Username == username);
 
-            return user;
+            // Then, perform the password verification in memory
+            if (existingUser == null || !BCrypt.Net.BCrypt.Verify(password, existingUser.Upassword))
+            {
+                return null; // Return 401 if authentication fails
+            }
+           
+
+            return existingUser;
         }
     }
 }

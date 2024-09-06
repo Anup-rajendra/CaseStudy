@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.Scripting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Repository.Models;
@@ -39,12 +40,18 @@ namespace RetailRestAPI.Controllers
         [Route("authenticate")]
         public async Task<IActionResult> Authenticate([FromBody] UserCredentials user)
         {
-            var existingUser = await _interfaceUser.SingleOrDefaultAsync(u => u.Username == user.Username && u.Upassword == user.Password);
+            // First, retrieve the user from the database by their username
+            var existingUser = await _interfaceUser.SingleOrDefaultAsync(u => u.Username == user.Username);
 
-            if (existingUser == null)
+             
+
+
+            // Then, perform the password verification in memory
+            if (existingUser == null || !BCrypt.Net.BCrypt.Verify(user.Password, existingUser.Upassword))
             {
                 return Unauthorized(); // Return 401 if authentication fails
             }
+
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_config["Jwt:Key"]);
             var tokenDescriptor = new SecurityTokenDescriptor
@@ -52,7 +59,7 @@ namespace RetailRestAPI.Controllers
                 Subject = new ClaimsIdentity(new[]
                 {
             new Claim(ClaimTypes.Name, existingUser.Username),
-            new Claim(ClaimTypes.NameIdentifier, existingUser. UserId.ToString())
+            new Claim(ClaimTypes.NameIdentifier, existingUser.UserId.ToString())
         }),
                 Expires = DateTime.UtcNow.AddHours(1),
                 Issuer = _config["Jwt:Issuer"],
@@ -66,6 +73,7 @@ namespace RetailRestAPI.Controllers
             // Save the token to the database if needed (optional)
             existingUser.Token = tokenString;
             await _interfaceUser.UpdateAsync(existingUser);
+
             // Return the token in the response
             return Ok(new { Token = tokenString });
         }
@@ -128,6 +136,11 @@ namespace RetailRestAPI.Controllers
 
         public async Task<object> GetUserID(string username,string password)
         {
+            var existingUser = await _interfaceUser.SingleOrDefaultAsync(u => u.Username == username);
+            if (existingUser == null || !BCrypt.Net.BCrypt.Verify(password, existingUser.Upassword))
+            {
+                return Unauthorized(); // Return 401 if authentication fails
+            }
             return await _interfaceUser.GetUserDetails(username, password);
         }
     }

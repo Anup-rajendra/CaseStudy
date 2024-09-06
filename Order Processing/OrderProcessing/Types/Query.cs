@@ -95,5 +95,12 @@ public class Query
                     .ThenInclude(wi => wi.Product)
             .FirstOrDefaultAsync(u => u.UserId == id);
     }
+    public async Task<List<Address>> GetAddressesByUserIdAsync([Service] IRetailApplication<Address> addressRepository, int userId)
+    {
+        return await addressRepository.GetAll()
+            .Where(a => a.UserId == userId)
+            .ToListAsync();
+    }
+
 
 }

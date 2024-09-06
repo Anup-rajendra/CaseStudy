@@ -18,6 +18,8 @@ namespace RepositoryLayer.Repo
 
         Task<CartItem> UpdateCartItem(int cartId, int productId);
 
+        Task<Address> AddAddress(int userId,string street,string city,string state,string zipcode);
+
     }
 
 
