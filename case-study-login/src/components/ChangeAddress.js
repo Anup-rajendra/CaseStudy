@@ -9,11 +9,11 @@ const ChangeAddress = () => {
   const navigate = useNavigate();
   
   useEffect(() => {
-    const userId = localStorage.getItem("userData");
+    const userId = 1;//localStorage.getItem("userData");
     if (userId) {
       setUser(parseInt(userId, 10));
     }
-  },[] ); // Add empty dependency array to ensure this effect runs only once on mount
+  }, ); // Add empty dependency array to ensure this effect runs only once on mount
 
   const AddressList = ({ userId }) => {
     const { loading, error, data } = useQuery(GET_ADDRESS_BY_USERID, {

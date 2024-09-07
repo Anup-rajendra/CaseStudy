@@ -1,6 +1,5 @@
-import React, { useState,useEffect } from 'react';
-import {   Route, Routes, useLocation } from 'react-router-dom';
-import LoadingBar from 'react-top-loading-bar';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './components/Login';
 import Products from './components/Products';
 import Layout from './components/layout';
@@ -8,47 +7,35 @@ import ProtectedRoute from './components/ProtectedRoute';
 import Cart from './components/Cart';
 import Order from './components/Order';
 import Signing from './components/signing';
+import ChangeAddress from './components/ChangeAddress';
+import AddAddress from './components/AddAddress';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
+import ProductDetails from './components/ProductDetails';
+import Categories from './components/Categories';
+import Searched from './components/Searchedproducts';
 
 function App() {
- 
-    const location = useLocation();
-    const [progress,setProgress]=useState(0);
-
-    useEffect(() => {
-        // Start loading when location changes
-        setProgress(30); // Start with 30% progress
-        const timer = setTimeout(() => {
-            setProgress(100); // Complete loading after a short delay
-        }, 500); // Adjust the delay as needed
-
-        // Reset progress to 0 when loading is complete
-        return () => {
-            clearTimeout(timer);
-            setProgress(0);
-        };
-    }, [location]);
-
     return (
-      
+        <Router>
             <div>
-                <LoadingBar
-        color="#ffffff"
-        progress={progress}
-        onLoaderFinished={() => setProgress(0)}
-      />
-                
                 <Routes>
                     <Route path="/signing" element={<Signing />} />
-                    <Route path="/login" element={<Login />} />
                     <Route path="*" element={<Login />}/>
-                    <Route element={<ProtectedRoute><Layout /></ProtectedRoute>}>
+                    {/* Wrap protected routes with ProtectedRoute */}
+                    <Route element={<Layout />}>
                         <Route path="/products" element={<Products />} />
+                        <Route path="/categories" element={<Categories />} />
+                        <Route path="/Searches" element={<Searched />} />
+                        <Route path="/product/:userId" element={<ProductDetails />} />
                         <Route path="/cart" element={<Cart/>}/>
-                        <Route path="/orders" element={<Order/>}/>
+                        <Route path="/order" element={<Order/>}/>
+                        <Route path="/add-address" element={<AddAddress />} />
+                        <Route path="/changeaddress" element={<ChangeAddress/>}/>
                     </Route>
                 </Routes>
             </div>
-  
+        </Router>
     );
 }
 

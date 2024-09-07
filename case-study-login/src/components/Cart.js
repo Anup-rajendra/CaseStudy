@@ -3,14 +3,6 @@ import "../css/Cart.css";
 import { useQuery } from '@apollo/client';
 import { GET_CARTDETAILS } from '../Apollo/queries';
 import { useNavigate } from 'react-router-dom';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "./ui/card"
 const Cart=()=>{
     const [user,setUser]=useState(1);
     const navigate=useNavigate();
@@ -18,7 +10,7 @@ const Cart=()=>{
         const userId=localStorage.getItem("userData")
         setUser(parseInt(userId, 10));
   },[])
-    const userId=user;
+    const userId=1;
     console.log(userId);
     const { loading, error, data } = useQuery(GET_CARTDETAILS, {
         variables: { "userId": userId },
@@ -40,7 +32,6 @@ const Cart=()=>{
             console.log('Hello World');
       }
     return (
-      <div>
     <div className='card-component'>
         <div>
       <h2 style={{paddingBottom:60,paddingTop:20}}>Cart Items</h2>
@@ -62,8 +53,6 @@ const Cart=()=>{
     <button onClick={handleOrder} className='order-button'>Order Now</button> 
     </div>
     </div>
-    </div>
     );
 }
 export default Cart;
-
