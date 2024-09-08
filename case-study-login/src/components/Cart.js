@@ -3,14 +3,6 @@ import "../css/Cart.css";
 import { useQuery } from '@apollo/client';
 import { GET_CARTDETAILS } from '../Apollo/queries';
 import { useNavigate } from 'react-router-dom';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "./ui/card"
 const Cart=()=>{
     const [user,setUser]=useState(1);
     const navigate=useNavigate();

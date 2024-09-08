@@ -103,8 +103,8 @@ const Login = () => {
                     <img alt="loader" src='/spinner.gif' width={25}/><div className='pl-2'>Logging In...</div></>) : (<div>Login</div>)} 
                 </Button>
                 <div>
-                    <Button type="button" onClick={handleSignUpRedirect} variant="link" className="pl-0">
-                        Don't Have An Account?&nbsp;&nbsp;Click here
+                    <Button type="button" onClick={handleSignUpRedirect} variant="link" className="pl-0 flex gap-3">
+                        <div>Don't Have An Account?</div><div>Click here</div>
                     </Button>
                 </div>
             </form>
