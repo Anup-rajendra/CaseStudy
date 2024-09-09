@@ -34,6 +34,11 @@ namespace RepositoryLayer.Repo
 
         Task<CartItem> RemoveCartItem(int cartItemId);
 
+        Task<Address> RemoveAddress(int addressId);
+        
+        
+
+        
 
     }
 

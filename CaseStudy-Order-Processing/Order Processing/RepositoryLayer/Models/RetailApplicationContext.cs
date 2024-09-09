@@ -186,7 +186,7 @@ public partial class RetailApplicationContext : DbContext
 
         modelBuilder.Entity<OrderItem>(entity =>
         {
-            entity.HasKey(e => e.OrderItemId).HasName("PK__OrderIte__57ED06A177CEF039");
+            entity.HasKey(e => e.OrderItemId).HasName("PK_OrderItemID");
 
             entity.Property(e => e.OrderItemId)
                 .ValueGeneratedNever()

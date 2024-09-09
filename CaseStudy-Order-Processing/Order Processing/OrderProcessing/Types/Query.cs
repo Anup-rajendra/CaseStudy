@@ -101,7 +101,20 @@ public class Query
             .Where(a => a.UserId == userId)
             .ToListAsync();
     }
-    
+
+
+    public async Task<List<Product>> GetProductByIdList([Service] IRetailApplication<Product> productItemRepository, List<int> productids)
+    {
+        List<Product> products = new List<Product>();
+        foreach (var productid in productids)
+        {
+            products.Add(await productItemRepository.GetByIdAsync(productid));
+        }
+        return products;
+    }
+
+
+
 
 
 }

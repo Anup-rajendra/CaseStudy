@@ -132,10 +132,11 @@ namespace RepositoryLayer.Repo
 
         public async Task<Address> AddAddress(int userId, string street, string city, string state, string zipcode)
         {
+            Random rand = new Random();
             int num = _context.Addresses.Count();
             Address address = new Address();
             address.UserId = userId;
-            address.AddressId = num + 1;
+            address.AddressId = rand.Next(0, 1000);
             address.City = city;
             address.State = state;
             address.ZipCode = zipcode;
@@ -211,24 +212,65 @@ namespace RepositoryLayer.Repo
             
         }
 
+        //We tried to add a more complex algorithm of delivery date but donno why the datediff was not working
+        //1.calculate the average price of orders.
+        //2.calculate the average delivery of orders.
+        //3. find a relation between them 
+        //4. calculate the delivery date
         public async Task<Shipment> AddShipment(int orderId)
         {
+            // Create a new shipment
             Shipment shipment = new Shipment();
-            List<Shipment> shipmentItems = _context.Shipments.ToList();
+
+            // Fetch the existing shipments and order
+            List<Shipment> shipmentItems = await _context.Shipments.ToListAsync();
+            Order order = await _context.Orders.FirstOrDefaultAsync(o => o.OrderId == orderId);
+
+            // Ensure the order exists
+            if (order == null)
+            {
+                throw new ArgumentException("Order not found.");
+            }
+
+            // Determine the delivery date based on the order's total price
+            DateTime currentDate = DateTime.Now;
+            DateTime deliveryDate;
+
+            if (order.TotalAmount < 160)
+            {
+                // Delivery within 3 days for orders under $50
+                deliveryDate = currentDate.AddDays(1);
+            }
+            else if (order.TotalAmount < 250)
+            {
+                // Delivery within 5 days for orders between $50 and $100
+                deliveryDate = currentDate.AddDays(5);
+            }
+            else
+            {
+                // Delivery within 7 days for orders over $100
+                deliveryDate = currentDate.AddDays(7);
+            }
+
+            // Set the calculated delivery date
             shipment.ShipmentId = shipmentItems.Count + 1;
             shipment.OrderId = orderId;
-            shipment.ShipmentDate = DateOnly.FromDateTime(DateTime.Now);
+            shipment.ShipmentDate = DateOnly.FromDateTime(currentDate);
+            shipment.DeliveryDate = DateOnly.FromDateTime(deliveryDate);
 
+            // Generate a tracking number
             const string prefix = "TRACK";
             Random random = new Random();
             int number = random.Next(100, 1000); // Generates a number between 100 and 999
-            shipment.TrackingNumber= $"{prefix}{number}";
+            shipment.TrackingNumber = $"{prefix}{number}";
 
-
+            // Add the shipment to the context and save changes
             _context.Shipments.Add(shipment);
-            await  _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
+
             return shipment;
         }
+
 
         public async Task<OrderItem> AddOrderItem(int userId, int productId, int quantity)
         {
@@ -256,6 +298,16 @@ namespace RepositoryLayer.Repo
             }
 
             return cartItem;
+        }
+
+        public async Task<Address> RemoveAddress(int addressId)
+        {
+            Address address = await _context.Addresses.FirstOrDefaultAsync(a=>a.AddressId==addressId);
+
+            _context.Addresses.Remove(address);
+            await _context.SaveChangesAsync();
+            return address;
+
         }
     }
 }

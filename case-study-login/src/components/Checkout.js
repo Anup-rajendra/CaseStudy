@@ -1,19 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import "../css/Checkout.css";
-import { useMutation } from '@apollo/client';
-import { ADD_NEW_ORDER, DELETE_CART_ITEM_BY_CART_ID, UPDATE_INVENTORY, ADD_SHIPMENT, ADD_ORDER_ITEM } from '../Apollo/queries';
+import { useMutation, useQuery } from '@apollo/client';
+import { ADD_NEW_ORDER, DELETE_CART_ITEM_BY_CART_ID, UPDATE_INVENTORY, ADD_SHIPMENT, ADD_ORDER_ITEM, GET_PRODUCTS_BY_IDS } from '../Apollo/queries';
 import { useNavigate } from 'react-router-dom';
 
 const Checkout = () => {
   const [userId, setUserId] = useState(null);
   const [totalPrice, setTotalPrice] = useState(0);
   const [orderId, setOrderId] = useState(""); // State for order ID
+  const [productIds, setProductIds] = useState([]); // State for product IDs
+  const [quantities, setQuantities] = useState([]); // State for product quantities
+  const [deliveryDate, setDeliveryDate] = useState(""); // State for delivery date
+
   const [addNewOrder] = useMutation(ADD_NEW_ORDER);
   const [deleteCartItemByCartId] = useMutation(DELETE_CART_ITEM_BY_CART_ID);
   const [updateInventory] = useMutation(UPDATE_INVENTORY);
   const [addShipment] = useMutation(ADD_SHIPMENT);
   const [addOrderItem] = useMutation(ADD_ORDER_ITEM);
   const navigate = useNavigate();
+  
+  // Fetch products based on product IDs
+  const { loading: productsLoading, error: productsError, data: productslist } = useQuery(GET_PRODUCTS_BY_IDS, {
+    variables: { productIds },
+    skip: productIds.length === 0,
+  });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,20 +48,23 @@ const Checkout = () => {
           });
           console.log('Cart item data:', cartData);
 
-          var productids = [];
-          var quantities = [];
+          const productIdsArray = [];
+          const quantitiesArray = [];
           cartData.deleteCartItemByCartId.forEach((element) => {
-            productids.push(element.productId);
-            quantities.push(element.productQuantity);
+            productIdsArray.push(element.productId);
+            quantitiesArray.push(element.productQuantity);
           });
 
-          console.log(productids);
-          console.log(quantities);
+          setProductIds(productIdsArray); // Set product IDs in state
+          setQuantities(quantitiesArray); // Set quantities in state
+
+          console.log(productIdsArray);
+          console.log(quantitiesArray);
 
           // Updating the Inventory (Stock Quantity)
-          for (let i = 0; i < productids.length; i++) {
+          for (let i = 0; i < productIdsArray.length; i++) {
             const { data: UpdatedInventory } = await updateInventory({
-              variables: { inventoryId: productids[i], quantity: quantities[i] },
+              variables: { inventoryId: productIdsArray[i], quantity: quantitiesArray[i] },
             });
             console.log(UpdatedInventory);
           }
@@ -61,12 +74,13 @@ const Checkout = () => {
             variables: { orderId: orderData.addNewOrder.orderId },
           });
           console.log(Shipmentdetails);
-
+          setDeliveryDate(Shipmentdetails.addShipment.deliveryDate);
+          
           // Adding OrderItems details
-          for (let i = 0; i < productids.length; i++) {
+          for (let i = 0; i < productIdsArray.length; i++) {
             try {
               const { data: OrderItem } = await addOrderItem({
-                variables: { orderId: orderData.addNewOrder.orderId, productId: productids[i], quantity: quantities[i] },
+                variables: { orderId: orderData.addNewOrder.orderId, productId: productIdsArray[i], quantity: quantitiesArray[i] },
               });
               console.log(OrderItem);
             } catch (error) {
@@ -80,7 +94,10 @@ const Checkout = () => {
     };
 
     fetchData();
-  }, []);
+  }, [addNewOrder, deleteCartItemByCartId, updateInventory, addShipment, addOrderItem]);
+
+  if (productsLoading) return <p>Loading products...</p>;
+  if (productsError) return <p>Error loading products: {productsError.message}</p>;
 
   return (
     <section className="checkout">
@@ -96,19 +113,19 @@ const Checkout = () => {
               </div>
               <div className="info-item">
                 <span>Order No.</span>
-                <p>{orderId}</p> {/* Using state for order ID */}
+                <p>{orderId}</p>
               </div>
             </div>
 
             <div className="details">
-              <div className="detail-item">
-                <span>BEATS Solo 3 Wireless Headphones</span>
-                <p>£299.99</p>
-              </div>
-              <div className="detail-item">
-                <span>Shipping</span>
-                <p>£33.00</p>
-              </div>
+              {productslist?.productByIdList?.map((product, index) => (
+                <div className="detail-item" key={index}>
+                  <img src={product.photoUrl} alt={product.name} className="checkout-product-image" />
+                  <span>{product.name}</span>
+                  <p>{quantities[index]}</p>
+                  <p>£{product.price.toFixed(2)}</p>
+                </div>
+              ))}
             </div>
 
             <div className="total">
@@ -118,14 +135,18 @@ const Checkout = () => {
             <h3 className="tracking-title">Tracking Order</h3>
 
             <ul className="timeline">
-              <li>Ordered</li>
-              <li>Shipped</li>
-              <li>On the way</li>
-              <li className="text-end">Delivered</li>
+              <li className="ordered">Ordered</li>
+              <li className="shipped">Shipped</li>
+              <li className="on-the-way">On the way</li>
+              <li className="delivered text-end">Delivered</li>
             </ul>
 
+            <div>
+              <p>Delivery Date: {deliveryDate}</p>
+            </div>
+
             <div className="button-container">
-              <button className="continue-shopping" onClick={() => { navigate('/products'); }}>
+              <button className="continue-shopping" onClick={() => navigate('/products')}>
                 Continue Shopping
               </button>
             </div>

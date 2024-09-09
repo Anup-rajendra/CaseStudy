@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import "../css/Orders.css";
-import { useQuery } from '@apollo/client';
+import { useQuery ,useMutation} from '@apollo/client';
 import { useNavigate } from 'react-router-dom';
-import { GET_ADDRESS_BY_USERID } from '../Apollo/queries';
+import { GET_ADDRESS_BY_USERID,REMOVE_ADDRESS } from '../Apollo/queries';
 
 const ChangeAddress = () => {
   const [user, setUser] = useState(1);
   const navigate = useNavigate();
+
+  const [removeAddress] = useMutation(REMOVE_ADDRESS);
   
   useEffect(() => {
     const userId = localStorage.getItem("userData");
@@ -24,7 +26,17 @@ const ChangeAddress = () => {
     if (error) return <p>Error: {error.message}</p>;
 
     if (data.addressesByUserId.length === 0) {
-      return <p>No addresses found for this user.</p>;
+      return (
+        <div>
+          <button 
+          className="add-new-address-button"
+          onClick={handleAddNewAddress}
+        >
+          Add New Address
+        </button>
+        </div>
+      );
+
     }
 
     return (
@@ -39,6 +51,9 @@ const ChangeAddress = () => {
               onClick={() => handleAddressSelect(index)}
             >
               Select Address
+            </button>
+            <button onClick={()=>RemoveAddress(address.addressId)}>
+              RemoveAddress
             </button>
           </div>
         ))}
@@ -58,8 +73,19 @@ const ChangeAddress = () => {
     navigate('/order');
   };
 
+  const RemoveAddress = async (addressId) => {
+    try {
+      await removeAddress({ variables: { addressId } });
+      alert('Address removed successfully');
+    } catch (error) {
+      alert('Error removing address');
+    }
+  };
+  
+
   const handleAddNewAddress = () => {
     navigate('/add-address'); // Navigate to the page where the user can add a new address
+    
   };
 
   return (

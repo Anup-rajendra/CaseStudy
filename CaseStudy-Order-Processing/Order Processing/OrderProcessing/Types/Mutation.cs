@@ -69,6 +69,13 @@ public class Mutation
             return await cartItemRepository.RemoveCartItem(cartItemId);
         }
 
+        public async Task<Address> RemoveAddress([Service] IRetailApplication<Address> cartItemRepository,
+        int addressId)
+        {
+            return await cartItemRepository.RemoveAddress(addressId);
+        }
+
+
 
 
 }

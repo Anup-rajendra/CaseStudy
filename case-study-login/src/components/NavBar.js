@@ -6,6 +6,9 @@ const NavBar = () => {
 
     const handleLogout = () => {
         localStorage.removeItem('token');
+        localStorage.removeItem('userData');
+        localStorage.removeItem('TotalPurchasePrice');
+        localStorage.removeItem('addressnumber');
         navigate('/login');
     };
 

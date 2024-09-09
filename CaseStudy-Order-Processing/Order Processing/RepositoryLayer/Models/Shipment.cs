@@ -11,7 +11,9 @@ public partial class Shipment
 
     public string? TrackingNumber { get; set; }
 
-    public DateOnly? ShipmentDate { get; set; }
+    public DateOnly ShipmentDate { get; set; }
+
+    public DateOnly? DeliveryDate { get; set; }
 
     public virtual Order? Order { get; set; }
 }

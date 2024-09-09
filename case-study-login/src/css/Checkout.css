@@ -1,3 +1,5 @@
+
+
 .checkout {
     background-color: #eee;
     padding: 2rem 0;
@@ -55,6 +57,14 @@
     margin: 0;
   }
   
+  .timeline {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+  }
+  
   .timeline li {
     background-color: #f37a27;
     color: white;
@@ -62,9 +72,27 @@
     border-radius: 0.25rem;
   }
   
+  .timeline li.ordered {
+    background-color: #277003; /* Darker color for Ordered */
+  }
+  
+  .timeline li.shipped {
+    background-color: #277003; /* Darker color for Shipped */
+  }
+  
+  .timeline li.on-the-way {
+    background-color: #dd0b0b; /* Lighter color for On the way */
+  }
+  
+  .timeline li.delivered {
+    background-color: #dd0b0b; /* Very light color for Delivered */
+     
+  }
+  
   .text-end {
     text-align: right;
   }
+  
   
   .contact {
     margin-top: 1.5rem;
@@ -77,5 +105,13 @@
   
   .contact-link:hover {
     text-decoration: underline;
+  }
+
+  .checkout-product-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 15px;
   }
   
