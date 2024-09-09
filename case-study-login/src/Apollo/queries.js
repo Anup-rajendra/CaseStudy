@@ -2,7 +2,7 @@ import { gql } from '@apollo/client';
 
 
 export const GET_PRODUCTS = gql`
- query {
+query {
   products {
     categoryId
     name
@@ -81,6 +81,7 @@ mutation UpdateCart($cartId:Int!,$productId:Int!){
 export const GET_ADDRESS_BY_USERID = gql`
   query GetAddressByID($userId: Int!) {
     addressesByUserId(userId: $userId) {
+      addressId
       street
       city
       state
@@ -101,4 +102,112 @@ export const ADD_TO_ADDRESS = gql`
   }
 `;
 
-  
+export const UPDATE_CART_ITEM_QUANTITY = gql`
+  mutation UpdateCartItemQuantity($cartItemId: Int!, $change: Int!) {
+    updateCartItemQuantity(cartItemId: $cartItemId, quantityChange: $change) {
+      cartItemId
+      quantity
+    }
+  }
+`;
+
+export const ADD_NEW_ORDER = gql`
+  mutation AddNewOrder($userId: Int!, $totalPrice: Int!) {
+    addNewOrder(userId: $userId, totalprice: $totalPrice) {
+      orderId
+      orderDate
+      totalAmount
+    }
+  }
+`;
+
+export const DELETE_CART_ITEM_BY_CART_ID = gql`
+  mutation DeleteCartItemByCartId($cartId: Int!) {
+    deleteCartItemByCartId(cartId: $cartId) {
+      productId
+      productQuantity
+    }
+  }
+`;
+
+export const UPDATE_INVENTORY = gql`
+  mutation UpdateInventory($inventoryId: Int!, $quantity: Int!) {
+    updateInventory(inventoryId: $inventoryId, quantity: $quantity) {
+      inventoryId
+      stockQuantity
+    }
+  }
+`;
+
+export const ADD_SHIPMENT = gql`
+  mutation AddShipment($orderId: Int!) {
+    addShipment(orderId: $orderId) {
+      shipmentId
+      shipmentDate
+      orderId
+      trackingNumber
+      deliveryDate
+    }
+  }
+`;
+
+export const ADD_ORDER_ITEM = gql`
+  mutation AddOrderItem($orderId: Int!, $productId: Int!, $quantity: Int!) {
+    addOrderItem(orderId: $orderId, productId: $productId, quantity: $quantity) {
+      productId
+      price
+      orderItemId
+      orderId
+      quantity
+    }
+  }
+`;
+
+
+export const REMOVE_CART_ITEM = gql`
+  mutation RemoveCartItem($cartItemId: Int!) {
+    removeCartItem(cartItemId: $cartItemId) {
+      cartItemId
+      product {
+        name
+      }
+    }
+  }
+`;
+
+
+export const GET_PRODUCT_BY_ID = gql`
+  query GetProductByID($productId: Int!) {
+    productById(productId: $productId) {
+      productId
+      name
+      price
+    }
+  }
+`;
+
+export const GET_PRODUCTS_BY_IDS = gql`
+  query GetProductsByIds($productIds: [Int!]!) {
+    productByIdList(productids: $productIds) {
+      productId
+      name
+      price
+      photoUrl
+    }
+  }
+`;
+
+
+
+
+export const REMOVE_ADDRESS = gql`
+mutation RemoveAddress($addressId: Int!) {
+  removeAddress(addressId: $addressId) {
+    addressId
+    userId
+    street
+    state
+    city
+  }
+}
+`;
