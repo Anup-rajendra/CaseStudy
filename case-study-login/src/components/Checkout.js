@@ -3,6 +3,7 @@ import "../css/Checkout.css";
 import { useMutation, useQuery } from '@apollo/client';
 import { ADD_NEW_ORDER, DELETE_CART_ITEM_BY_CART_ID, UPDATE_INVENTORY, ADD_SHIPMENT, ADD_ORDER_ITEM, GET_PRODUCTS_BY_IDS } from '../Apollo/queries';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const Checkout = () => {
   const [userId, setUserId] = useState(null);
@@ -11,6 +12,7 @@ const Checkout = () => {
   const [productIds, setProductIds] = useState([]); // State for product IDs
   const [quantities, setQuantities] = useState([]); // State for product quantities
   const [deliveryDate, setDeliveryDate] = useState(""); // State for delivery date
+  const[orderDate,setOrderDate]=useState("");
 
   const [addNewOrder] = useMutation(ADD_NEW_ORDER);
   const [deleteCartItemByCartId] = useMutation(DELETE_CART_ITEM_BY_CART_ID);
@@ -19,6 +21,11 @@ const Checkout = () => {
   const [addOrderItem] = useMutation(ADD_ORDER_ITEM);
   const navigate = useNavigate();
   
+  //Non state variable
+  var productids=[]
+  var quantityarray=[]
+  var orderid=0;
+
   // Fetch products based on product IDs
   const { loading: productsLoading, error: productsError, data: productslist } = useQuery(GET_PRODUCTS_BY_IDS, {
     variables: { productIds },
@@ -41,6 +48,9 @@ const Checkout = () => {
           });
           console.log('Order data:', orderData);
           setOrderId(orderData.addNewOrder.orderId); // Set orderId in state
+          setOrderDate(orderData.addNewOrder.orderDate);
+
+          orderid=orderData.addNewOrder.orderId;
 
           // Deleting cart items
           const { data: cartData } = await deleteCartItemByCartId({
@@ -57,7 +67,8 @@ const Checkout = () => {
 
           setProductIds(productIdsArray); // Set product IDs in state
           setQuantities(quantitiesArray); // Set quantities in state
-
+          productids=productIdsArray;
+          quantityarray=quantitiesArray;
           console.log(productIdsArray);
           console.log(quantitiesArray);
 
@@ -88,6 +99,30 @@ const Checkout = () => {
             }
           }
         }
+        // Define the order summary with the correct types
+        const orderSummary = {
+        userId: userIdFromStorage,
+        addressNumber: parseInt(localStorage.getItem('addressnumber') || '0', 10),
+        orderId: orderid,
+        orderDate: new Date().toISOString(), // Ensure this is in ISO 8601 format
+        ProductsIds: productids, // Match the backend property name
+        Quantity: quantityarray // Match the backend property name
+        };
+
+        console.log('Order Summary:', orderSummary);
+
+        try {
+          const response = await axios.post(
+            'http://localhost:5071/api/Notifications', 
+            orderSummary, 
+            { headers: { 'Content-Type': 'application/json' } }
+          );
+        
+          console.log('Response:', response.data);
+        } catch (error) {
+          console.error('Error making POST request:', error);
+        }
+
       } catch (error) {
         console.error('An error occurred during checkout:', error);
       }

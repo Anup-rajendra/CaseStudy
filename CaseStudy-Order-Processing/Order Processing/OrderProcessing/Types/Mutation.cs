@@ -11,8 +11,6 @@ using Microsoft.EntityFrameworkCore;
 
 public class Mutation
 {
-        
- 
         public async Task<Cart> CreateOrUpdateCart(
             [Service] IRetailApplication<Cart> cartRepository,
             int userId)
