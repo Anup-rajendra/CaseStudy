@@ -1,15 +1,18 @@
-# There is one error in the database
+Added User Profile Page
 
-In the orderitems table , the primary key for the table is orderid and orderitemid, which is not allowing us to add many orderitems with same orderid.
+Displays the User's Information
 
+Username:
+john_doe
+First Name:
+John
+Last Name:
+Doe
+Email:
+john@example.com
+Phone Number:
+1234567890
 
-do this
+Edit Profile
 
-
--- Step 1: Drop the existing composite primary key
-ALTER TABLE OrderItems
-DROP CONSTRAINT IF EXISTS PK__OrderIte__57ED06A177CEF039;--replace it with your primary key constraint it (you can git it by runnig the query sp_help OrderItems)
-
--- Step 2: Add a new primary key on OrderItemID
-ALTER TABLE OrderItems
-ADD CONSTRAINT PK_OrderItemID PRIMARY KEY (OrderItemID);
+On clciking the edit profile, we can edit the information other than the username and the changes are saved in the database.
