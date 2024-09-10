@@ -11,6 +11,8 @@ import ChangeAddress from './components/ChangeAddress';
 import AddAddress from './components/AddAddress';
 import Checkout from './components/Checkout';
 import Profile from './components/ProfilePage'; // Import the ProfilePage component
+import OrderHistoryPage from './components/OrderHistoryPage';
+import OrderDetailsPage from './components/OrderDetailsPage';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 
@@ -30,6 +32,8 @@ function App() {
                         <Route path="/changeaddress" element={<ChangeAddress/>}/>
                         <Route path="/checkout" element={<Checkout/>}/>
                         <Route path="/profile" element={<Profile/>}/> {/* Add Profile route */}
+                        <Route path="/order-history" element={<OrderHistoryPage/>}/>
+                        <Route path="/order-details/:orderId" element={<OrderDetailsPage />} />
                     </Route>
                 </Routes>
             </div>

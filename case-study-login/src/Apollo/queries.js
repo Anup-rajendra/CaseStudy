@@ -216,3 +216,56 @@ export const UPDATE_ADDRESS = gql`
     }
   }
 `;
+
+//order history 
+
+export const GET_USER_ORDERS = gql`
+  query GetUserOrders($userId: Int!) {
+    userOrders(userId: $userId) {
+      orderId
+      orderDate
+      totalAmount
+      orderItems {
+        productId
+        quantity
+        price
+        product {
+          name
+          photoUrl
+        }
+      }
+    }
+  }
+`;
+
+//order details
+// queries.js
+
+export const GET_ORDER_DETAILS = gql`
+  query GetOrderDetails($orderId: Int!) {
+    getOrderByIdAsync(orderId: $orderId) {
+      orderId
+      orderDate
+      totalAmount
+      shipment {
+        trackingNumber
+      }
+      orderItems {
+        product {
+          name
+          photoUrl
+        }
+        quantity
+        price
+      }
+      shippingAddress {
+        street
+        city
+        state
+        zipCode
+      }
+    }
+  }
+`;
+
+

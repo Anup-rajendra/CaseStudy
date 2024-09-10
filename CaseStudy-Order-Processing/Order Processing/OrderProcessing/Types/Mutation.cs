@@ -90,5 +90,4 @@ public class Mutation
         await userRepository.UpdateAsync(user);
         return user;
     }
-
 }

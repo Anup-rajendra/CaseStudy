@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useQuery, useMutation } from '@apollo/client';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for routing
 import { GET_USER_PROFILE, UPDATE_PROFILE } from '../Apollo/queries'; // Ensure this path is correct
 import '../css/ProfilePage.css';
 
 const ProfilePage = () => {
   const userId = 1; // Set user ID dynamically based on login
+  const navigate = useNavigate(); // Add navigate for routing
 
   // Fetch the user profile using the GraphQL query
   const { data, loading, error, refetch } = useQuery(GET_USER_PROFILE, {
@@ -62,9 +64,15 @@ const ProfilePage = () => {
     }
   };
 
+  const handleOrdersClick = () => {
+    navigate('/order-history'); // Navigate to OrderHistoryPage when Orders button is clicked
+  };
+
   return (
     <div className="profile-container">
       <h2>User Profile</h2>
+
+      {/* User information fields */}
       <div className="profile-field">
         <label>Username:</label>
         <span>{data?.userById?.username}</span>
@@ -121,12 +129,17 @@ const ProfilePage = () => {
           <span>{formData.phoneNumber}</span>
         )}
       </div>
-      
+
       {isEditing ? (
         <button onClick={handleSaveClick}>Save</button>
       ) : (
         <button onClick={handleEditClick}>Edit Profile</button>
       )}
+
+      {/* Orders Button Outside User Information */}
+      <div className="orders-section">
+        <button onClick={handleOrdersClick}>Orders</button> {/* New Orders button */}
+      </div>
     </div>
   );
 };

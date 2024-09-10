@@ -1,0 +1,16 @@
+/* OrderDetailsPage.css */
+
+.order-details-container {
+  padding: 20px;
+}
+
+.product-details {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.product-image {
+  max-width: 200px; /* Adjust size as needed */
+  height: auto;
+}

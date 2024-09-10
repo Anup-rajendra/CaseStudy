@@ -120,6 +120,35 @@ public class Query
         return user;
     }
 
+    public async Task<IEnumerable<Order>> GetOrdersByUserIdAsync([Service] IRetailApplication<Order> orderRepository, int userId)
+    {
+        return await orderRepository.GetAll()
+            .Where(o => o.UserId == userId)
+            .Include(o => o.OrderItems)
+                .ThenInclude(oi => oi.Product)
+            .Include(o => o.Shipment)
+            .ToListAsync();
+    }
 
+    public async Task<Order> GetOrderByIdAsync([Service] IRetailApplication<Order> orderRepository, int orderId)
+    {
+        return await orderRepository.GetAll()
+            .Where(o => o.OrderId == orderId)
+            .Include(o => o.OrderItems)
+                .ThenInclude(oi => oi.Product) // Make sure to include Product details
+            .Include(o => o.Shipment)
+            .FirstOrDefaultAsync();
+    }
+
+
+    public async Task<IEnumerable<Order>> GetUserOrders([Service] IRetailApplication<Order> orderRepository, int userId)
+    {
+        return await orderRepository.GetAll()
+            .Where(o => o.UserId == userId)
+            .Include(o => o.OrderItems)
+                .ThenInclude(oi => oi.Product)
+            .Include(o => o.Shipment)
+            .ToListAsync();
+    }
 
 }

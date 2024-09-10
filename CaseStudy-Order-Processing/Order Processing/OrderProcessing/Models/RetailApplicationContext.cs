@@ -49,13 +49,13 @@ public partial class RetailApplicationContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("server=CL-HPPKBY3;Database=RetailApplication;Integrated Security=true;trust server certificate=true");
+        => optionsBuilder.UseSqlServer("server=CL-1Q0MMN3;Database=RetailApplication;Integrated Security=true;trust server certificate=true");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Address>(entity =>
         {
-            entity.HasKey(e => e.AddressId).HasName("PK__Addresse__091C2A1B61EFA69C");
+            entity.HasKey(e => e.AddressId).HasName("PK__Addresse__091C2A1B65F54CE8");
 
             entity.Property(e => e.AddressId)
                 .ValueGeneratedNever()
@@ -81,7 +81,7 @@ public partial class RetailApplicationContext : DbContext
 
         modelBuilder.Entity<Cart>(entity =>
         {
-            entity.HasKey(e => e.CartId).HasName("PK__Carts__51BCD7976D9BF051");
+            entity.HasKey(e => e.CartId).HasName("PK__Carts__51BCD797B163D7D5");
 
             entity.Property(e => e.CartId)
                 .ValueGeneratedNever()
@@ -95,7 +95,7 @@ public partial class RetailApplicationContext : DbContext
 
         modelBuilder.Entity<CartItem>(entity =>
         {
-            entity.HasKey(e => e.CartItemId).HasName("PK__CartItem__488B0B2A5E5A6285");
+            entity.HasKey(e => e.CartItemId).HasName("PK__CartItem__488B0B2A95C9DF8D");
 
             entity.Property(e => e.CartItemId)
                 .ValueGeneratedNever()
@@ -114,7 +114,7 @@ public partial class RetailApplicationContext : DbContext
 
         modelBuilder.Entity<Category>(entity =>
         {
-            entity.HasKey(e => e.CategoryId).HasName("PK__Categori__19093A2B41057F17");
+            entity.HasKey(e => e.CategoryId).HasName("PK__Categori__19093A2BB24B44C3");
 
             entity.Property(e => e.CategoryId)
                 .ValueGeneratedNever()
@@ -126,7 +126,7 @@ public partial class RetailApplicationContext : DbContext
 
         modelBuilder.Entity<Inventory>(entity =>
         {
-            entity.HasKey(e => e.InventoryId).HasName("PK__Inventor__F5FDE6D316D644F5");
+            entity.HasKey(e => e.InventoryId).HasName("PK__Inventor__F5FDE6D3067B084F");
 
             entity.ToTable("Inventory");
 
@@ -137,7 +137,7 @@ public partial class RetailApplicationContext : DbContext
 
         modelBuilder.Entity<Notification>(entity =>
         {
-            entity.HasKey(e => e.NotificationId).HasName("PK__Notifica__20CF2E322051E2DD");
+            entity.HasKey(e => e.NotificationId).HasName("PK__Notifica__20CF2E3296B991C6");
 
             entity.Property(e => e.NotificationId)
                 .ValueGeneratedNever()
@@ -152,7 +152,7 @@ public partial class RetailApplicationContext : DbContext
 
         modelBuilder.Entity<Order>(entity =>
         {
-            entity.HasKey(e => e.OrderId).HasName("PK__Orders__C3905BAF454E6775");
+            entity.HasKey(e => e.OrderId).HasName("PK__Orders__C3905BAFB147602E");
 
             entity.Property(e => e.OrderId)
                 .ValueGeneratedNever()
@@ -168,7 +168,7 @@ public partial class RetailApplicationContext : DbContext
 
         modelBuilder.Entity<OrderItem>(entity =>
         {
-            entity.HasKey(e => e.OrderItemId).HasName("PK__OrderIte__57ED06A18F5688D3");
+            entity.HasKey(e => e.OrderItemId).HasName("PK__OrderIte__57ED06A188E35820");
 
             entity.Property(e => e.OrderItemId)
                 .ValueGeneratedNever()
@@ -188,9 +188,9 @@ public partial class RetailApplicationContext : DbContext
 
         modelBuilder.Entity<Payment>(entity =>
         {
-            entity.HasKey(e => e.PaymentId).HasName("PK__Payments__9B556A58BCBC5330");
+            entity.HasKey(e => e.PaymentId).HasName("PK__Payments__9B556A58353BEBF1");
 
-            entity.HasIndex(e => e.OrderId, "UQ__Payments__C3905BAEF6D9FFE9").IsUnique();
+            entity.HasIndex(e => e.OrderId, "UQ__Payments__C3905BAE26AB7F79").IsUnique();
 
             entity.Property(e => e.PaymentId)
                 .ValueGeneratedNever()
@@ -205,7 +205,7 @@ public partial class RetailApplicationContext : DbContext
 
         modelBuilder.Entity<Product>(entity =>
         {
-            entity.HasKey(e => e.ProductId).HasName("PK__Products__B40CC6EDB0EDA6D4");
+            entity.HasKey(e => e.ProductId).HasName("PK__Products__B40CC6EDDEE1A99D");
 
             entity.Property(e => e.ProductId)
                 .ValueGeneratedNever()
@@ -215,6 +215,10 @@ public partial class RetailApplicationContext : DbContext
             entity.Property(e => e.Name)
                 .HasMaxLength(255)
                 .IsUnicode(false);
+            entity.Property(e => e.PhotoUrl)
+                .HasMaxLength(255)
+                .IsUnicode(false)
+                .HasColumnName("PhotoURL");
             entity.Property(e => e.Price).HasColumnType("decimal(10, 3)");
             entity.Property(e => e.SupplierId).HasColumnName("SupplierID");
 
@@ -233,7 +237,7 @@ public partial class RetailApplicationContext : DbContext
 
         modelBuilder.Entity<Review>(entity =>
         {
-            entity.HasKey(e => e.ReviewId).HasName("PK__Reviews__74BC79AE22FC3587");
+            entity.HasKey(e => e.ReviewId).HasName("PK__Reviews__74BC79AE4FE10629");
 
             entity.Property(e => e.ReviewId)
                 .ValueGeneratedNever()
@@ -244,18 +248,18 @@ public partial class RetailApplicationContext : DbContext
 
             entity.HasOne(d => d.Product).WithMany(p => p.Reviews)
                 .HasForeignKey(d => d.ProductId)
-                .HasConstraintName("FK__Reviews__Product__6754599E");
+                .HasConstraintName("FK__Reviews__Product__693CA210");
 
             entity.HasOne(d => d.User).WithMany(p => p.Reviews)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__Reviews__UserID__68487DD7");
+                .HasConstraintName("FK__Reviews__UserID__6A30C649");
         });
 
         modelBuilder.Entity<Shipment>(entity =>
         {
-            entity.HasKey(e => e.ShipmentId).HasName("PK__Shipment__5CAD378DA92CE187");
+            entity.HasKey(e => e.ShipmentId).HasName("PK__Shipment__5CAD378D27FA442D");
 
-            entity.HasIndex(e => e.OrderId, "UQ__Shipment__C3905BAEA552A137").IsUnique();
+            entity.HasIndex(e => e.OrderId, "UQ__Shipment__C3905BAE50871D0B").IsUnique();
 
             entity.Property(e => e.ShipmentId)
                 .ValueGeneratedNever()
@@ -272,7 +276,7 @@ public partial class RetailApplicationContext : DbContext
 
         modelBuilder.Entity<Supplier>(entity =>
         {
-            entity.HasKey(e => e.SupplierId).HasName("PK__Supplier__4BE666944E501350");
+            entity.HasKey(e => e.SupplierId).HasName("PK__Supplier__4BE6669485A2A56F");
 
             entity.Property(e => e.SupplierId)
                 .ValueGeneratedNever()
@@ -284,7 +288,7 @@ public partial class RetailApplicationContext : DbContext
 
         modelBuilder.Entity<User>(entity =>
         {
-            entity.HasKey(e => e.UserId).HasName("PK__Users__1788CCAC35EC8E02");
+            entity.HasKey(e => e.UserId).HasName("PK__Users__1788CCAC1A99639D");
 
             entity.Property(e => e.UserId)
                 .ValueGeneratedNever()
@@ -305,7 +309,7 @@ public partial class RetailApplicationContext : DbContext
                 .HasMaxLength(255)
                 .IsUnicode(false);
             entity.Property(e => e.Token)
-                .HasMaxLength(512)
+                .HasMaxLength(1000)
                 .IsUnicode(false);
             entity.Property(e => e.TokenExpiry).HasColumnType("datetime");
             entity.Property(e => e.Upassword)
@@ -323,9 +327,9 @@ public partial class RetailApplicationContext : DbContext
 
         modelBuilder.Entity<Wishlist>(entity =>
         {
-            entity.HasKey(e => e.WishlistId).HasName("PK__Wishlist__233189CBAF20F2A5");
+            entity.HasKey(e => e.WishlistId).HasName("PK__Wishlist__233189CBE58D7CCE");
 
-            entity.HasIndex(e => e.UserId, "UQ__Wishlist__1788CCAD9595884E").IsUnique();
+            entity.HasIndex(e => e.UserId, "UQ__Wishlist__1788CCAD19A426B2").IsUnique();
 
             entity.Property(e => e.WishlistId)
                 .ValueGeneratedNever()
@@ -334,12 +338,12 @@ public partial class RetailApplicationContext : DbContext
 
             entity.HasOne(d => d.User).WithOne(p => p.Wishlist)
                 .HasForeignKey<Wishlist>(d => d.UserId)
-                .HasConstraintName("FK__Wishlists__UserI__5FB337D6");
+                .HasConstraintName("FK__Wishlists__UserI__60A75C0F");
         });
 
         modelBuilder.Entity<WishlistItem>(entity =>
         {
-            entity.HasKey(e => e.WishlistItemId).HasName("PK__Wishlist__171E2181785E8612");
+            entity.HasKey(e => e.WishlistItemId).HasName("PK__Wishlist__171E2181160D2C2E");
 
             entity.HasIndex(e => new { e.WishlistId, e.ProductId }, "uwhi").IsUnique();
 
@@ -351,11 +355,11 @@ public partial class RetailApplicationContext : DbContext
 
             entity.HasOne(d => d.Product).WithMany(p => p.WishlistItems)
                 .HasForeignKey(d => d.ProductId)
-                .HasConstraintName("FK__WishlistI__Produ__6477ECF3");
+                .HasConstraintName("FK__WishlistI__Produ__656C112C");
 
             entity.HasOne(d => d.Wishlist).WithMany(p => p.WishlistItems)
                 .HasForeignKey(d => d.WishlistId)
-                .HasConstraintName("FK__WishlistI__Wishl__6383C8BA");
+                .HasConstraintName("FK__WishlistI__Wishl__6477ECF3");
         });
 
         OnModelCreatingPartial(modelBuilder);
