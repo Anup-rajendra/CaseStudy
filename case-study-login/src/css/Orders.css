@@ -1,29 +1,100 @@
-@media (min-width: 1025px) {
-    .h-custom {
-    height: 100vh !important;
-    }
-    }
-    
-    .horizontal-timeline .items {
-    border-top: 2px solid #ddd;
-    }
-    
-    .horizontal-timeline .items .items-list {
-    position: relative;
-    margin-right: 0;
-    }
-    
-    .horizontal-timeline .items .items-list:before {
-    content: "";
-    position: absolute;
-    height: 8px;
-    width: 8px;
-    border-radius: 50%;
-    background-color: #ddd;
-    top: 0;
-    margin-top: -5px;
-    }
-    
-    .horizontal-timeline .items .items-list {
-    padding-top: 15px;
-    }
+.order-container {
+  padding: 20px;
+}
+
+.address-container {
+  margin-bottom: 20px;
+}
+
+.address-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.address-item h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.change-address-button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.change-address-button:hover {
+  background-color: #0056b3;
+}
+
+.cart-items-container {
+  margin-top: 20px;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.cart-item-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.cart-item-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-item-description h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.order-summary {
+  margin-top: 20px;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.order-summary h2 {
+  margin-top: 0;
+}
+
+.order-summary p {
+  margin: 5px 0;
+}
+.checkout-button {
+  position: fixed; /* Fixes the button in place relative to the viewport */
+  bottom: 20px; /* Distance from the bottom of the viewport */
+  right: 20px; /* Distance from the right of the viewport */
+  background-color: #007bff; /* Button color */
+  color: white; /* Text color */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Padding inside the button */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change cursor to pointer */
+  z-index: 1000; /* Ensures button is on top of other content */
+}
+.checkout-button:hover {
+  background-color: #0056b3; /* Darker color on hover */
+}

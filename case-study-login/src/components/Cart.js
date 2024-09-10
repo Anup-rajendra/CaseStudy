@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import '../css/Cart.css';
 import { useQuery, useMutation } from '@apollo/client';
-import { GET_CARTDETAILS, UPDATE_CART_ITEM_QUANTITY, REMOVE_CART_ITEM } from '../Apollo/queries';
+import {
+  GET_CARTDETAILS,
+  UPDATE_CART_ITEM_QUANTITY,
+  REMOVE_CART_ITEM,
+} from '../Apollo/queries';
 import { useNavigate } from 'react-router-dom';
 import {
   Table,
@@ -62,10 +66,9 @@ const Cart = () => {
   });
 
   useEffect(() => {
-    const totalCartPrice = cartItemsArray.reduce(
-      (acc, item) => acc + parseFloat(item.totalPrice),
-      0
-    ).toFixed(2);
+    const totalCartPrice = cartItemsArray
+      .reduce((acc, item) => acc + parseFloat(item.totalPrice), 0)
+      .toFixed(2);
     setTotalPrice(totalCartPrice);
   }, [cartItemsArray]);
 
@@ -76,7 +79,14 @@ const Cart = () => {
     setCartItemsArray((prevItems) =>
       prevItems.map((item) =>
         item.cartItemId === cartItemId
-          ? { ...item, quantity: Math.max(1, item.quantity + change), totalPrice: ((item.quantity + change) * item.productPrice).toFixed(2) }
+          ? {
+              ...item,
+              quantity: Math.max(1, item.quantity + change),
+              totalPrice: (
+                (item.quantity + change) *
+                item.productPrice
+              ).toFixed(2),
+            }
           : item
       )
     );
@@ -93,7 +103,14 @@ const Cart = () => {
       setCartItemsArray((prevItems) =>
         prevItems.map((item) =>
           item.cartItemId === cartItemId
-            ? { ...item, quantity: Math.max(1, item.quantity - change), totalPrice: ((item.quantity - change) * item.productPrice).toFixed(2) }
+            ? {
+                ...item,
+                quantity: Math.max(1, item.quantity - change),
+                totalPrice: (
+                  (item.quantity - change) *
+                  item.productPrice
+                ).toFixed(2),
+              }
             : item
         )
       );
@@ -101,7 +118,9 @@ const Cart = () => {
   };
 
   const handleRemoveItem = async (cartItemId) => {
-    setCartItemsArray((prevItems) => prevItems.filter((item) => item.cartItemId !== cartItemId));
+    setCartItemsArray((prevItems) =>
+      prevItems.filter((item) => item.cartItemId !== cartItemId)
+    );
 
     try {
       await removeCartItem({
@@ -115,7 +134,7 @@ const Cart = () => {
   };
 
   const handleOrder = () => {
-    navigate('/order');
+    navigate('/orders');
   };
 
   return (
@@ -126,11 +145,24 @@ const Cart = () => {
           <Table>
             <TableHeader>
               <TableRow className="font-extrabold bg-gradient-to-r from-primary to-blue-400 animated-background transition">
-                <TableHead className="w-[200px] font-extrabold text-white">Item</TableHead>
-                <TableHead className="font-extrabold text-white">Price</TableHead>
-                <TableHead colSpan={2} className="font-extrabold pl-7 text-white">Quantity</TableHead>
-                <TableHead className="font-extrabold text-white">Amount</TableHead>
-                <TableHead className="font-extrabold text-white">Remove</TableHead>
+                <TableHead className="w-[200px] font-extrabold text-white">
+                  Item
+                </TableHead>
+                <TableHead className="font-extrabold text-white">
+                  Price
+                </TableHead>
+                <TableHead
+                  colSpan={2}
+                  className="font-extrabold pl-7 text-white"
+                >
+                  Quantity
+                </TableHead>
+                <TableHead className="font-extrabold text-white">
+                  Amount
+                </TableHead>
+                <TableHead className="font-extrabold text-white">
+                  Remove
+                </TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -148,18 +180,28 @@ const Cart = () => {
                     <TableCell>{cartItem.productPrice}</TableCell>
                     <TableCell colSpan={2}>
                       <div className="flex gap-3">
-                        <button onClick={() => handleQuantityChange(cartItem.cartItemId, -1)}>
+                        <button
+                          onClick={() =>
+                            handleQuantityChange(cartItem.cartItemId, -1)
+                          }
+                        >
                           <Minus className="text-primary" />
                         </button>
                         {cartItem.quantity}
-                        <button onClick={() => handleQuantityChange(cartItem.cartItemId, 1)}>
+                        <button
+                          onClick={() =>
+                            handleQuantityChange(cartItem.cartItemId, 1)
+                          }
+                        >
                           <Plus className="text-primary" />
                         </button>
                       </div>
                     </TableCell>
                     <TableCell>{cartItem.totalPrice}</TableCell>
                     <TableCell className="pl-8 text-primary">
-                      <button onClick={() => handleRemoveItem(cartItem.cartItemId)}>
+                      <button
+                        onClick={() => handleRemoveItem(cartItem.cartItemId)}
+                      >
                         <Trash2 />
                       </button>
                     </TableCell>
@@ -169,7 +211,9 @@ const Cart = () => {
             </TableBody>
             <TableFooter>
               <TableRow>
-                <TableCell colSpan={4} className="text-primary font-bold">Total</TableCell>
+                <TableCell colSpan={4} className="text-primary font-bold">
+                  Total
+                </TableCell>
                 <TableCell className="text-primary">{totalPrice}</TableCell>
               </TableRow>
             </TableFooter>
@@ -189,7 +233,9 @@ const Cart = () => {
         <Card className="w-[300px]">
           <CardHeader className="border-b bg-gradient-to-r from-primary to-blue-400 animated-background">
             <CardTitle className="text-white">Summary</CardTitle>
-            <CardDescription className="text-white">Price Details</CardDescription>
+            <CardDescription className="text-white">
+              Price Details
+            </CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col gap-5 pt-4 border-b">
             <div className="flex gap-4">
