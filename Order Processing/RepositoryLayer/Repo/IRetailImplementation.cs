@@ -73,7 +73,7 @@ namespace RepositoryLayer.Repo
                     // Do not manually set CartId if it's an identity column
                     CartId = userId,
                     UserId = userId,
-                    
+
                     // Set other properties as needed
                 };
 
@@ -114,11 +114,11 @@ namespace RepositoryLayer.Repo
                 // Create a new cart item with the provided productId and quantity set to 1.
                 var newCartItem = new CartItem
                 {
-                    CartItemId=randomInt,
+                    CartItemId = randomInt,
                     CartId = cartId,
                     ProductId = productId,
                     Quantity = 1,
-                      
+
                 };
 
                 await _context.CartItems.AddAsync(newCartItem);
@@ -130,19 +130,159 @@ namespace RepositoryLayer.Repo
             return cartItemDetails;
         }
 
-        public async Task<Address> AddAddress(int userId, string street ,string city,string state,string zipcode)
+        public async Task<Address> AddAddress(int userId, string street, string city, string state, string zipcode)
         {
-            int num = _context.Addresses.Count();
-            Address address = new Address();
-            address.UserId = userId;
-            address.AddressId = num + 1;
-            address.City = city;
-            address.State = state; 
-            address.ZipCode=zipcode;
-            address.Street = street;  
-            _context.Addresses.Add(address);
+            try
+            {
+                int num = _context.Addresses.Count();
+                Address address = new Address
+                {
+                    UserId = userId,
+                    AddressId = num + 1,
+                    City = city,
+                    State = state,
+                    ZipCode = zipcode,
+                    Street = street
+                };
+
+                _context.Addresses.Add(address);
+                await _context.SaveChangesAsync();
+                return address;
+            }
+            catch (DbUpdateException ex)
+            {
+                // Log or output the inner exception for details
+                Console.WriteLine("An error occurred while saving changes: " + ex.Message);
+
+                if (ex.InnerException != null)
+                {
+                    Console.WriteLine("Inner Exception: " + ex.InnerException.Message);
+                }
+                // You can rethrow the exception if needed, or handle it as appropriate.
+                throw;
+            }
+        }
+
+        public async Task<CartItem> UpdateCartByCartItemId(int cartItemId, int quantityChange)
+        {
+            var cartItemDetails = await _context.CartItems.FirstOrDefaultAsync(u => u.CartItemId == cartItemId);
+            if (cartItemDetails != null)
+            {
+                if (cartItemDetails.Quantity == 1 && quantityChange == -1)
+                {
+                    _context.CartItems.Remove(cartItemDetails);
+                    await _context.SaveChangesAsync();
+                    return cartItemDetails;
+
+                }
+                cartItemDetails.Quantity += quantityChange;
+                _context.CartItems.Update(cartItemDetails);
+                await _context.SaveChangesAsync();
+                return cartItemDetails;
+
+            }
+            else return null;
+        }
+
+        public async Task<Order> AddNewOrder(int userId, int totalprice)
+        {
+            Random random = new Random();
+
+            // Generate a small random number 
+            int randomNumber = random.Next(1, 10000);
+            Order order = new Order();
+            order.UserId = userId;
+            order.OrderId = randomNumber;
+            order.TotalAmount = totalprice;
+            order.OrderDate = DateTime.Now;
+
+            await _context.Orders.AddAsync(order);
+            await _context.SaveChangesAsync();
+            return order;
+        }
+
+        public async Task<List<ProductAndQuantity>> DeleteByCartId(int cartId)
+        {
+            List<ProductAndQuantity> list = new List<ProductAndQuantity>();
+            List<CartItem> cartItems=_context.CartItems.Where(item=>item.CartId == cartId).ToList();
+
+            foreach (var cartitem in cartItems) {
+                ProductAndQuantity productAndQuantity = new ProductAndQuantity();
+                productAndQuantity.ProductId = (int)cartitem.ProductId;
+                productAndQuantity.ProductQuantity = (int)cartitem.Quantity;
+                list.Add(productAndQuantity);
+                _context.Remove(cartitem);
+                await _context.SaveChangesAsync();
+            }
+            return list;
+        }
+
+        public async Task<Inventory> UpdateInventory(int inventoryId, int quantity)
+        {
+            Inventory inventory =await  _context.Inventories.FirstOrDefaultAsync(u => u.InventoryId == inventoryId);
+            
+            inventory.StockQuantity -= quantity;
+
+            _context.Inventories.Update(inventory);
+            await _context.SaveChangesAsync();
+            return inventory;
+            
+        }
+
+        public async Task<Shipment> AddShipment(int orderId)
+        {
+            Shipment shipment = new Shipment();
+            List<Shipment> shipmentItems = _context.Shipments.ToList();
+            shipment.ShipmentId = shipmentItems.Count + 1;
+            shipment.OrderId = orderId;
+            shipment.ShipmentDate = DateOnly.FromDateTime(DateTime.Now);
+
+            const string prefix = "TRACK";
+            Random random = new Random();
+            int number = random.Next(100, 1000); // Generates a number between 100 and 999
+            shipment.TrackingNumber= $"{prefix}{number}";
+
+
+            _context.Shipments.Add(shipment);
+            await  _context.SaveChangesAsync();
+            return shipment;
+        }
+
+        public async Task<OrderItem> AddOrderItem(int userId, int productId, int quantity)
+        {
+            List<OrderItem> oitem=_context.OrderItems.ToList();
+            OrderItem orderItem = new OrderItem();
+            orderItem.OrderItemId = oitem.Count + 1;
+            orderItem.OrderId = userId;
+            orderItem.ProductId = productId;
+            orderItem.Quantity=quantity;
+            Product product = await _context.Products.FirstOrDefaultAsync(u => u.ProductId==productId);
+            orderItem.Price=product.Price*quantity;
+            _context.OrderItems.Add(orderItem);
+            await _context.SaveChangesAsync();
+            return orderItem;
+        }
+
+        public async Task<CartItem> RemoveCartItem(int cartItemId)
+        {
+            var cartItem = await _context.CartItems.FirstOrDefaultAsync(u => u.CartItemId == cartItemId);
+
+            if (cartItem != null)
+            {
+                _context.CartItems.Remove(cartItem);
+                await _context.SaveChangesAsync();
+            }
+
+            return cartItem;
+        }
+        public async Task<Address> RemoveAddress(int addressId)
+        {
+            Address address = await _context.Addresses.FirstOrDefaultAsync(a => a.AddressId == addressId);
+
+            _context.Addresses.Remove(address);
             await _context.SaveChangesAsync();
             return address;
+
         }
     }
 }

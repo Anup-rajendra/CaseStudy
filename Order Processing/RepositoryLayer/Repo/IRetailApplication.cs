@@ -20,6 +20,21 @@ namespace RepositoryLayer.Repo
 
         Task<Address> AddAddress(int userId,string street,string city,string state,string zipcode);
 
+        Task<CartItem> UpdateCartByCartItemId(int cartItemId, int quantityChange);
+
+        Task<Order>AddNewOrder(int userId,int totalprice);
+
+        Task<List<ProductAndQuantity>> DeleteByCartId(int cartId);
+
+        Task<Inventory> UpdateInventory(int inventoryId,int quantity);
+
+        Task<Shipment> AddShipment(int orderId);
+
+        Task<OrderItem> AddOrderItem(int userId, int productId, int quantity);
+
+        Task<CartItem> RemoveCartItem(int cartItemId);
+
+        Task<Address> RemoveAddress(int addressId);
     }
 
 
