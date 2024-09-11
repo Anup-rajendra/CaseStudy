@@ -3,6 +3,8 @@ import '../css/Orders.css';
 import { useQuery, useMutation } from '@apollo/client';
 import { GET_ADDRESS_BY_USERID, REMOVE_ADDRESS } from '../Apollo/queries';
 import AddAddress from './AddAddress';
+import { Button } from './ui/button';
+import { Toaster, toast } from 'sonner';
 const ChangeAddress = ({ onChangeAddress, onAddressSelect }) => {
   const [user, setUser] = useState(null);
   const [removeAddress] = useMutation(REMOVE_ADDRESS);
@@ -38,7 +40,7 @@ const ChangeAddress = ({ onChangeAddress, onAddressSelect }) => {
     try {
       await removeAddress({ variables: { addressId } });
       refetch();
-      alert('Address removed successfully');
+      toast.info('Address removed successfully. Please select an address');
     } catch (error) {
       alert('Error removing address');
     }
@@ -46,6 +48,7 @@ const ChangeAddress = ({ onChangeAddress, onAddressSelect }) => {
 
   return (
     <div className="order-container">
+      <Toaster />
       {user ? (
         <>
           <AddressList
@@ -87,39 +90,59 @@ const AddressList = ({
 
   const addresses = data?.addressesByUserId || [];
   return (
-    <div className="address-container">
-      <h2>Shipping Addresses</h2>
+    <>
+      <div className="font-bold text-xl pb-3">Shipping Addresses</div>
       {addresses.length === 0 ? (
-        <button className="add-new-address-button" onClick={onAddNewAddress}>
+        <Button
+          className="bg-gradient-to-r from-primary to-blue-400 animated-background transition ease-in-out delay-150 hover:translate-y-1 hover:scale-110 duration-300"
+          onClick={onAddNewAddress}
+        >
           Add New Address
-        </button>
+        </Button>
       ) : (
         addresses.map((address, index) => (
-          <div key={address.addressId} className="address-item">
-            <p>Street: {address.street}</p>
-            <p>
-              City: {address.city}, State: {address.state}, ZipCode:{' '}
-              {address.zipCode}
-            </p>
-            <button
-              className="select-address-button"
+          <div
+            className="flex gap-4 w-full bg-white transition ease-in-out delay-150 hover:translate-y-1 hover:scale-105 duration-300"
+            key={address.addressId}
+          >
+            <div
+              key={address.addressId}
+              className="border flex justify-between p-2 gap-4 cursor-pointer w-full"
               onClick={() => onAddressSelect(index)}
             >
-              Select Address
-            </button>
-            <button
-              className="remove-address-button"
-              onClick={() => onRemoveAddress(address.addressId)}
-            >
-              Remove Address
-            </button>
+              <div className="pl-1 ">
+                <div>{index + 1}.</div>
+                <p>Street: {address.street}</p>
+                <p>
+                  City: {address.city}, State: {address.state}, ZipCode:{' '}
+                  {address.zipCode}
+                </p>
+              </div>
+              <div className="flex items-center">
+                <Button
+                  onClick={(e) => {
+                    e.stopPropagation(); // Prevent address selection when remove button is clicked
+                    onRemoveAddress(address.addressId); // Call the remove function
+                  }}
+                  variant="destructive"
+                  className="pr-2 pb-2"
+                >
+                  Remove Address
+                </Button>
+              </div>
+            </div>
           </div>
         ))
       )}
-      <button className="add-new-address-button" onClick={onAddNewAddress}>
-        Add New Address
-      </button>
-    </div>
+      <div className="pt-3">
+        <Button
+          className="bg-gradient-to-r from-primary to-blue-400 animated-background transition ease-in-out delay-150 hover:translate-y-1 hover:scale-110 duration-300"
+          onClick={onAddNewAddress}
+        >
+          Add New Address
+        </Button>
+      </div>
+    </>
   );
 };
 
