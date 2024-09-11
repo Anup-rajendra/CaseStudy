@@ -15,7 +15,7 @@ const OrderDetailsPage = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>; // Display the actual error message
 
-  const { getOrderByIdAsync: order } = data;
+  const { getOrderById: order } = data;
 
   return (
     <div className="order-details-container">
@@ -30,7 +30,7 @@ const OrderDetailsPage = () => {
       {/* Product Details */}
       <h3>Products:</h3>
       {order.orderItems.map((item) => (
-        <div key={item.product.id} className="product-details">
+        <div key={item.product.productId} className="product-details">
           <img src={item.product.photoUrl} alt={item.product.name} className="product-image" />
           <p>Product: {item.product.name}</p>
           <p>Quantity: {item.quantity}</p>
@@ -38,10 +38,6 @@ const OrderDetailsPage = () => {
           <p>Subtotal: ${item.price * item.quantity}</p>
         </div>
       ))}
-
-      {/* Shipping Address */}
-      <h3>Shipping Address:</h3>
-      <p>{order.shippingAddress.street}, {order.shippingAddress.city}, {order.shippingAddress.state} {order.shippingAddress.zipCode}</p>
 
       {/* Shipment Tracking */}
       <h3>Shipment Tracking:</h3>

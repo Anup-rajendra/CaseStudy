@@ -243,29 +243,28 @@ export const GET_USER_ORDERS = gql`
 
 export const GET_ORDER_DETAILS = gql`
   query GetOrderDetails($orderId: Int!) {
-    getOrderByIdAsync(orderId: $orderId) {
-      orderId
-      orderDate
-      totalAmount
-      shipment {
-        trackingNumber
-      }
-      orderItems {
-        product {
-          name
-          photoUrl
-        }
-        quantity
-        price
-      }
-      shippingAddress {
-        street
-        city
-        state
-        zipCode
+  getOrderById(orderId: $orderId) {
+    orderId
+    orderDate
+    totalAmount
+    orderItems {
+      orderItemId
+      quantity
+      price
+      product {
+        productId
+        name
+        photoUrl
       }
     }
+    shipment {
+      shipmentId
+      trackingNumber
+      shipmentDate
+    }
   }
+}
+
 `;
 
 

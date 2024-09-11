@@ -130,15 +130,16 @@ public class Query
             .ToListAsync();
     }
 
-    public async Task<Order> GetOrderByIdAsync([Service] IRetailApplication<Order> orderRepository, int orderId)
+    public async Task<Order> getOrderByIdAsync([Service] IRetailApplication<Order> orderRepository, int orderId)
     {
         return await orderRepository.GetAll()
             .Where(o => o.OrderId == orderId)
             .Include(o => o.OrderItems)
-                .ThenInclude(oi => oi.Product) // Make sure to include Product details
-            .Include(o => o.Shipment)
-            .FirstOrDefaultAsync();
+                .ThenInclude(oi => oi.Product) // Include Product details for each OrderItem
+            .Include(o => o.Shipment) // Include Shipment details
+            .FirstOrDefaultAsync(); // Get the first match or null
     }
+
 
 
     public async Task<IEnumerable<Order>> GetUserOrders([Service] IRetailApplication<Order> orderRepository, int userId)
