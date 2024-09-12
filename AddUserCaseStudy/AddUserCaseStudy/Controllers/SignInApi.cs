@@ -48,8 +48,12 @@ namespace AddUserCaseStudy.Controllers
                     Upassword = hashedPassword,
                     UserId = _interfaceUser2.Givenewid()
                 };
+                Wishlist w = new Wishlist
+                {
+                    WishlistId = newUser.UserId,
+                    UserId = newUser.UserId
+                };
 
-                
 
                 Random random = new Random();
                 int otp = random.Next(1000, 9999);
@@ -62,8 +66,9 @@ namespace AddUserCaseStudy.Controllers
 
                 // Mark the email as verified and save the user
                 newUser.EmailVerified = true;
+            
                 await _interfaceUser2.AddAsync(newUser);
-
+                await _interfaceUser2.AddWishlist(w);
                 //Add Corresponding CartNumber To the Database
                 await _interfaceUser2.AddCart(newUser.UserId);
 

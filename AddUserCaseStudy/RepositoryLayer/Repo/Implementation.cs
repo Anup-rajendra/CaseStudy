@@ -119,6 +119,11 @@ namespace RepositoryLayer.Repo
             // Save all changes to the database
             _context.SaveChanges();
         }
+        public async Task AddWishlist(Wishlist entity)
+        {
+            _context.Wishlists.Add(entity);
+            _context.SaveChanges();
+        }
 
         public Task AddCart(int Userid)
         {
