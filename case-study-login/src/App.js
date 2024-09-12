@@ -10,7 +10,10 @@ import Order from './components/Order';
 import Signing from './components/signing';
 import ChangeAddress from './components/ChangeAddress';
 import AddAddress from './components/AddAddress';
-import Checkout from './components/Checkout';
+import ProductDetails from './components/ProductDetails';
+import Categories from './components/Categories';
+import Searched from './components/Searchedproducts';
+import Wishlist  from './components/wishlist';
 function App() {
   const location = useLocation();
   const [progress, setProgress] = useState(0);
@@ -50,10 +53,13 @@ function App() {
         >
           <Route path="/add-address" element={<AddAddress />} />
           <Route path="/changeaddress" element={<ChangeAddress />} />
+          <Route path="/categories" element={<Categories />} />
+          <Route path="/Searches" element={<Searched />} />
+          <Route path="/product" element={<ProductDetails />} />
           <Route path="/products" element={<Products />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/orders" element={<Order />} />
-          <Route path="/checkout" element={<Checkout />} />
         </Route>
       </Routes>
     </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SearchBar from './SearchBar';
 import DropdownAvatar from './DropdownAvatar';
-import { ShoppingCart } from 'lucide-react';
+import { ShoppingCart, Heart } from 'lucide-react';
 import CategoryNavigation from './CategoryNavigation';
 const NavBar = () => {
   return (
@@ -35,15 +35,24 @@ const NavBar = () => {
               </Link>
             </li>
             <li>
+              <Link
+                to="/wishlist"
+                className="flex gap-1 text-white text-lg items-center"
+              >
+                <Heart />
+                Wishlist
+              </Link>
+            </li>
+            <li>
               <DropdownAvatar />
             </li>
           </ul>
         </nav>
-        <div className="pl-16 border-b-2 z-10 bg-white">
+        <div className="pl-16 border-b z-10">
           <CategoryNavigation />
         </div>
       </div>
-      <div className="pt-[100px]"></div>
+      <div className="pt-24"></div>
     </div>
   );
 };

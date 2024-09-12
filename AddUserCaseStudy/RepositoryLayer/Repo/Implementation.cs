@@ -83,9 +83,7 @@ namespace RepositoryLayer.Repo
         public int Givenewid()
         {
             var list=_dbSet.ToList();
-
-            Random random = new Random();
-            return random.Next(list.Count+1,1000);
+            return list.Count+1;
         }
 
         public bool CheckEmailPresent(string email)
@@ -93,7 +91,7 @@ namespace RepositoryLayer.Repo
             var list = _context.Users.ToList();
             for (int i = 0; i < list.Count; i++)
             {
-                if (list[i].Email == email )
+                if (list[i].Email == email)
                     return true;
             }
             return false;
@@ -120,14 +118,5 @@ namespace RepositoryLayer.Repo
             _context.SaveChanges();
         }
 
-        public Task AddCart(int Userid)
-        {
-            Cart cart = new Cart();
-            cart.UserId = Userid;
-            cart.CartId= Userid;
-            _context.Carts.AddAsync(cart);
-            _context.SaveChanges();
-            return Task.CompletedTask;
-        }
     }
 }

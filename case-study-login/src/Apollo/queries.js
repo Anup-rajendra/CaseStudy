@@ -4,7 +4,7 @@ import { gql } from '@apollo/client';
 export const GET_PRODUCTS = gql`
 query {
   products {
-    categoryId
+    productId
     name
     price
     photoUrl
@@ -22,6 +22,49 @@ query {
   }
 }
 `;
+
+export const GET_PRODUCTS_BY_CATEGORY = gql`
+query GetProductsByCategory($categoryId: Int!) {
+  productsByCategory(categoryId: $categoryId) {
+    productId
+    name
+    price
+    photoUrl
+    category {
+      categoryId
+      categoryName
+    }
+    supplier {
+      supplierId
+      name
+    }
+    inventory {
+      stockQuantity
+    }
+  }
+}
+`
+export const GET_PRODUCTS_BY_NAME  = gql`
+query GetProductsByMatchingString($searchString: String!) {
+  productsByMatchingString(searchString: $searchString) {
+    productId
+    name
+    price
+    photoUrl
+    category {
+      categoryId
+      categoryName
+    }
+    supplier {
+      supplierId
+      name
+    }
+    inventory {
+      stockQuantity
+    }
+  }
+}
+`
 
 export const GET_CARTDETAILS=gql`
 query GetCartDetails($userId: Int!) {

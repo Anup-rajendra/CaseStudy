@@ -23,16 +23,16 @@ namespace AddUserCaseStudy.Controllers
 
 
         [HttpPost]
-        public async Task<String> Create([FromBody] UserCredentials user)
+        public async Task<IActionResult> Create([FromBody] UserCredentials user)
         {
             
             if (user == null)
             {
-                return "User credentials cannot be null.";
+                return BadRequest("User credentials cannot be null.");
             }
             if (_interfaceUser2.CheckEmailPresent(user.Email))
             {
-                return "Email Already Present";
+                return StatusCode(401, "Email Already Present");
             }
             try
             {
@@ -49,33 +49,20 @@ namespace AddUserCaseStudy.Controllers
                     UserId = _interfaceUser2.Givenewid()
                 };
 
-                
-
-                Random random = new Random();
-                int otp = random.Next(1000, 9999);
-
-                // Prepare email body with OTP
-                string emailBody = $"<h1>Thank you for registering!</h1><br /><h3>Your OTP is: {otp}</h3>";
-
-                // Send email with OTP
-                _emailService.SendEmail(newUser.Email, "Welcome to Our App", emailBody);
-
-                // Mark the email as verified and save the user
-                newUser.EmailVerified = true;
+                  
+                _emailService.SendEmail(newUser.Email, "Welcome to Our App", "<h1>Thank you for registering!</h1>");
+                newUser.EmailVerified= true;
                 await _interfaceUser2.AddAsync(newUser);
 
-                //Add Corresponding CartNumber To the Database
-                await _interfaceUser2.AddCart(newUser.UserId);
 
-                // Return OTP in the response
-                return $"{otp}";
+                return Ok(new { message = "Registration successful!" });
 
             }
             catch (Exception ex)
             {
                 // Log the exception
                 Console.WriteLine(ex.Message);
-                return $"{ex}";
+                return StatusCode(500, "Internal server error.");
             }
         }
 

@@ -43,9 +43,6 @@ namespace RetailRestAPI.Controllers
             // First, retrieve the user from the database by their username
             var existingUser = await _interfaceUser.SingleOrDefaultAsync(u => u.Username == user.Username);
 
-             
-
-
             // Then, perform the password verification in memory
             if (existingUser == null || !BCrypt.Net.BCrypt.Verify(user.Password, existingUser.Upassword))
             {
@@ -71,7 +68,7 @@ namespace RetailRestAPI.Controllers
             var tokenString = tokenHandler.WriteToken(token);
 
             // Save the token to the database if needed (optional)
-            existingUser.Token = tokenString;
+            //existingUser.Token = tokenString;
             await _interfaceUser.UpdateAsync(existingUser);
 
             // Return the token in the response

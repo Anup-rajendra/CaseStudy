@@ -12,10 +12,6 @@ namespace RepositoryLayer.Repo
         bool CheckEmailPresent(string email);
         Task<IEnumerable<T>> FindAsync(Expression<Func<T, bool>> predicate);
         Task AddAsync(T entity);
-
-        //Add Cart Entry
-
-        Task AddCart(int Userid);
         Task AddRangeAsync(IEnumerable<T> entities);
         Task UpdateAsync(T entity);
         int Givenewid();

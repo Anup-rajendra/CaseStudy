@@ -17,5 +17,5 @@ public partial class Address
 
     public string? ZipCode { get; set; }
 
-    public virtual User? User { get; set; }
+    public virtual User User { get; set; }
 }
