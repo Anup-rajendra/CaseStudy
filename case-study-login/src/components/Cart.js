@@ -229,7 +229,7 @@ const Cart = () => {
         </div>
       </div>
       <div className="w-[300px]"></div>
-      <div className="fixed right-12">
+      <div className="fixed right-12 top-[210px]">
         <Card className="w-[300px]">
           <CardHeader className="border-b bg-gradient-to-r from-primary to-blue-400 animated-background">
             <CardTitle className="text-white">Summary</CardTitle>

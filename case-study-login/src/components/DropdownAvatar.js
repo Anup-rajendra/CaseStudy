@@ -123,8 +123,10 @@ const DropdownAvatar = () => {
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
-          <LogOut className="mr-2 h-4 w-4" />
-          <button onClick={handleLogout}>Log out</button>
+          <button onClick={handleLogout}>
+            <LogOut className="mr-2 h-4 w-4" />
+            Log out
+          </button>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

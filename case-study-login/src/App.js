@@ -10,6 +10,7 @@ import Order from './components/Order';
 import Signing from './components/signing';
 import ChangeAddress from './components/ChangeAddress';
 import AddAddress from './components/AddAddress';
+import Checkout from './components/Checkout';
 function App() {
   const location = useLocation();
   const [progress, setProgress] = useState(0);
@@ -52,6 +53,7 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/orders" element={<Order />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Route>
       </Routes>
     </div>
