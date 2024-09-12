@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import '../css/Orders.css';
 import { useQuery } from '@apollo/client';
-import { GET_ADDRESS_BY_USERID, GET_CARTDETAILS } from '../Apollo/queries';
+import { GET_ADDRESS_BY_USERID } from '../Apollo/queries';
 import { loadStripe } from '@stripe/stripe-js';
-import { useNavigate } from 'react-router-dom';
 import ChangeAddress from './ChangeAddress';
 import { Button } from './ui/button';
 import {
@@ -14,12 +13,28 @@ import {
   CardTitle,
   CardDescription,
 } from './ui/card';
-const Order = () => {
+import { useLocation, useNavigate } from 'react-router-dom';
+const OrderItem = () => {
+  const navigate = useNavigate();
   const [userId, setUserId] = useState(null);
   const [currentAddressNumber, setCurrentAddressNumber] = useState(0);
   const [changeAddress, setChangeAddress] = useState(false);
-  const navigate = useNavigate();
+  const location = useLocation();
+  console.log(location.state);
+  const { productId, productName, productPrice, productPhotoURL } =
+    location.state;
+  console.log(productId);
 
+  const productArray = [
+    {
+      productName,
+      productPrice,
+      quantity: 1,
+      photoUrl: productPhotoURL,
+    },
+  ];
+
+  console.log('productArray', productArray);
   // Retrieve user ID and address number from localStorage on mount
   useEffect(() => {
     const storedUserId = localStorage.getItem('userData');
@@ -43,58 +58,26 @@ const Order = () => {
     skip: !userId, // Skip if userId is not set
   });
 
-  const {
-    loading: cartLoading,
-    error: cartError,
-    data: cartData,
-    refetch: refetchCart,
-  } = useQuery(GET_CARTDETAILS, {
-    variables: { userId: userId },
-    skip: !userId, // Skip if userId is not set
-  });
-
   // Optionally refetch data when userId or currentAddressNumber changes
   useEffect(() => {
     if (userId !== null) {
       refetchAddress();
-      refetchCart();
     }
-  }, [userId, currentAddressNumber, refetchAddress, refetchCart]);
+  }, [userId, currentAddressNumber, refetchAddress]);
 
-  if (addressLoading || cartLoading) return <p>Loading...</p>;
+  if (addressLoading) return <p>Loading...</p>;
   if (addressError)
     return <p>Error fetching addresses: {addressError.message}</p>;
-  if (cartError) return <p>Error fetching cart details: {cartError.message}</p>;
 
   const displayAddress =
     addressData?.addressesByUserId[currentAddressNumber] || {};
-
-  const cartItemsArray =
-    cartData?.userById.carts[0]?.cartItems.map((item) => ({
-      productName: item.product.name,
-      productPrice: item.product.price,
-      quantity: item.quantity,
-      photoUrl: item.product.photoUrl,
-    })) || [];
-  console.log(cartItemsArray);
-
-  // const totalQuantity = cartItemsArray.reduce(
-  //   (sum, item) => sum + item.quantity,
-  //   0
-  // );
-  const totalPrice = cartItemsArray.reduce(
-    (sum, item) => sum + item.productPrice * item.quantity,
-    0
-  );
-  localStorage.setItem('TotalPurchasePrice', totalPrice);
-
   const makePayment = async () => {
     const stripe = await loadStripe(
       'pk_test_51PvFPH1adOqTPZqxtt6RZyDNusEZez3sNi8rv3Lb1PXVXf0vQrEjxK4TiAgh12fOmIVGy5f0eLQygl96ldRRrBap00op42RAX4'
     );
 
     const body = {
-      products: cartItemsArray,
+      products: productArray,
     };
     const headers = {
       'Content-Type': 'application/json',
@@ -162,12 +145,12 @@ const Order = () => {
           )}
 
           <div className="pt-5 ">
-            {cartItemsArray.length > 0 ? (
+            {productArray.length > 0 ? (
               <div className="flex flex-col">
-                {cartItemsArray.map((item, index) => (
+                {productArray.map((item, index) => (
                   <div
-                    key={index}
                     className="flex items-start bg-white gap-4 p-4 border"
+                    key={index}
                   >
                     <img
                       src={item.photoUrl}
@@ -178,14 +161,14 @@ const Order = () => {
                       <div className="font-bold text-lg">
                         {item.productName}
                       </div>
-                      <p>Price: ${item.productPrice}</p>
-                      <p>Quantity: {item.quantity}</p>
+                      <p>Price: ${productPrice}</p>
+                      {/* <p>Quantity: {productQuantity}</p> */}
                     </div>
                   </div>
                 ))}
               </div>
             ) : (
-              <p>No items in the cart.</p>
+              <p>No items.</p>
             )}
           </div>
         </div>
@@ -201,9 +184,7 @@ const Order = () => {
             <CardContent className="flex flex-col gap-5 pt-4 border-b">
               <div className="flex gap-4">
                 <div className="text-primary font-semibold">Subtotal:</div>
-                <div className="text-black font-normal">
-                  {totalPrice.toFixed(2)}
-                </div>
+                <div className="text-black font-normal">{productPrice}</div>
               </div>
               <div className="flex gap-4">
                 <div className="text-primary font-semibold">Delivery fee:</div>
@@ -212,11 +193,10 @@ const Order = () => {
             </CardContent>
             <CardFooter className="flex flex-row gap-4 pt-4">
               <div className="text-primary font-semibold">Total Price:</div>
-              <div className="text-black font-normal">
-                ${totalPrice.toFixed(2)}
-              </div>
+              <div className="text-black font-normal">${productPrice}</div>
             </CardFooter>
           </Card>
+
           <div className="">
             <Button
               onClick={makePayment}
@@ -231,4 +211,4 @@ const Order = () => {
   );
 };
 
-export default Order;
+export default OrderItem;
