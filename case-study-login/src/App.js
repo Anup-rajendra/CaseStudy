@@ -13,7 +13,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import Checkout from './components/Checkout';
 
-
+import NotificationComponent from './components/Notification';
 function App() {
     return (
         <Router>
@@ -21,6 +21,7 @@ function App() {
                 <Routes>
                     <Route path="/signing" element={<Signing />} />
                     <Route path="*" element={<Login />}/>
+                    <Route path='/notification' element={<NotificationComponent/>}/>
                     {/* Wrap protected routes with ProtectedRoute */}
                     <Route element={<ProtectedRoute><Layout /></ProtectedRoute>}>
                         <Route path="/products" element={<Products />} />
@@ -30,6 +31,7 @@ function App() {
                         <Route path="/changeaddress" element={<ChangeAddress/>}/>
                         <Route path="/checkout" element={<Checkout/>}/>
                     </Route>
+                    
                 </Routes>
             </div>
         </Router>

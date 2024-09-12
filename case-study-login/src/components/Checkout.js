@@ -110,7 +110,7 @@ const Checkout = () => {
         };
 
         console.log('Order Summary:', orderSummary);
-
+        
         try {
           const response = await axios.post(
             'http://localhost:5071/api/Notifications', 

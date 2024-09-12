@@ -1,0 +1,21 @@
+// src/axios.js
+import axios from 'axios';
+
+// Configure axios instance
+const axiosInstance = axios.create({
+  baseURL: 'http://localhost:5207/api',
+});
+
+// Add a request interceptor
+axiosInstance.interceptors.request.use(
+  config => {
+    const token = localStorage.getItem('jwtToken');
+    if (token) {
+      config.headers['Authorization'] = `Bearer ${token}`;
+    }
+    return config;
+  },
+  error => Promise.reject(error)
+);
+
+export default axiosInstance;
