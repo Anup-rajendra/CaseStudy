@@ -75,7 +75,7 @@ namespace AddUserCaseStudy.Controllers
             {
                 // Log the exception
                 Console.WriteLine(ex.Message);
-                return "Internal server error.";
+                return $"{ex}";
             }
         }
 

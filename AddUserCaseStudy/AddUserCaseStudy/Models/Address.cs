@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace RepositoryLayer.Models;
+namespace AddUserCaseStudy.Models;
 
 public partial class Address
 {

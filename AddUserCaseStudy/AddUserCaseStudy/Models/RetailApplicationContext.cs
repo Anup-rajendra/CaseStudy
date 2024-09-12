@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace RepositoryLayer.Models;
+namespace AddUserCaseStudy.Models;
 
 public partial class RetailApplicationContext : DbContext
 {
