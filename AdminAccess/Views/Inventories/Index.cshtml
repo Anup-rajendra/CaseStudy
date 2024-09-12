@@ -1,0 +1,38 @@
+﻿@model IEnumerable<AdminAccess.Models.Inventory>
+
+@{
+    ViewData["Title"] = "Inventory List";
+}
+
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="text-primary">Inventory List</h1>
+        <a asp-action="Create" class="btn btn-success">Create New Inventory</a>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-hover align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th>Stock Quantity</th>
+                    <th class="text-center">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.StockQuantity)
+                        </td>
+                        <td class="text-center">
+                            <a asp-action="Edit" asp-route-id="@item.InventoryId" class="btn btn-sm btn-primary me-2">Edit</a>
+                            <a asp-action="Details" asp-route-id="@item.InventoryId" class="btn btn-sm btn-info me-2">Details</a>
+                            <a asp-action="Delete" asp-route-id="@item.InventoryId" class="btn btn-sm btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
