@@ -122,10 +122,10 @@ const DropdownAvatar = () => {
           <span>API</span>
         </DropdownMenuItem>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>
-          <button onClick={handleLogout}>
+        <DropdownMenuItem onClick={handleLogout}>
+          <button className="flex">
             <LogOut className="mr-2 h-4 w-4" />
-            Log out
+            <div>Log out</div>
           </button>
         </DropdownMenuItem>
       </DropdownMenuContent>
