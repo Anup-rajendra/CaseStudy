@@ -2,9 +2,14 @@ import React, { useState, useEffect } from 'react';
 import '../css/AddAddress.css';
 import { useMutation } from '@apollo/client';
 import { ADD_TO_ADDRESS } from '../Apollo/queries';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog';
-import { Input } from './ui/input';
-import { Button } from './ui/button';
+import {
+  Dialog,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from './ui/dialog';
+
 const AddAddress = ({ isOpen, onClose, refetchAddresses }) => {
   const [user, setUser] = useState(1);
   const [address, setAddress] = useState({
@@ -96,18 +101,16 @@ const AddAddress = ({ isOpen, onClose, refetchAddresses }) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[425px]  ">
+      <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle className="text-primary font-bold pb-2 text-xl">
-            Add a New Address
-          </DialogTitle>
+          <DialogTitle>Add a New Address</DialogTitle>
         </DialogHeader>
-        <div>
+        <div className="add-address-container">
           <form onSubmit={handleSubmit}>
-            <div className="form-group ">
+            <div className="form-group">
               <label>
                 Street:
-                <Input
+                <input
                   type="text"
                   name="street"
                   value={address.street}
@@ -119,7 +122,7 @@ const AddAddress = ({ isOpen, onClose, refetchAddresses }) => {
             <div className="form-group">
               <label>
                 City:
-                <Input
+                <input
                   type="text"
                   name="city"
                   value={address.city}
@@ -131,7 +134,7 @@ const AddAddress = ({ isOpen, onClose, refetchAddresses }) => {
             <div className="form-group">
               <label>
                 State:
-                <Input
+                <input
                   type="text"
                   name="state"
                   value={address.state}
@@ -143,7 +146,7 @@ const AddAddress = ({ isOpen, onClose, refetchAddresses }) => {
             <div className="form-group">
               <label>
                 Zip Code:
-                <Input
+                <input
                   type="text"
                   name="zipCode"
                   value={address.zipCode}
@@ -152,24 +155,19 @@ const AddAddress = ({ isOpen, onClose, refetchAddresses }) => {
                 />
               </label>
             </div>
-            <div className="flex flex-col gap-2">
-              <Button
-                type="button"
-                onClick={fetchLocation}
-                disabled={isFetchingLocation}
-                className="bg-gradient-to-r from-primary to-blue-400 animated-background transition ease-in-out delay-150 hover:translate-y-1 hover:scale-110 duration-300"
-              >
-                {isFetchingLocation ? 'Fetching Location...' : 'Use Location'}
-              </Button>
-              <Button
-                type="submit"
-                className="bg-gradient-to-r from-primary to-blue-400 animated-background transition ease-in-out delay-150 hover:translate-y-1 hover:scale-110 duration-300"
-              >
-                Add Address
-              </Button>
-            </div>
+            <button
+              type="button"
+              onClick={fetchLocation}
+              disabled={isFetchingLocation}
+            >
+              {isFetchingLocation ? 'Fetching Location...' : 'Use Location'}
+            </button>
+            <button type="submit">Add Address</button>
           </form>
         </div>
+        <DialogFooter>
+          <button onClick={onClose}>Cancel</button>
+        </DialogFooter>
       </DialogContent>
     </Dialog>
   );

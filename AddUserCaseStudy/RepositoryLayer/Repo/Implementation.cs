@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace RepositoryLayer.Repo
 {
-    public class Implementation<T> : SignInInterface <T> where T : class
+    public class Implementation<T> : SignInInterface<T> where T : class
     {
         private readonly RetailApplicationContext _context;
         private readonly DbSet<T> _dbSet;
@@ -35,6 +35,11 @@ namespace RepositoryLayer.Repo
             return await _dbSet.Where(predicate).ToListAsync();
         }
 
+        public async Task AddWishlist(Wishlist entity)
+        {
+            _context.Wishlists.Add(entity);
+            _context.SaveChanges();
+        }
         public async Task AddAsync(T entity)
         {
             await _dbSet.AddAsync(entity);
@@ -83,9 +88,7 @@ namespace RepositoryLayer.Repo
         public int Givenewid()
         {
             var list=_dbSet.ToList();
-
-            Random random = new Random();
-            return random.Next(list.Count+1,1000);
+            return list.Count+1;
         }
 
         public bool CheckEmailPresent(string email)
@@ -93,7 +96,7 @@ namespace RepositoryLayer.Repo
             var list = _context.Users.ToList();
             for (int i = 0; i < list.Count; i++)
             {
-                if (list[i].Email == email )
+                if (list[i].Email == email)
                     return true;
             }
             return false;
@@ -119,20 +122,6 @@ namespace RepositoryLayer.Repo
             // Save all changes to the database
             _context.SaveChanges();
         }
-        public async Task AddWishlist(Wishlist entity)
-        {
-            _context.Wishlists.Add(entity);
-            _context.SaveChanges();
-        }
 
-        public Task AddCart(int Userid)
-        {
-            Cart cart = new Cart();
-            cart.UserId = Userid;
-            cart.CartId= Userid;
-            _context.Carts.AddAsync(cart);
-            _context.SaveChanges();
-            return Task.CompletedTask;
-        }
     }
 }

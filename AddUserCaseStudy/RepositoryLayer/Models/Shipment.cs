@@ -13,7 +13,5 @@ public partial class Shipment
 
     public DateOnly? ShipmentDate { get; set; }
 
-    public DateTime? DeliveryDate { get; set; }
-
     public virtual Order? Order { get; set; }
 }

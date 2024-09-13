@@ -48,11 +48,11 @@ const NavBar = () => {
             </li>
           </ul>
         </nav>
-        <div className="pl-16 border-b-2 z-10 bg-white">
+        <div className="pl-16 border-b z-10">
           <CategoryNavigation />
         </div>
       </div>
-      <div className="pt-[100px]"></div>
+      <div className="pt-24"></div>
     </div>
   );
 };

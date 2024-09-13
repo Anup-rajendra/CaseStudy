@@ -13,7 +13,7 @@
       "sourceType": "module",
       "requireConfigFile": false
     },
-    "plugins": ["react","jsx","tsx"],
+    "plugins": ["react","jsx"],
     "rules": {
       "react/prop-types": "off",
       "react/no-unknown-property": "off"
