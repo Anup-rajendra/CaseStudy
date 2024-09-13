@@ -19,6 +19,7 @@ import { Button } from './ui/button';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
+import { ShoppingCart } from 'lucide-react';
 const Products = () => {
   const [likedProducts, setLikedProducts] = useState([]);
   const Navigate = useNavigate();
@@ -128,16 +129,33 @@ const Products = () => {
                 <button class="fixed-button" onClick={()=>navigate('/Cart')}>Go To Cart</button>
             </div> */}
       <div className="grid grid-cols-3 gap-4 px-3">
-        {products.map((product) => (
-          <>
-            <Card className="rounded-none text-primary shadow-md hover:shadow-primary ">
-              <CardHeader>
-                <CardTitle className="border-b pb-4">{product.name}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="flex gap-6">
-                  <div className="flex flex-col gap-2 relative">
-                    <Link to={`/product`} state={{ product, userId }}>
+        {products.map((product, index) => (
+          <div key={index}>
+            <Link to={`/product`} state={{ product, userId }}>
+              <Card className="rounded-none text-primary shadow-md hover:shadow-primary">
+                <CardHeader>
+                  <CardTitle className="border-b pb-4">
+                    <div className="flex justify-between">
+                      <div>{product.name}</div>
+                      <div
+                        className="cursor-pointer"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleLikeClick(product.productId);
+                        }}
+                      >
+                        {likedProducts.includes(product.productId) ? (
+                          <AiFillHeart size={24} className="text-red-500" />
+                        ) : (
+                          <AiOutlineHeart size={24} className="text-gray-500" />
+                        )}
+                      </div>
+                    </div>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="flex gap-6">
+                    <div className="flex flex-col gap-2 relative">
                       <img
                         src={product.photoUrl}
                         alt={product.name}
@@ -148,71 +166,66 @@ const Products = () => {
                           alignContent: 'center',
                         }}
                       />
-                    </Link>
-                    <div
-                      className="absolute top-2 right-2 cursor-pointer"
-                      onClick={() => handleLikeClick(product.productId)}
+                    </div>
+                    <div className="flex flex-col gap-6 justify-center">
+                      <div>
+                        <span className="font-bold text-xl">Price: </span>
+                        <span className="text-black font-semibold pl-1">
+                          Rs.{product.price.toFixed(2)}
+                        </span>
+                      </div>
+                      <div>
+                        <span className="font-bold text-xl">Category:</span>
+                        <span className="text-black font-semibold pl-1">
+                          {' '}
+                          {product.category.categoryName}
+                        </span>
+                      </div>
+                      <div>
+                        <span className="font-bold text-xl">Quantity:</span>{' '}
+                        <span className="text-black font-semibold pl-1">
+                          {product.inventory.stockQuantity}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+                <CardFooter className="flex gap-4">
+                  <div>
+                    <Button
+                      variant="outline"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation(); // Prevent link navigation
+                        handleCartSubmit(product.productId, product.name);
+                      }}
+                      className="transition ease-in-out delay-150 hover:-translate-y-1"
                     >
-                      {likedProducts.includes(product.productId) ? (
-                        <AiFillHeart size={24} className="text-red-500" />
-                      ) : (
-                        <AiOutlineHeart size={24} className="text-gray-500" />
-                      )}
-                    </div>
+                      <ShoppingCart size={20} />
+                      Add to Cart
+                    </Button>
                   </div>
-                  <div className="flex flex-col gap-6 justify-center">
-                    <div>
-                      <span className="font-bold text-xl">Price: </span>
-                      <span className="text-black font-semibold pl-1">
-                        Rs.{product.price.toFixed(2)}
-                      </span>
-                    </div>
-                    <div>
-                      <span className="font-bold text-xl">Category:</span>
-                      <span className="text-black font-semibold pl-1">
-                        {' '}
-                        {product.category.categoryName}
-                      </span>
-                    </div>
-                    <div>
-                      <span className="font-bold text-xl">Quantity:</span>{' '}
-                      <span className="text-black font-semibold pl-1">
-                        {product.inventory.stockQuantity}
-                      </span>
-                    </div>
+                  <div className="w-full">
+                    <Button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation(); // Prevent link navigation
+                        handleBuyNow(
+                          product.productId,
+                          product.name,
+                          product.price,
+                          product.photoUrl
+                        );
+                      }}
+                      className="bg-gradient-to-r from-primary to-blue-400 animated-background w-full transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 hover:bg-indigo-500 duration-300"
+                    >
+                      Buy Now
+                    </Button>
                   </div>
-                </div>
-              </CardContent>
-              <CardFooter className="flex gap-4">
-                <div>
-                  <Button
-                    variant="outline"
-                    onClick={() =>
-                      handleCartSubmit(product.productId, product.name)
-                    }
-                    className="transition ease-in-out delay-150 hover:-translate-y-1"
-                  >
-                    Add to Cart
-                  </Button>
-                </div>
-                <div className="w-full">
-                  <Button
-                    onClick={() =>
-                      handleBuyNow(
-                        product.productId,
-                        product.name,
-                        product.price,
-                        product.photoUrl
-                      )
-                    }
-                    className="bg-gradient-to-r from-primary to-blue-400 animated-background w-full transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 hover:bg-indigo-500 duration-300    "
-                  >
-                    Buy Now
-                  </Button>
-                </div>
-              </CardFooter>
-            </Card>
-          </>
+                </CardFooter>
+              </Card>
+            </Link>
+          </div>
         ))}
       </div>
     </div>

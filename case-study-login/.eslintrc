@@ -1,5 +1,5 @@
 {
-    "parser": "@babel/eslint-parser",
+
     "env": {
       "browser": true,
       "es2021": true
@@ -9,11 +9,12 @@
       "plugin:react/recommended"
     ],
     "parserOptions": {
+      "parser": "@babel/eslint-parser",
       "ecmaVersion": 12,
       "sourceType": "module",
       "requireConfigFile": false
     },
-    "plugins": ["react","jsx","tsx"],
+    "plugins": ["react","jsx"],
     "rules": {
       "react/prop-types": "off",
       "react/no-unknown-property": "off"

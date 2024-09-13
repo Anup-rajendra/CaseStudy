@@ -21,8 +21,7 @@ const OrderItem = () => {
   const [changeAddress, setChangeAddress] = useState(false);
   const location = useLocation();
   console.log(location.state);
-  const { productId, productName, productPrice, productPhotoURL } =
-    location.state;
+  const { productId, productName, productPrice, photoURL } = location.state;
   console.log(productId);
 
   const productArray = [
@@ -30,7 +29,7 @@ const OrderItem = () => {
       productName,
       productPrice,
       quantity: 1,
-      photoUrl: productPhotoURL,
+      photoUrl: photoURL,
     },
   ];
 

@@ -10,10 +10,12 @@ import { Toaster, toast } from 'sonner';
 import AddReview from './AddReview';
 import axios from 'axios';
 import '../css/ProductDetails.css';
+import { Button } from './ui/button';
 const ProductDetails = () => {
   const location = useLocation();
   const { product } = location.state || {};
   const [reviews, setReviews] = useState([]);
+  console.log(product);
   const [isLoading, setIsLoading] = useState(false);
   const [averageRating, setAverageRating] = useState(0);
   //const productImageUrl = product.photoUrl;
@@ -39,12 +41,14 @@ const ProductDetails = () => {
         );
         const fetchedReviews = response.data.$values;
         setReviews(fetchedReviews);
+
         // Calculate average rating
         if (fetchedReviews.length > 0) {
           const totalRating = fetchedReviews.reduce(
             (sum, review) => sum + review.rating,
             0
           );
+
           const avgRating = totalRating / fetchedReviews.length;
           setAverageRating(avgRating);
         } else {
@@ -109,36 +113,61 @@ const ProductDetails = () => {
     );
   };
   console.log('this is product', product);
+  console.log('reviews', reviews);
   return (
-    <div className="product-details-container">
-      <Toaster />
-      <div className="product-image-section">
-        <img src={product.photoUrl} alt="Product" className="product-image" />
-        <div className="button-container">
-          <button
+    <div className="flex items-center justify-end pr-20 pt-6 bg-white">
+      <div className="fixed left-36 top-40 bg-transparent bg-white border rounded-lg hover:shadow-primary shadow-md">
+        <div className="border-b p-3 ">
+          <img
+            src={product.photoUrl}
+            alt="Product"
+            className=" w-[416px] h-[416px]"
+          />
+        </div>
+        <div className="flex gap-2 p-4">
+          <Button
             onClick={() => handleAddToCart(product.productId, product.name)}
-            className="button add-to-cart"
+            className="flex-1 h-14 text-primary transition ease-in-out delay-150 hover:-translate-y-1"
+            variant="outline"
           >
             Add to Cart
-          </button>
-          <button onClick={() => handleBuyNow} className="button buy-now">
+          </Button>
+          <Button
+            onClick={() => handleBuyNow}
+            className="flex-1 h-14 bg-gradient-to-r from-primary to-blue-400 animated-background transition ease-in-out delay-150 hover:-translate-y-1"
+          >
             Buy Now
-          </button>
+          </Button>
         </div>
       </div>
-      <div className="product-info-section">
-        <h2>Product Details</h2>
-        <p className="product-id">ProductName: {product.name}</p>
-        <p className="product-id">Price: {product.price}$</p>
-        <p className="user-id">Category: {product.category.categoryName}</p>
-        <p className="description">Description: {product.description}</p>
-        <h2 className="heading">User Reviews</h2>
+      <div className="bg-white w-[800px] flex-1"></div>
+      <div className="flex flex-col w-[800px] p-5 rounded-sm bg-white gap-4 ">
+        <Toaster />
+        <div className="flex flex-col gap-2 border p-4 rounded-md">
+          <div className="font-bold text-3xl border-b pb-4 ">
+            {product.name}
+          </div>
+          <div className="font-extrabold text-2xl pb-2">${product.price}</div>
+          <div className="flex gap-2">
+            <div className="font-semibold ">Category: </div>
+            <div>{product.category.categoryName}</div>
+          </div>
+          <div className="flex gap-2 flex-wrap pb-8">
+            <div className="font-semibold ">Description: </div>
+            <div>{product.description}</div>
+          </div>
+        </div>
         {isLoading ? (
           <p className="loading">Loading reviews...</p>
         ) : (
-          <>
+          <div className="border rounded-sm p-4">
             <div className="overall-rating">
-              <h3>Overall Rating</h3>
+              <div className="font-bold text-3xl border-b pb-3">
+                User Reviews
+              </div>
+              <div className="pt-3 font-medium border-b pb-4">
+                Overall Rating
+              </div>
               <div className="rating-stars">{renderStars(averageRating)}</div>
               <p className="average-rating">
                 {averageRating.toFixed(1)} out of 5
@@ -153,7 +182,8 @@ const ProductDetails = () => {
                       {review.username}
                     </p>
                     <p>
-                      <strong>Rating:</strong> {renderStars(review.rating)}
+                      <div className="font-semibold">Rating:</div>{' '}
+                      {renderStars(review.rating)}
                     </p>
                     <p>
                       <strong>Comment:</strong> {review.comment}
@@ -168,7 +198,7 @@ const ProductDetails = () => {
                 <li className="noReviews">No reviews found</li>
               )}
             </ul>
-          </>
+          </div>
         )}
         <div className="add-review-container">
           <AddReview product={product} />

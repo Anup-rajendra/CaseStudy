@@ -7,6 +7,7 @@ export const GET_PRODUCTS = gql`
       name
       price
       photoUrl
+      description
       productId
       supplierId
       inventory {
