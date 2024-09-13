@@ -101,7 +101,54 @@ public class Query
             .Where(a => a.UserId == userId)
             .ToListAsync();
     }
-    
+    public async Task<User> UpdateUserProfileAsync([Service] IRetailApplication<User> userRepository, int userId, User updatedUser)
+    {
+        var user = await userRepository.GetByIdAsync(userId);
+        if (user == null) return null;
 
+        user.Firstname = updatedUser.Firstname;
+        user.Lastname = updatedUser.Lastname;
+        user.Email = updatedUser.Email;
+        user.PhoneNumber = updatedUser.PhoneNumber;
+        user.Addresses.FirstOrDefault().Street = updatedUser.Addresses.FirstOrDefault().Street;
+        user.Addresses.FirstOrDefault().City = updatedUser.Addresses.FirstOrDefault().City;
+        user.Addresses.FirstOrDefault().State = updatedUser.Addresses.FirstOrDefault().State;
+        user.Addresses.FirstOrDefault().ZipCode = updatedUser.Addresses.FirstOrDefault().ZipCode;
+
+        await userRepository.UpdateAsync(user);
+        return user;
+    }
+
+    public async Task<IEnumerable<Order>> GetOrdersByUserIdAsync([Service] IRetailApplication<Order> orderRepository, int userId)
+    {
+        return await orderRepository.GetAll()
+            .Where(o => o.UserId == userId)
+            .Include(o => o.OrderItems)
+                .ThenInclude(oi => oi.Product)
+            .Include(o => o.Shipment)
+            .ToListAsync();
+    }
+
+    public async Task<Order> getOrderByIdAsync([Service] IRetailApplication<Order> orderRepository, int orderId)
+    {
+        return await orderRepository.GetAll()
+            .Where(o => o.OrderId == orderId)
+            .Include(o => o.OrderItems)
+                .ThenInclude(oi => oi.Product) // Include Product details for each OrderItem
+            .Include(o => o.Shipment) // Include Shipment details
+            .FirstOrDefaultAsync(); // Get the first match or null
+    }
+
+
+
+    public async Task<IEnumerable<Order>> GetUserOrders([Service] IRetailApplication<Order> orderRepository, int userId)
+    {
+        return await orderRepository.GetAll()
+            .Where(o => o.UserId == userId)
+            .Include(o => o.OrderItems)
+                .ThenInclude(oi => oi.Product)
+            .Include(o => o.Shipment)
+            .ToListAsync();
+    }
 
 }

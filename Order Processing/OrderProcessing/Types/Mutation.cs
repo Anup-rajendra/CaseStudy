@@ -74,5 +74,30 @@ public class Mutation
     {
         return await cartItemRepository.RemoveAddress(addressId);
     }
+    public async Task<User> UpdateUserProfileAsync(
+        [Service] IRetailApplication<User> userRepository,
+        int userId,
+        string firstName,  // Updated argument names
+        string lastName,
+        string email,
+        string? phoneNumber
+    )
+    {
+        // Fetch the user by ID
+        var user = await userRepository.GetByIdAsync(userId);
+        if (user == null)
+        {
+            throw new Exception("User not found");
+        }
 
+        // Update the user details
+        user.Firstname = firstName;
+        user.Lastname = lastName;
+        user.Email = email;
+        user.PhoneNumber = phoneNumber;
+
+        // Persist changes
+        await userRepository.UpdateAsync(user);
+        return user;
+    }
 }
