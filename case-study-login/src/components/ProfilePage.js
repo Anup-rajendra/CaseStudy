@@ -1,14 +1,14 @@
+// ProfilePage.js
 import React, { useState, useEffect } from 'react';
 import { useQuery, useMutation } from '@apollo/client';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for routing
-import { GET_USER_PROFILE, UPDATE_PROFILE } from '../Apollo/queries'; // Ensure this path is correct
+import { useNavigate } from 'react-router-dom';
+import { GET_USER_PROFILE, UPDATE_PROFILE } from '../Apollo/queries';
 import '../css/ProfilePage.css';
 
 const ProfilePage = () => {
   const userId = 1; // Set user ID dynamically based on login
-  const navigate = useNavigate(); // Add navigate for routing
+  const navigate = useNavigate();
 
-  // Fetch the user profile using the GraphQL query
   const { data, loading, error, refetch } = useQuery(GET_USER_PROFILE, {
     variables: { userId },
   });
@@ -65,7 +65,11 @@ const ProfilePage = () => {
   };
 
   const handleOrdersClick = () => {
-    navigate('/order-history'); // Navigate to OrderHistoryPage when Orders button is clicked
+    navigate('/order-history');
+  };
+
+  const handleSupportClick = () => {
+    navigate('/customer-support'); // Navigate to CustomerSupportPage when Support button is clicked
   };
 
   return (
@@ -136,9 +140,10 @@ const ProfilePage = () => {
         <button onClick={handleEditClick}>Edit Profile</button>
       )}
 
-      {/* Orders Button Outside User Information */}
+      {/* Orders and Support Buttons */}
       <div className="orders-section">
-        <button onClick={handleOrdersClick}>Orders</button> {/* New Orders button */}
+        <button onClick={handleOrdersClick}>Orders</button>
+        <button onClick={handleSupportClick}>Customer Support</button> {/* New Customer Support button */}
       </div>
     </div>
   );

@@ -158,8 +158,13 @@ public partial class RetailApplicationContext : DbContext
                 .ValueGeneratedNever()
                 .HasColumnName("OrderID");
             entity.Property(e => e.OrderDate).HasColumnType("datetime");
+            entity.Property(e => e.ShippingAddressId).HasColumnName("ShippingAddressID");
             entity.Property(e => e.TotalAmount).HasColumnType("decimal(10, 3)");
             entity.Property(e => e.UserId).HasColumnName("UserID");
+
+            entity.HasOne(d => d.ShippingAddress).WithMany(p => p.Orders)
+                .HasForeignKey(d => d.ShippingAddressId)
+                .HasConstraintName("FK__Orders__Shipping__6E01572D");
 
             entity.HasOne(d => d.User).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.UserId)

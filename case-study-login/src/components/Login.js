@@ -1,15 +1,15 @@
-import React, { useState,useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
- 
 
 const Login = () => {
-    const { user,login } = useContext(AuthContext);
+    const { user, login } = useContext(AuthContext);
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
+
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
@@ -17,28 +17,25 @@ const Login = () => {
                 Username: username,
                 Password: password
             });
-            const response = await axios.post('http://localhost:5185/api/RetailAPI/authenticate', 
-                { Username: username, Password: password }, 
+            const response = await axios.post('http://localhost:5185/api/RetailAPI/authenticate',
+                { Username: username, Password: password },
                 { headers: { 'Content-Type': 'application/json' } }
             );
-            
+
             const token = response.data.token;
             console.log(response);
 
             // Store the JWT token in local storage
             localStorage.setItem('token', token);
- 
-           // http://localhost:5185/api/RetailAPI/john_doe/Password123
-            const getUserDetails= await axios.get(`http://localhost:5185/api/RetailAPI/${username}/${password}`)
+
+            const getUserDetails = await axios.get(`http://localhost:5185/api/RetailAPI/${username}/${password}`);
             console.log(getUserDetails);
             const userData = {
                 UserId: getUserDetails.data,  // Adjust the property name as per your API response
-             
-                // Add more properties if needed
             };
-            console.log(userData,userData.UserId)
+            console.log(userData, userData.UserId);
             login(userData.UserId);
-           console.log("Context:",user);
+            console.log("Context:", user);
 
             // Redirect to the Products page
             navigate('/products');
@@ -50,6 +47,10 @@ const Login = () => {
 
     const handleSignUpRedirect = () => {
         navigate('/signing');
+    };
+
+    const handleForgotPasswordRedirect = () => {
+        navigate('/forgot-password'); // Redirect to a Forgot Password page
     };
 
     return (
@@ -75,9 +76,17 @@ const Login = () => {
                 </div>
                 <button type="submit">Login</button>
             </form>
+
             <div>
                 <button type="button" onClick={handleSignUpRedirect}>
                     Don't Have An Account?
+                </button>
+            </div>
+
+            {/* Forgot Password link */}
+            <div>
+                <button type="button" onClick={handleForgotPasswordRedirect} style={{ color: 'blue', textDecoration: 'underline', border: 'none', background: 'none', cursor: 'pointer' }}>
+                    Forgot Password?
                 </button>
             </div>
         </div>

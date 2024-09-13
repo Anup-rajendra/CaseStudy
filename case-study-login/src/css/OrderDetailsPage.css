@@ -2,15 +2,135 @@
 
 .order-details-container {
   padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.order-summary, .shipping-address, .shipment-tracking {
+  margin-bottom: 20px;
+}
+
+.order-summary p, .shipping-address p {
+  font-size: 16px;
+  margin: 5px 0;
 }
 
 .product-details {
   border: 1px solid #ddd;
   padding: 10px;
   margin-bottom: 20px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .product-image {
-  max-width: 200px; /* Adjust size as needed */
+  max-width: 150px; /* Adjust size as needed */
   height: auto;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.product-details p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.total-amount {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.shipping-address p {
+  font-size: 14px;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #888;
+}
+
+.timeline li {
+  position: relative;
+  flex: 1;
+  text-align: center;
+}
+
+.timeline li:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #ddd;
+  z-index: -1;
+}
+
+.timeline li:first-child:before {
+  left: 50%;
+}
+
+.timeline li:last-child:before {
+  right: 50%;
+}
+
+.timeline li.active {
+  color: #4caf50;
+}
+
+.timeline li.active:before {
+  background: #4caf50;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.continue-shopping {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.continue-shopping:hover {
+  background-color: #45a049;
+}
+
+.contact {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+.contact-link {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
 }

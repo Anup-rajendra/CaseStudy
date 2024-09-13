@@ -13,6 +13,7 @@ import Checkout from './components/Checkout';
 import Profile from './components/ProfilePage'; // Import the ProfilePage component
 import OrderHistoryPage from './components/OrderHistoryPage';
 import OrderDetailsPage from './components/OrderDetailsPage';
+import CustomerSupportPage from './components/CustomerSupportPage'; 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 
@@ -34,6 +35,7 @@ function App() {
                         <Route path="/profile" element={<Profile/>}/> {/* Add Profile route */}
                         <Route path="/order-history" element={<OrderHistoryPage/>}/>
                         <Route path="/order-details/:orderId" element={<OrderDetailsPage />} />
+                        <Route path="/customer-support" element={<CustomerSupportPage />} /> {/* New Customer Support route */}
                     </Route>
                 </Routes>
             </div>

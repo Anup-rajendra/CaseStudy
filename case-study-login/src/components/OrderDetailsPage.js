@@ -42,6 +42,19 @@ const OrderDetailsPage = () => {
       {/* Shipment Tracking */}
       <h3>Shipment Tracking:</h3>
       <p>Tracking Number: {order.shipment.trackingNumber}</p>
+
+      {/* Shipping Address */}
+      <h3>Shipping Address:</h3>
+      {order.shipment.address ? (
+        <div className="shipping-address">
+          <p>Street: {order.shipment.address.street || 'Street not available'}</p>
+          <p>City: {order.shipment.address.city || 'City not available'}</p>
+          <p>State: {order.shipment.address.state || 'State not available'}</p>
+          <p>Zip Code: {order.shipment.address.zipCode || 'Zip Code not available'}</p>
+        </div>
+      ) : (
+        <p>Adarsh Palm Retreat Internal Road, Bengaluru	Karnataka -	560103</p>
+      )}
     </div>
   );
 };

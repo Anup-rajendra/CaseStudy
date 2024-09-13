@@ -17,5 +17,7 @@ public partial class Address
 
     public string? ZipCode { get; set; }
 
+    public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
+
     public virtual User? User { get; set; }
 }

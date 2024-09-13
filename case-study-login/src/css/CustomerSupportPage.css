@@ -1,0 +1,106 @@
+/* CustomerSupportPage.css */
+.support-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+.faq-buttons button {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.faq-buttons button:hover {
+  background-color: #0056b3;
+}
+
+.answer-section {
+  margin-top: 20px;
+}
+
+.feedback {
+  margin-top: 20px;
+}
+
+.feedback button {
+  margin-right: 10px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.feedback button:hover {
+  background-color: #0056b3;
+}
+
+/* Contact Form Styles */
+.contact-form {
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  margin-top: auto;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #666;
+  padding: 1rem 0;
+}
