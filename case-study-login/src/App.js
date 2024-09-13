@@ -14,6 +14,11 @@ import Checkout from './components/Checkout';
 import OrderItem from './components/OrderItem';
 import ProductDetails from './components/ProductDetails';
 import Wishlist from './components/Wishlist';
+import Profile from './components/ProfilePage'; // Import the ProfilePage component
+import OrderHistoryPage from './components/OrderHistoryPage';
+import OrderDetailsPage from './components/OrderDetailsPage';
+import CustomerSupportPage from './components/CustomerSupportPage';
+import SearchedProducts from './components/SearchedProducts';
 function App() {
   const location = useLocation();
   const [progress, setProgress] = useState(0);
@@ -60,6 +65,14 @@ function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/orderitem" element={<OrderItem />} />
           <Route path="/wishlist" element={<Wishlist />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/order-history" element={<OrderHistoryPage />} />
+          <Route
+            path="/order-details/:orderId"
+            element={<OrderDetailsPage />}
+          />
+          <Route path="/customer-support" element={<CustomerSupportPage />} />
+          <Route path="/Searches" element={<SearchedProducts />} />
         </Route>
       </Routes>
     </div>

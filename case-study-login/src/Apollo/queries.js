@@ -264,3 +264,112 @@ export const REMOVE_ADDRESS = gql`
     }
   }
 `;
+
+export const GET_USER_PROFILE = gql`
+  query GetUserProfile($userId: Int!) {
+    userById(id: $userId) {
+      userId
+      username
+      firstname
+      lastname
+      email
+      phoneNumber
+      addresses {
+        street
+        city
+        state
+        zipCode
+      }
+    }
+  }
+`;
+
+export const UPDATE_PROFILE = gql`
+  mutation UpdateUserProfile(
+    $userId: Int!
+    $firstName: String!
+    $lastName: String!
+    $email: String!
+    $phoneNumber: String
+  ) {
+    updateUserProfile(
+      userId: $userId
+      firstName: $firstName
+      lastName: $lastName
+      email: $email
+      phoneNumber: $phoneNumber
+    ) {
+      userId
+      firstname
+      lastname
+      email
+      phoneNumber
+    }
+  }
+`;
+export const UPDATE_ADDRESS = gql`
+  mutation UpdateAddress(
+    $userId: Int!
+    $street: String
+    $city: String
+    $state: String
+    $zipcode: String
+  ) {
+    updateAddress(
+      userId: $userId
+      street: $street
+      city: $city
+      state: $state
+      zipcode: $zipcode
+    ) {
+      street
+      city
+      state
+      zipcode
+    }
+  }
+`;
+
+export const GET_USER_ORDERS = gql`
+  query GetUserOrders($userId: Int!) {
+    userOrders(userId: $userId) {
+      orderId
+      orderDate
+      totalAmount
+      orderItems {
+        productId
+        quantity
+        price
+        product {
+          name
+          photoUrl
+        }
+      }
+    }
+  }
+`;
+
+export const GET_ORDER_DETAILS = gql`
+  query GetOrderDetails($orderId: Int!) {
+    getOrderById(orderId: $orderId) {
+      orderId
+      orderDate
+      totalAmount
+      orderItems {
+        orderItemId
+        quantity
+        price
+        product {
+          productId
+          name
+          photoUrl
+        }
+      }
+      shipment {
+        shipmentId
+        trackingNumber
+        shipmentDate
+      }
+    }
+  }
+`;
