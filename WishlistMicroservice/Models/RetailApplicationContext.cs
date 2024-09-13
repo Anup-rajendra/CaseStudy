@@ -211,6 +211,7 @@ public partial class RetailApplicationContext : DbContext
                 .ValueGeneratedNever()
                 .HasColumnName("ProductID");
             entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
+            entity.Property(e => e.Description).IsUnicode(false);
             entity.Property(e => e.InventoryId).HasColumnName("InventoryID");
             entity.Property(e => e.Name)
                 .HasMaxLength(255)
@@ -346,23 +347,15 @@ public partial class RetailApplicationContext : DbContext
 
         modelBuilder.Entity<WishlistItem>(entity =>
         {
-            entity.HasKey(e => e.WishlistItemId).HasName("PK__Wishlist__171E2181785E8612");
-
-            entity.HasIndex(e => new { e.WishlistId, e.ProductId }, "uwhi").IsUnique();
-
-            entity.Property(e => e.WishlistItemId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("WishlistItemID");
-            entity.Property(e => e.ProductId).HasColumnName("ProductID");
-            entity.Property(e => e.WishlistId).HasColumnName("WishlistID");
+            entity.HasKey(e => e.WishlistItemId).HasName("PK__Wishlist__171E21A120224A54");
 
             entity.HasOne(d => d.Product).WithMany(p => p.WishlistItems)
                 .HasForeignKey(d => d.ProductId)
-                .HasConstraintName("FK__WishlistI__Produ__6477ECF3");
+                .HasConstraintName("FK__WishlistI__Produ__70DDC3D8");
 
             entity.HasOne(d => d.Wishlist).WithMany(p => p.WishlistItems)
                 .HasForeignKey(d => d.WishlistId)
-                .HasConstraintName("FK__WishlistI__Wishl__6383C8BA");
+                .HasConstraintName("FK__WishlistI__Wishl__6FE99F9F");
         });
 
         OnModelCreatingPartial(modelBuilder);

@@ -238,22 +238,20 @@ public partial class RetailApplicationContext : DbContext
 
         modelBuilder.Entity<Review>(entity =>
         {
-            entity.HasKey(e => e.ReviewId).HasName("PK__Reviews__74BC79AE22FC3587");
+            entity.HasKey(e => e.ReviewId).HasName("PK__Reviews__74BC79AEA84160C1");
 
-            entity.Property(e => e.ReviewId)
-                .ValueGeneratedNever()
-                .HasColumnName("ReviewID");
-            entity.Property(e => e.Comment).HasColumnType("text");
+            entity.Property(e => e.ReviewId).HasColumnName("ReviewID");
+            entity.Property(e => e.Comment).IsUnicode(false);
             entity.Property(e => e.ProductId).HasColumnName("ProductID");
             entity.Property(e => e.UserId).HasColumnName("UserID");
 
             entity.HasOne(d => d.Product).WithMany(p => p.Reviews)
                 .HasForeignKey(d => d.ProductId)
-                .HasConstraintName("FK__Reviews__Product__6754599E");
+                .HasConstraintName("FK__Reviews__Product__73BA3083");
 
             entity.HasOne(d => d.User).WithMany(p => p.Reviews)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__Reviews__UserID__68487DD7");
+                .HasConstraintName("FK__Reviews__UserID__74AE54BC");
         });
 
         modelBuilder.Entity<Shipment>(entity =>

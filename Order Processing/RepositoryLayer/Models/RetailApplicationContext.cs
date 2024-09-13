@@ -158,8 +158,13 @@ public partial class RetailApplicationContext : DbContext
                 .ValueGeneratedNever()
                 .HasColumnName("OrderID");
             entity.Property(e => e.OrderDate).HasColumnType("datetime");
+            entity.Property(e => e.ShippingAddressId).HasColumnName("ShippingAddressID");
             entity.Property(e => e.TotalAmount).HasColumnType("decimal(10, 3)");
             entity.Property(e => e.UserId).HasColumnName("UserID");
+
+            entity.HasOne(d => d.ShippingAddress).WithMany(p => p.Orders)
+                .HasForeignKey(d => d.ShippingAddressId)
+                .HasConstraintName("FK__Orders__Shipping__75A278F5");
 
             entity.HasOne(d => d.User).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.UserId)
@@ -211,6 +216,7 @@ public partial class RetailApplicationContext : DbContext
                 .ValueGeneratedNever()
                 .HasColumnName("ProductID");
             entity.Property(e => e.CategoryId).HasColumnName("CategoryID");
+            entity.Property(e => e.Description).IsUnicode(false);
             entity.Property(e => e.InventoryId).HasColumnName("InventoryID");
             entity.Property(e => e.Name)
                 .HasMaxLength(255)
@@ -237,22 +243,20 @@ public partial class RetailApplicationContext : DbContext
 
         modelBuilder.Entity<Review>(entity =>
         {
-            entity.HasKey(e => e.ReviewId).HasName("PK__Reviews__74BC79AE22FC3587");
+            entity.HasKey(e => e.ReviewId).HasName("PK__Reviews__74BC79AEA84160C1");
 
-            entity.Property(e => e.ReviewId)
-                .ValueGeneratedNever()
-                .HasColumnName("ReviewID");
-            entity.Property(e => e.Comment).HasColumnType("text");
+            entity.Property(e => e.ReviewId).HasColumnName("ReviewID");
+            entity.Property(e => e.Comment).IsUnicode(false);
             entity.Property(e => e.ProductId).HasColumnName("ProductID");
             entity.Property(e => e.UserId).HasColumnName("UserID");
 
             entity.HasOne(d => d.Product).WithMany(p => p.Reviews)
                 .HasForeignKey(d => d.ProductId)
-                .HasConstraintName("FK__Reviews__Product__6754599E");
+                .HasConstraintName("FK__Reviews__Product__73BA3083");
 
             entity.HasOne(d => d.User).WithMany(p => p.Reviews)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__Reviews__UserID__68487DD7");
+                .HasConstraintName("FK__Reviews__UserID__74AE54BC");
         });
 
         modelBuilder.Entity<Shipment>(entity =>
@@ -343,23 +347,15 @@ public partial class RetailApplicationContext : DbContext
 
         modelBuilder.Entity<WishlistItem>(entity =>
         {
-            entity.HasKey(e => e.WishlistItemId).HasName("PK__Wishlist__171E2181785E8612");
-
-            entity.HasIndex(e => new { e.WishlistId, e.ProductId }, "uwhi").IsUnique();
-
-            entity.Property(e => e.WishlistItemId)
-                .ValueGeneratedNever()
-                .HasColumnName("WishlistItemID");
-            entity.Property(e => e.ProductId).HasColumnName("ProductID");
-            entity.Property(e => e.WishlistId).HasColumnName("WishlistID");
+            entity.HasKey(e => e.WishlistItemId).HasName("PK__Wishlist__171E21A120224A54");
 
             entity.HasOne(d => d.Product).WithMany(p => p.WishlistItems)
                 .HasForeignKey(d => d.ProductId)
-                .HasConstraintName("FK__WishlistI__Produ__6477ECF3");
+                .HasConstraintName("FK__WishlistI__Produ__70DDC3D8");
 
             entity.HasOne(d => d.Wishlist).WithMany(p => p.WishlistItems)
                 .HasForeignKey(d => d.WishlistId)
-                .HasConstraintName("FK__WishlistI__Wishl__6383C8BA");
+                .HasConstraintName("FK__WishlistI__Wishl__6FE99F9F");
         });
 
         OnModelCreatingPartial(modelBuilder);
