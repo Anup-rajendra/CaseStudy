@@ -119,7 +119,7 @@ namespace AdminAccess.Controllers
             using (var channel = connection.CreateModel())
             {
                 channel.QueueDeclare(queue: "product_notifications",
-                                     durable: true,
+                                     durable: false,
                                      exclusive: false,
                                      autoDelete: false,
                                      arguments: null);

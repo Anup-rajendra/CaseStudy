@@ -57,6 +57,8 @@ namespace AdminAccess.Controllers
         {
             if (ModelState.IsValid)
             {
+                Random random= new Random();
+                category.CategoryId = random.Next(1, 1000);
                 _context.Add(category);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
