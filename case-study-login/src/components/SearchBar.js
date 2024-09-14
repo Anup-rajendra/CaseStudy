@@ -1,127 +1,121 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'; // Importing the useNavigate hook
-// import axios from 'axios';
 import {
   Command,
-  CommandEmpty,
-  CommandGroup,
+  // CommandEmpty,
+  //CommandGroup,
   CommandInput,
   CommandItem,
   CommandList,
-  //CommandSeparator,
 } from './ui/command';
 import { useQuery } from '@apollo/client'; // Assuming you're using Apollo for GraphQL
 import { GET_PRODUCTS } from '../Apollo/queries'; // Importing the query for products
 
 const SearchBar = () => {
   const [open, setOpen] = useState(false);
-  const [searchString, setSearchString] = useState(''); // Updated state name for search input
+  const [searchString, setSearchString] = useState(''); // State for search input
   const [suggestions, setSuggestions] = useState([]);
-  const [loading, setLoading] = useState(false);
+  //const [selectSuggestio, setSelectSuggestion] = useState([]);
   const navigate = useNavigate(); // To navigate to another page
 
-  // Fetch products
+  // Fetch products from GraphQL
   const {
     loading: productsLoading,
     error: productsError,
     data: productsData,
   } = useQuery(GET_PRODUCTS);
 
-  // Function to fetch suggestions (mocked or replace with actual API call)
+  // Function to fetch suggestions based on search term
   const fetchSuggestions = (searchTerm) => {
-    if (productsData) {
-      // Ensure searchTerm is at least 3 characters long
-      if (searchTerm.length < 3) {
-        setSuggestions([]); // Not enough characters to form a valid pattern
-        return;
+    if (productsData && searchTerm.length >= 2) {
+      const regex = new RegExp(searchTerm, 'i'); // Case-insensitive search
+      const filteredSuggestions = productsData.products.filter((product) =>
+        regex.test(product.name)
+      );
+      if (searchTerm <= 2) {
+        setSuggestions([]);
       }
-
-      // Create a regex pattern to match any sequence of at least 3 consecutive characters from searchTerm
-      const minLength = 3;
-      const pattern = Array.from(
-        { length: searchTerm.length - minLength + 1 },
-        (_, i) => searchTerm.slice(i, i + minLength)
-      ).join('|');
-
-      // Regex to match any of the sequences
-      const regex = new RegExp(pattern, 'i');
-
-      // Filter products based on regex pattern
-      const filteredSuggestions = productsData.products.filter((product) => {
-        return regex.test(product.name); // Check if product name matches the regex
-      });
-
-      setSuggestions(filteredSuggestions); // Set the filtered products as suggestions
-      setLoading(false); // Stop loading once suggestions are fetched
+      setSuggestions(filteredSuggestions); // Update suggestions based on the search term
+      setOpen(filteredSuggestions.length > 0);
+    } else {
+      setSuggestions([]); // Clear suggestions if search term is less than 2 characters
+      setOpen(false);
     }
   };
 
-  // Debouncing the input to avoid multiple API calls
+  // Debounce search input to avoid multiple API calls
   useEffect(() => {
     const delayDebounceFn = setTimeout(() => {
       if (searchString) {
-        setLoading(true);
-        fetchSuggestions(searchString); // Use searchString for suggestions
         setOpen(true);
+        fetchSuggestions(searchString);
       } else {
         setOpen(false);
       }
     }, 300); // 300ms debounce
 
     return () => clearTimeout(delayDebounceFn);
-  }, [searchString]);
+  }, [searchString, productsData]);
 
+  // Update searchString as user types
   const handleValueChange = (value) => {
-    setSearchString(value); // Correct way to update the search string
+    setSearchString(value);
   };
 
+  // Handle Enter key press
   const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
-      // Navigate to the SearchedProducts page with the searchString and suggestions array as state
-      console.log('This is searchString:', searchString);
-      console.log('These are suggestions:', suggestions);
-
-      navigate('/Searches', {
-        state: {
-          suggestions, // Pass the suggestions array
-        },
-      });
+      event.preventDefault(); // Prevent default behavior for Enter key
+      if (suggestions.length > 0) {
+        navigate('/Searches', {
+          state: {
+            suggestions, // Pass the suggestions array
+          },
+        });
+      }
     }
   };
 
-  if (productsLoading) return <h1>Loading</h1>;
-  if (productsError) return <h1>Error fetching retry</h1>;
+  // Handle click on a suggestion to navigate to product details
+  const handleSuggestionClick = (product) => {
+    console.log(product, 'inside onclick');
+    navigate('/Searches', {
+      state: {
+        product, // Pass the suggestions array
+      },
+    });
+  };
 
+  if (productsLoading) return <h1>Loading...</h1>;
+  if (productsError) return <h1>Error fetching products. Please retry.</h1>;
+  console.log('Suggestion', suggestions);
+
+  console.log(open);
   return (
-    <Command className="rounded-3xl border-none md:min-w-[450px] z-50">
+    <Command
+      className="rounded-3xl border-none md:min-w-[450px] z-50"
+      open={open}
+      onOpenChange={setOpen}
+    >
       <CommandInput
         placeholder="Type a search..."
-        onValueChange={handleValueChange} // Correct reference to the handler
+        value={searchString}
+        onValueChange={handleValueChange} // Update search input
         onKeyDown={handleKeyDown} // Handle Enter key press
         className="rounded-full"
       />
       <CommandList className="bg-white rounded-lg z-50">
-        {open && (
-          <>
-            {loading ? (
-              <CommandEmpty>Loading...</CommandEmpty>
-            ) : (
-              <>
-                {suggestions.length === 0 ? (
-                  <CommandEmpty>No results found.</CommandEmpty>
-                ) : (
-                  <CommandGroup heading="Suggestions">
-                    {suggestions.map((suggestions, index) => (
-                      <CommandItem key={index}>
-                        <span>{suggestions.name}</span>
-                      </CommandItem>
-                    ))}
-                  </CommandGroup>
-                )}
-              </>
-            )}
-          </>
-        )}
+        {suggestions.map((suggestion) => (
+          <CommandItem
+            key={suggestion.id}
+            onSelect={() => {
+              console.log(suggestion);
+              handleSuggestionClick(suggestion);
+            }} // Handle suggestion click
+          >
+            {suggestion.name}
+          </CommandItem>
+        ))}
       </CommandList>
     </Command>
   );

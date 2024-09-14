@@ -8,7 +8,7 @@ const NavBar = () => {
   return (
     // animated-background bg-gradient-to-r from-primary via-teal-600 to-blue-400
     <div>
-      <div className="flex flex-col fixed w-full">
+      <div className="flex flex-col fixed w-full z-50">
         <nav className=" z-40 bg-gradient-to-r from-primary to-blue-400 animated-background py-1 border-b ">
           <ul className="flex items-center place-content-around p-0 m-0 list-none">
             <li>
@@ -48,7 +48,7 @@ const NavBar = () => {
             </li>
           </ul>
         </nav>
-        <div className="pl-16 border-b-2 z-10 bg-white">
+        <div className="pl-16 border-b-2 z-50 bg-white">
           <CategoryNavigation />
         </div>
       </div>

@@ -5,15 +5,14 @@ import {
   GET_CART_TABLE,
   CREATE_OR_UPDATE_CART,
   UPDATE_CART_ITEM,
-} from '../Apollo/queries'; // Adjust the import path if necessary
+} from '../Apollo/queries';
 import { Toaster, toast } from 'sonner';
 import { useNavigate, Link, useLocation } from 'react-router-dom';
-//import { CloudCog } from 'lucide-react';
+
 const SearchedProducts = () => {
   const location = useLocation();
-  const { suggestions } = location.state || {};
+  const { suggestions, product } = location.state || {};
   const [selectedProduct, setSelectedProduct] = useState(null);
-  //const [selectedCategory, setSelectedCategory] = useState(null);
   const userId = parseInt(localStorage.getItem('userData'), 10);
   const navigate = useNavigate();
 
@@ -27,12 +26,9 @@ const SearchedProducts = () => {
 
   const handleCartSubmit = async (productId, productName) => {
     setSelectedProduct(productId);
-    console.log(productId);
-    console.log(productName);
     let cartId;
 
     if (!cartData?.getCartByUserId) {
-      // If cart does not exist, create it
       const response = await createOrUpdateCart({ variables: { userId } });
       cartId = response.data.createOrUpdateCart.cartId;
       refetchCart();
@@ -40,10 +36,9 @@ const SearchedProducts = () => {
       cartId = cartData.getCartByUserId.cartId;
     }
 
-    // Once you have the cartId, update the cart item
     const res = await updateCartItem({ variables: { cartId, productId } });
-    console.log('CartItem Details:', res.data.updateCartItem);
     toast.success(`${productName} has been added to Cart`);
+    console.log(res);
     setSelectedProduct(null);
   };
 
@@ -52,19 +47,19 @@ const SearchedProducts = () => {
       <Toaster />
       <h2 style={{ paddingBottom: 60, paddingTop: 20 }}>Products</h2>
       <div>
-        <button class="fixed-button" onClick={() => navigate('/Cart')}>
+        <button className="fixed-button" onClick={() => navigate('/Cart')}>
           Go To Cart
         </button>
       </div>
       <div className="product-card">
-        {suggestions.map((product) => (
-          <div className="product-item" key={product.productId}>
-            <div className="product-heading">{product.name}</div>
+        {(suggestions || [product]).map((prod) => (
+          <div className="product-item" key={prod.id}>
+            <div className="product-heading">{prod.name}</div>
             <div className="product-heading">
-              <Link to={`/product/${userId}`} state={{ product, userId }}>
+              <Link to={`/product/${userId}`} state={{ product: prod, userId }}>
                 <img
-                  src={product.photoUrl}
-                  alt={product.name}
+                  src={prod.photoUrl}
+                  alt={prod.name}
                   style={{
                     width: '50%',
                     height: 'auto',
@@ -75,16 +70,10 @@ const SearchedProducts = () => {
               </Link>
             </div>
             <div className="product-details">
-              Price: ${product.price.toFixed(2)}
+              Price: ${prod.price.toFixed(2)}
             </div>
-            {/* <div className='product-details'>Category: {product.category.categoryName}</div> */}
-            {/* <div className='product-details'>Quantity: {product.inventory.stockQuantity}</div> */}
             <div className="button">
-              <button
-                onClick={() =>
-                  handleCartSubmit(product.productId, product.name)
-                }
-              >
+              <button onClick={() => handleCartSubmit(prod.id, prod.name)}>
                 Add to Cart
               </button>
             </div>

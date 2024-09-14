@@ -125,9 +125,6 @@ const Products = () => {
     <div className="h-full">
       <Toaster />
       <div className="text-center text-3xl font-bold pt-8 pb-12">Products</div>
-      {/* <div>
-                <button class="fixed-button" onClick={()=>navigate('/Cart')}>Go To Cart</button>
-            </div> */}
       <div className="grid grid-cols-3 gap-4 px-3">
         {products.map((product, index) => (
           <div key={index}>
@@ -191,7 +188,7 @@ const Products = () => {
                   </div>
                 </CardContent>
                 <CardFooter className="flex gap-4">
-                  <div>
+                  <div className="flex items-center gap-2">
                     <Button
                       variant="outline"
                       onClick={(e) => {
@@ -199,7 +196,7 @@ const Products = () => {
                         e.stopPropagation(); // Prevent link navigation
                         handleCartSubmit(product.productId, product.name);
                       }}
-                      className="transition ease-in-out delay-150 hover:-translate-y-1"
+                      className="transition ease-in-out delay-150 hover:-translate-y-1 flex items-center gap-2"
                     >
                       <ShoppingCart size={20} />
                       Add to Cart

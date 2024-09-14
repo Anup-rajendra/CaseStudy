@@ -56,7 +56,7 @@ const Categories = () => {
       }
     };
     fetchLikedProducts();
-  }, [userId, likedProducts]);
+  }, [userId]);
   // Update products and filter liked products when productsData changes
   // Update products and filter liked products when productsData changes
   useEffect(() => {
