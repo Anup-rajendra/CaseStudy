@@ -3,16 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\onedrive - planview, inc\\desktop\\adminaccess\\adminaccess\\controllers\\dataanalysiscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:controllers\\dataanalysiscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\onedrive - planview, inc\\desktop\\adminaccess\\adminaccess\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\onedrive - planview, inc\\desktop\\adminaccess\\adminaccess\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\onedrive - planview, inc\\desktop\\adminaccess\\adminaccess\\controllers\\inventoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:controllers\\inventoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\onedrive - planview, inc\\desktop\\adminaccess\\adminaccess\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\onedrive - planview, inc\\desktop\\adminaccess\\adminaccess\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\onedrive - planview, inc\\desktop\\adminaccess\\adminaccess\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\onedrive - planview, inc\\desktop\\adminaccess\\adminaccess\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\onedrive - planview, inc\\desktop\\adminaccess\\adminaccess\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\onedrive - planview, inc\\desktop\\adminaccess\\adminaccess\\views\\products\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -27,10 +47,6 @@
       "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\categories\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\onedrive - planview, inc\\desktop\\adminaccess\\adminaccess\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\onedrive - planview, inc\\desktop\\adminaccess\\adminaccess\\views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -41,10 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\onedrive - planview, inc\\desktop\\adminaccess\\adminaccess\\views\\dataanalysis\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\dataanalysis\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\onedrive - planview, inc\\desktop\\adminaccess\\adminaccess\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\onedrive - planview, inc\\desktop\\adminaccess\\adminaccess\\views\\dataanalysis\\mostorderingusers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -65,18 +77,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\onedrive - planview, inc\\desktop\\adminaccess\\adminaccess\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\onedrive - planview, inc\\desktop\\adminaccess\\adminaccess\\controllers\\dataanalysiscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:controllers\\dataanalysiscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\onedrive - planview, inc\\desktop\\adminaccess\\adminaccess\\controllers\\inventoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:controllers\\inventoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\onedrive - planview, inc\\desktop\\adminaccess\\adminaccess\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\onedrive - planview, inc\\desktop\\adminaccess\\adminaccess\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -170,7 +170,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -178,20 +178,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Views\\Categories\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Categories\\Index.cshtml",
-              "ToolTip": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Views\\Categories\\Index.cshtml",
-              "RelativeToolTip": "Views\\Categories\\Index.cshtml",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAgwCQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-12T12:10:52.742Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
@@ -204,20 +191,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Views\\Users\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Users\\Index.cshtml",
-              "ToolTip": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Views\\Users\\Index.cshtml",
-              "RelativeToolTip": "Views\\Users\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-12T14:29:43.626Z",
+              "DocumentIndex": 5,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Controllers\\UsersController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T14:21:41.256Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
+              "Title": "InventoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Controllers\\InventoriesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\InventoriesController.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Controllers\\InventoriesController.cs",
+              "RelativeToolTip": "Controllers\\InventoriesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T14:16:29.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAkwDUAAABvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T14:49:02.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DataAnalysisController.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Controllers\\DataAnalysisController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DataAnalysisController.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Controllers\\DataAnalysisController.cs",
+              "RelativeToolTip": "Controllers\\DataAnalysisController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAUwBcAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T14:39:39.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "CategoriesController.cs",
               "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Controllers\\CategoriesController.cs",
               "RelativeDocumentMoniker": "Controllers\\CategoriesController.cs",
@@ -230,20 +256,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Views\\Products\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\Products\\Create.cshtml",
-              "ToolTip": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Views\\Products\\Create.cshtml",
-              "RelativeToolTip": "Views\\Products\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-12T11:56:41.765Z",
+              "DocumentIndex": 6,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "Models\\Product.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Models\\Product.cs",
+              "RelativeToolTip": "Models\\Product.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T09:49:48.759Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Views\\Categories\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Categories\\Create.cshtml",
@@ -251,25 +277,47 @@
               "RelativeToolTip": "Views\\Categories\\Create.cshtml",
               "ViewState": "AQIAAAEAAAAAAAAAAAAswCUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-12T12:10:11.989Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Models\\Product.cs",
-              "RelativeDocumentMoniker": "Models\\Product.cs",
-              "ToolTip": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Models\\Product.cs",
-              "RelativeToolTip": "Models\\Product.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAswAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-12T09:49:48.759Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-12T12:10:11.989Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Views\\Products\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Products\\Create.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Views\\Products\\Create.cshtml",
+              "RelativeToolTip": "Views\\Products\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T11:56:41.765Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Views\\Users\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Users\\Index.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Views\\Users\\Index.cshtml",
+              "RelativeToolTip": "Views\\Users\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T14:29:43.626Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Views\\Categories\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Categories\\Index.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Views\\Categories\\Index.cshtml",
+              "RelativeToolTip": "Views\\Categories\\Index.cshtml",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAgwCQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T12:10:52.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Views\\Inventories\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Inventories\\Index.cshtml",
@@ -281,7 +329,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Views\\Products\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Products\\Index.cshtml",
@@ -289,12 +337,11 @@
               "RelativeToolTip": "Views\\Products\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAD0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-09-12T06:02:15.885Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-12T06:02:15.885Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
@@ -306,7 +353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Views\\DataAnalysis\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\DataAnalysis\\Index.cshtml",
@@ -318,7 +365,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Views\\Users\\Create.cshtml",
               "RelativeDocumentMoniker": "Views\\Users\\Create.cshtml",
@@ -330,31 +377,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAkwDUAAABvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-12T14:49:02.975Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "InventoriesController.cs",
-              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Controllers\\InventoriesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\InventoriesController.cs",
-              "ToolTip": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Controllers\\InventoriesController.cs",
-              "RelativeToolTip": "Controllers\\InventoriesController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-12T14:16:29.709Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Views\\Home\\Login.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Login.cshtml",
@@ -366,7 +389,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -378,7 +401,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "MostOrderingUsers.cshtml",
               "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Views\\DataAnalysis\\MostOrderingUsers.cshtml",
               "RelativeDocumentMoniker": "Views\\DataAnalysis\\MostOrderingUsers.cshtml",
@@ -387,30 +410,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-09-12T15:17:37.572Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "DataAnalysisController.cs",
-              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Controllers\\DataAnalysisController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DataAnalysisController.cs",
-              "ToolTip": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Controllers\\DataAnalysisController.cs",
-              "RelativeToolTip": "Controllers\\DataAnalysisController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAUwBcAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-12T14:39:39.212Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\adminaccess\\AdminAccess\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "Controllers\\UsersController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-12T14:21:41.256Z"
             },
             {
               "$type": "Document",
