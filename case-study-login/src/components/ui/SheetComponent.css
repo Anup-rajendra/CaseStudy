@@ -1,0 +1,19 @@
+/* SheetComponent.css */
+
+/* Ensure that the SheetContent is scrollable */
+.SheetContent {
+    overflow-y: auto;  /* Enables vertical scrolling */
+    max-height: 100vh; /* Limits height to viewport */
+    -webkit-overflow-scrolling: touch; /* Improves scrolling on mobile devices */
+  }
+  
+  /* Optional: Custom scrollbar styling */
+  .SheetContent::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .SheetContent::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+  
