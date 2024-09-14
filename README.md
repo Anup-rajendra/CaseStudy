@@ -1,21 +1,14 @@
+#Forgot Password Functionality
 
-Added User Profile Page
+I only made changes in case-study-login and AddUserCaseStudy for this functionality
 
-Displays the User's Information
+In the Database I have added two columns in the users table to handle the OTP
 
-Username:
-john_doe
-First Name:
-John
-Last Name:
-Doe
-Email:
-john@example.com
-Phone Number:
-1234567890
+/*forgot password*/
+ALTER TABLE Users
+ADD OTPCode VARCHAR(10);  -- To store the OTP code for password reset
 
-Edit Profile
-On clciking the edit profile, we can edit the information other than the username and the changes are saved in the database.
+ALTER TABLE Users
+ADD OTPVerified BIT DEFAULT 0; -- To check if the OTP was verified (1 means verified)
 
-
-#Order History list is working here#
+Remember to add these and scaffold in the AddUserCaseStudy
