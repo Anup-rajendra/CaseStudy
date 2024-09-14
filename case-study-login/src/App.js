@@ -20,6 +20,9 @@ import OrderDetailsPage from './components/OrderDetailsPage';
 import CustomerSupportPage from './components/CustomerSupportPage';
 import SearchedProducts from './components/SearchedProducts';
 import Categories from './components/Categories';
+import ForgotPassword from './components/ForgotPassword';
+import VerifyOtp from './components/VerifyOtp';
+import ResetPassword from './components/ResetPassword';
 function App() {
   const location = useLocation();
   const [progress, setProgress] = useState(0);
@@ -76,6 +79,9 @@ function App() {
           <Route path="/Searches" element={<SearchedProducts />} />
           <Route path="/Categories" element={<Categories />} />
         </Route>
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/verify-otp" element={<VerifyOtp />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
       </Routes>
     </div>
   );

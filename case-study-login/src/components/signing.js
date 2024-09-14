@@ -42,7 +42,7 @@ const formSchema = z.object({
     .regex(/^\d+$/, 'The number must contain only digits'),
 });
 
-const Login = () => {
+const Signing = () => {
   const navigate = useNavigate();
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -249,4 +249,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signing;

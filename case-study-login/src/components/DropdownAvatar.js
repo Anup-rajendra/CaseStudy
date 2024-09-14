@@ -40,7 +40,9 @@ const DropdownAvatar = () => {
     localStorage.removeItem('token');
     navigate('/login');
   };
-
+  const handleProfile = () => {
+    navigate('/profile');
+  };
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -52,10 +54,9 @@ const DropdownAvatar = () => {
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
-          <DropdownMenuItem>
+          <DropdownMenuItem onClick={handleProfile}>
             <User className="mr-2 h-4 w-4" />
             <span>Profile</span>
-            <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
           </DropdownMenuItem>
           <DropdownMenuItem>
             <CreditCard className="mr-2 h-4 w-4" />

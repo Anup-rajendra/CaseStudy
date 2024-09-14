@@ -178,7 +178,7 @@ const Order = () => {
                       <div className="font-bold text-lg">
                         {item.productName}
                       </div>
-                      <p>Price: ${item.productPrice}</p>
+                      <p>Price: Rs.{item.productPrice}</p>
                       <p>Quantity: {item.quantity}</p>
                     </div>
                   </div>
@@ -202,7 +202,7 @@ const Order = () => {
               <div className="flex gap-4">
                 <div className="text-primary font-semibold">Subtotal:</div>
                 <div className="text-black font-normal">
-                  {totalPrice.toFixed(2)}
+                  Rs.{totalPrice.toFixed(2)}
                 </div>
               </div>
               <div className="flex gap-4">
@@ -213,7 +213,7 @@ const Order = () => {
             <CardFooter className="flex flex-row gap-4 pt-4">
               <div className="text-primary font-semibold">Total Price:</div>
               <div className="text-black font-normal">
-                ${totalPrice.toFixed(2)}
+                Rs.{totalPrice.toFixed(2)}
               </div>
             </CardFooter>
           </Card>

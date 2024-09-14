@@ -1,15 +1,62 @@
 import React, { useState, useEffect } from 'react';
 import { useQuery, useMutation } from '@apollo/client';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for routing
-import { GET_USER_PROFILE, UPDATE_PROFILE } from '../Apollo/queries'; // Ensure this path is correct
+import { GET_USER_PROFILE, UPDATE_PROFILE } from '../Apollo/queries';
 import '../css/ProfilePage.css';
+import { Button } from './ui/button';
+import {
+  Form,
+  FormField,
+  FormControl,
+  FormLabel,
+  FormItem,
+  FormMessage,
+} from './ui/form';
+import { Input } from './ui/input';
+import { z } from 'zod';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+
+// Zod schema for form validation
+const formSchema = z.object({
+  username: z
+    .string()
+    .min(2, 'Username must be at least 2 characters')
+    .max(50, "Username can't exceed 50 characters"),
+  email: z
+    .string()
+    .email('Invalid Email Address')
+    .max(50, "Email can't exceed 50 characters"),
+  firstName: z
+    .string()
+    .min(2, 'First Name must be at least 2 characters')
+    .max(50, "First Name can't exceed 50 characters"),
+  lastName: z
+    .string()
+    .min(1, 'Last Name must be at least 2 characters')
+    .max(50, "Last Name can't exceed 50 characters"),
+  phoneNumber: z
+    .string()
+    .length(10, 'The number must be exactly 10 characters long')
+    .regex(/^\d+$/, 'The number must contain only digits'),
+});
 
 const ProfilePage = () => {
-  // Set user ID dynamically based on login
-  const navigate = useNavigate(); // Add navigate for routing
   const [userId, setUserId] = useState(null);
+  const [isEditing, setIsEditing] = useState(false);
+  const [originalValues, setOriginalValues] = useState(null); // To store the original values
 
-  // Fetch the user profile using the GraphQL query
+  const form = useForm({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      username: '',
+      email: '',
+      firstName: '',
+      lastName: '',
+      phoneNumber: '',
+    },
+  });
+
+  // Fetch user profile using GraphQL query
   const { data, loading, error, refetch } = useQuery(GET_USER_PROFILE, {
     variables: { userId },
     skip: !userId,
@@ -17,133 +64,177 @@ const ProfilePage = () => {
 
   const [updateProfile] = useMutation(UPDATE_PROFILE);
 
-  const [isEditing, setIsEditing] = useState(false);
-  const [formData, setFormData] = useState({
-    firstname: '',
-    lastname: '',
-    email: '',
-    phoneNumber: '',
-  });
-  console.log(userId);
+  // Fetch user ID from local storage and update form values based on the fetched profile
   useEffect(() => {
     const userId = parseInt(localStorage.getItem('userData'), 10);
     setUserId(userId);
+
     if (data) {
       const user = data.userById;
-      setFormData({
-        firstname: user.firstname || '',
-        lastname: user.lastname || '',
+      const userData = {
+        username: user.username || '',
         email: user.email || '',
+        firstName: user.firstname || '',
+        lastName: user.lastname || '',
         phoneNumber: user.phoneNumber || '',
-      });
+      };
+
+      setOriginalValues(userData); // Save original values for cancellation
+      form.reset(userData); // Update form values
     }
-  }, [data]);
+  }, [data, form]);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error fetching profile data.</p>;
 
-  const handleInputChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleEditClick = () => {
-    setIsEditing(true);
-  };
-
-  const handleSaveClick = async () => {
+  // Handle form submission
+  const onSubmit = async (formData) => {
+    console.log('Form Data:', formData);
     try {
       await updateProfile({
         variables: {
           userId,
-          firstName: formData.firstname,
-          lastName: formData.lastname,
+          firstName: formData.firstName,
+          lastName: formData.lastName,
           email: formData.email,
           phoneNumber: formData.phoneNumber,
         },
       });
-      setIsEditing(false);
-      refetch();
+      setIsEditing(false); // Turn off edit mode
+      refetch(); // Refetch profile data after saving
     } catch (err) {
       console.error('Error updating profile:', err);
     }
   };
 
-  const handleOrdersClick = () => {
-    navigate('/order-history'); // Navigate to OrderHistoryPage when Orders button is clicked
+  // Handle edit button click
+  const handleEditClick = () => {
+    setIsEditing(true); // Turn on edit mode
+  };
+
+  // Handle cancel button click
+  const handleCancelClick = () => {
+    form.reset(originalValues); // Reset the form to the original values
+    setIsEditing(false); // Turn off edit mode
   };
 
   return (
-    <div className="profile-container">
-      <h2>User Profile</h2>
+    <div className="w-full flex justify-center pt-12">
+      <div className="flex flex-col border bg-white space-y-3 w-1/3 p-6 rounded-lg shadow-2xl z-10">
+        <div className="font-bold text-xl ">User Profile</div>
 
-      {/* User information fields */}
-      <div className="profile-field">
-        <label>Username:</label>
-        <span>{data?.userById?.username}</span>
-      </div>
-      <div className="profile-field">
-        <label>First Name:</label>
-        {isEditing ? (
-          <input
-            type="text"
-            name="firstname"
-            value={formData.firstname}
-            onChange={handleInputChange}
-          />
-        ) : (
-          <span>{formData.firstname}</span>
-        )}
-      </div>
-      <div className="profile-field">
-        <label>Last Name:</label>
-        {isEditing ? (
-          <input
-            type="text"
-            name="lastname"
-            value={formData.lastname}
-            onChange={handleInputChange}
-          />
-        ) : (
-          <span>{formData.lastname}</span>
-        )}
-      </div>
-      <div className="profile-field">
-        <label>Email:</label>
-        {isEditing ? (
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleInputChange}
-          />
-        ) : (
-          <span>{formData.email}</span>
-        )}
-      </div>
-      <div className="profile-field">
-        <label>Phone Number:</label>
-        {isEditing ? (
-          <input
-            type="text"
-            name="phoneNumber"
-            value={formData.phoneNumber}
-            onChange={handleInputChange}
-          />
-        ) : (
-          <span>{formData.phoneNumber}</span>
-        )}
-      </div>
-
-      {isEditing ? (
-        <button onClick={handleSaveClick}>Save</button>
-      ) : (
-        <button onClick={handleEditClick}>Edit Profile</button>
-      )}
-
-      {/* Orders Button Outside User Information */}
-      <div className="orders-section">
-        <button onClick={handleOrdersClick}>Orders</button>{' '}
-        {/* New Orders button */}
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+            {/* Username Field */}
+            <FormField
+              control={form.control}
+              name="username"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Username</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="Username"
+                      {...field}
+                      disabled={!isEditing}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            {/* Email Field */}
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Email</FormLabel>
+                  <FormControl>
+                    <Input
+                      type="email"
+                      placeholder="Email"
+                      {...field}
+                      disabled={!isEditing}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            {/* First Name Field */}
+            <FormField
+              control={form.control}
+              name="firstName"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>First Name</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="First Name"
+                      {...field}
+                      disabled={!isEditing}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            {/* Last Name Field */}
+            <FormField
+              control={form.control}
+              name="lastName"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Last Name</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="Last Name"
+                      {...field}
+                      disabled={!isEditing}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            {/* Phone Number Field */}
+            <FormField
+              control={form.control}
+              name="phoneNumber"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Phone Number</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="Phone Number"
+                      {...field}
+                      disabled={!isEditing}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            {/* Edit/Save and Cancel Buttons */}
+            {isEditing ? (
+              <div className="flex space-x-4">
+                <Button type="submit" className="w-full">
+                  Save
+                </Button>
+                <Button
+                  type="button"
+                  onClick={handleCancelClick}
+                  className="w-full"
+                >
+                  Cancel
+                </Button>
+              </div>
+            ) : (
+              <Button onClick={handleEditClick}>Edit Profile</Button>
+            )}
+          </form>
+        </Form>
       </div>
     </div>
   );

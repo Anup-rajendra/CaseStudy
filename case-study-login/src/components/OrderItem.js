@@ -160,7 +160,7 @@ const OrderItem = () => {
                       <div className="font-bold text-lg">
                         {item.productName}
                       </div>
-                      <p>Price: ${productPrice}</p>
+                      <p>Price: Rs.{productPrice}</p>
                       {/* <p>Quantity: {productQuantity}</p> */}
                     </div>
                   </div>
@@ -183,7 +183,7 @@ const OrderItem = () => {
             <CardContent className="flex flex-col gap-5 pt-4 border-b">
               <div className="flex gap-4">
                 <div className="text-primary font-semibold">Subtotal:</div>
-                <div className="text-black font-normal">{productPrice}</div>
+                <div className="text-black font-normal">Rs.{productPrice}</div>
               </div>
               <div className="flex gap-4">
                 <div className="text-primary font-semibold">Delivery fee:</div>
@@ -192,7 +192,7 @@ const OrderItem = () => {
             </CardContent>
             <CardFooter className="flex flex-row gap-4 pt-4">
               <div className="text-primary font-semibold">Total Price:</div>
-              <div className="text-black font-normal">${productPrice}</div>
+              <div className="text-black font-normal">Rs.{productPrice}</div>
             </CardFooter>
           </Card>
 

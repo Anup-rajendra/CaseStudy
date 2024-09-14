@@ -29,6 +29,7 @@ namespace RepositoryLayer.Repo
         //only for user entities
         Task<T> AuthenticateAsync(string username, string password);
         Task AddWishlist(Wishlist entity);
-
+        Task<User> GetByEmailAsync(string email);
+        Task UpdateAsync(User user);
     }
 }

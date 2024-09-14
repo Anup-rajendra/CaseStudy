@@ -1,8 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-import { GET_ORDER_DETAILS } from '../Apollo/queries'; // Make sure this path is correct
-import '../css/OrderDetailsPage.css';
+import { GET_ORDER_DETAILS } from '../Apollo/queries';
 
 const OrderDetailsPage = () => {
   const { orderId } = useParams(); // Retrieve orderId from URL parameters
@@ -12,58 +11,105 @@ const OrderDetailsPage = () => {
     variables: { orderId: parseInt(orderId, 10) }, // Convert orderId to an integer
   });
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>; // Display the actual error message
+  if (loading)
+    return <p className="text-center text-lg text-gray-600">Loading...</p>;
+  if (error)
+    return <p className="text-center text-red-500">Error: {error.message}</p>;
 
   const { getOrderById: order } = data;
 
   return (
-    <div className="order-details-container">
-      <h2>Order Details for Order ID: {order.orderId}</h2>
+    <div className=" py-10 px-4">
+      <div className="max-w-5xl mx-auto   shadow-xl rounded-3xl p-8 bg-blue-100">
+        <h2 className="text-4xl font-extrabold mb-8 text-center text-gray-800">
+          Order Details
+        </h2>
 
-      {/* Order Summary */}
-      <div className="order-summary">
-        <p>Order Date: {new Date(order.orderDate).toLocaleDateString()}</p>
-        <p>Total Amount: ${order.totalAmount}</p>
+        {/* Order Summary */}
+        <div className="mb-12">
+          <h3 className="text-2xl font-semibold mb-4 text-gray-700">
+            Order Summary
+          </h3>
+          <div className="bg-gray-100 p-6 rounded-xl shadow-md">
+            <p className="mb-3">
+              <span className="font-semibold">Order Date:</span>{' '}
+              {new Date(order.orderDate).toLocaleDateString()}
+            </p>
+            <p className="mb-3">
+              <span className="font-semibold">Total Amount:</span> Rs.
+              {order.totalAmount}
+            </p>
+          </div>
+        </div>
+
+        {/* Product Details */}
+        <h3 className="text-2xl font-semibold mb-6 text-gray-700">Products</h3>
+        <div className="space-y-6">
+          {order.orderItems.map((item) => (
+            <div
+              key={item.product.productId}
+              className="bg-gray-50 p-6 rounded-xl shadow-lg flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6 "
+            >
+              <img
+                src={item.product.photoUrl}
+                alt={item.product.name}
+                className="w-full md:w-32 h-32 object-cover rounded-lg"
+              />
+              <div className="flex-1">
+                <p className="font-semibold text-xl text-gray-800">
+                  {item.product.name}
+                </p>
+                <p className="text-gray-600">Quantity: {item.quantity}</p>
+                <p className="text-gray-600">Price: Rs.{item.price}</p>
+                <p className="font-semibold text-gray-800">
+                  Subtotal: Rs.{item.price * item.quantity}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Shipment Tracking */}
+        <div className="mt-12">
+          <h3 className="text-2xl font-semibold mb-4 text-gray-700">
+            Shipment Tracking
+          </h3>
+          <div className="bg-gray-100 p-6 rounded-xl shadow-md">
+            <p>Tracking Number: {order.shipment.trackingNumber}</p>
+          </div>
+        </div>
+
+        {/* Shipping Address */}
+        <div className="mt-12">
+          <h3 className="text-2xl font-semibold mb-4 text-gray-700">
+            Shipping Address
+          </h3>
+          <div className="bg-gray-100 p-6 rounded-xl shadow-md">
+            {order.shipment.address ? (
+              <>
+                <p>
+                  Street:{' '}
+                  {order.shipment.address.street || 'Street not available'}
+                </p>
+                <p>
+                  City: {order.shipment.address.city || 'City not available'}
+                </p>
+                <p>
+                  State: {order.shipment.address.state || 'State not available'}
+                </p>
+                <p>
+                  Zip Code:{' '}
+                  {order.shipment.address.zipCode || 'Zip Code not available'}
+                </p>
+              </>
+            ) : (
+              <p>
+                Adarsh Palm Retreat Internal Road, Bengaluru Karnataka - 560103
+              </p>
+            )}
+          </div>
+        </div>
       </div>
-
-      {/* Product Details */}
-      <h3>Products:</h3>
-      {order.orderItems.map((item) => (
-        <div key={item.product.productId} className="product-details">
-          <img
-            src={item.product.photoUrl}
-            alt={item.product.name}
-            className="product-image"
-          />
-          <p>Product: {item.product.name}</p>
-          <p>Quantity: {item.quantity}</p>
-          <p>Price: ${item.price}</p>
-          <p>Subtotal: ${item.price * item.quantity}</p>
-        </div>
-      ))}
-
-      {/* Shipment Tracking */}
-      <h3>Shipment Tracking:</h3>
-      <p>Tracking Number: {order.shipment.trackingNumber}</p>
-
-      {/* Shipping Address */}
-      <h3>Shipping Address:</h3>
-      {order.shipment.address ? (
-        <div className="shipping-address">
-          <p>
-            Street: {order.shipment.address.street || 'Street not available'}
-          </p>
-          <p>City: {order.shipment.address.city || 'City not available'}</p>
-          <p>State: {order.shipment.address.state || 'State not available'}</p>
-          <p>
-            Zip Code:{' '}
-            {order.shipment.address.zipCode || 'Zip Code not available'}
-          </p>
-        </div>
-      ) : (
-        <p>Adarsh Palm Retreat Internal Road, Bengaluru Karnataka - 560103</p>
-      )}
     </div>
   );
 };

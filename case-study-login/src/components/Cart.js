@@ -175,7 +175,7 @@ const Cart = () => {
                         alt={cartItem.productName}
                         style={{ width: '60px', height: '60px' }}
                       />
-                      <div>{cartItem.productName}</div>
+                      <div>Rs.{cartItem.productName}</div>
                     </TableCell>
                     <TableCell>{cartItem.productPrice}</TableCell>
                     <TableCell colSpan={2}>
@@ -240,7 +240,7 @@ const Cart = () => {
           <CardContent className="flex flex-col gap-5 pt-4 border-b">
             <div className="flex gap-4">
               <div className="text-primary font-semibold">Subtotal:</div>
-              <div className="text-black font-normal">{totalPrice}</div>
+              <div className="text-black font-normal">Rs.{totalPrice}</div>
             </div>
             <div className="flex gap-4">
               <div className="text-primary font-semibold">Delivery fee:</div>
@@ -249,7 +249,7 @@ const Cart = () => {
           </CardContent>
           <CardFooter className="flex flex-row gap-4 pt-4">
             <div className="text-primary font-semibold">Total Price:</div>
-            <div className="text-black font-normal">{totalPrice}</div>
+            <div className="text-black font-normal">Rs.{totalPrice}</div>
           </CardFooter>
         </Card>
       </div>

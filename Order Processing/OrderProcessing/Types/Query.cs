@@ -182,5 +182,5 @@ public class Query
             .Include(o => o.Shipment)
             .ToListAsync();
     }
-
+    
 }

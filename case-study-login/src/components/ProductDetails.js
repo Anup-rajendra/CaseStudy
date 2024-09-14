@@ -181,7 +181,7 @@ const ProductDetails = () => {
               <Star size={14} />
             </Badge>
           </div>
-          <div className="font-extrabold text-2xl pb-2">${product.price}</div>
+          <div className="font-extrabold text-2xl pb-2">Rs.{product.price}</div>
           <div className="flex gap-2">
             <div className="font-semibold">Category: </div>
             <div>{product.category.categoryName}</div>

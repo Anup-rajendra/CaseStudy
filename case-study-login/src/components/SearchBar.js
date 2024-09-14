@@ -25,36 +25,34 @@ const SearchBar = () => {
     data: productsData,
   } = useQuery(GET_PRODUCTS);
 
-  // Function to fetch suggestions based on search term
   const fetchSuggestions = (searchTerm) => {
-    if (productsData && searchTerm.length >= 2) {
-      const regex = new RegExp(searchTerm, 'i'); // Case-insensitive search
+    if (productsData && searchTerm.trim().length >= 2) {
+      // Escape special characters
+      const escapedSearchTerm = searchTerm.replace(
+        /[.*+?^${}()|[\]\\]/g,
+        '\\$&'
+      );
+      const regex = new RegExp(escapedSearchTerm, 'i'); // Case-insensitive search
       const filteredSuggestions = productsData.products.filter((product) =>
         regex.test(product.name)
       );
-      if (searchTerm <= 2) {
-        setSuggestions([]);
-      }
       setSuggestions(filteredSuggestions); // Update suggestions based on the search term
       setOpen(filteredSuggestions.length > 0);
     } else {
-      setSuggestions([]); // Clear suggestions if search term is less than 2 characters
+      setSuggestions([]); // Clear suggestions if search term is less than 2 characters or whitespace
       setOpen(false);
     }
   };
 
   // Debounce search input to avoid multiple API calls
   useEffect(() => {
-    const delayDebounceFn = setTimeout(() => {
-      if (searchString) {
-        setOpen(true);
-        fetchSuggestions(searchString);
-      } else {
-        setOpen(false);
-      }
-    }, 300); // 300ms debounce
-
-    return () => clearTimeout(delayDebounceFn);
+    if (searchString) {
+      setOpen(true);
+      fetchSuggestions(searchString);
+    } else {
+      setOpen(false);
+    }
+    // 300ms debounce
   }, [searchString, productsData]);
 
   // Update searchString as user types
