@@ -70,6 +70,9 @@ const OrderItem = () => {
 
   const displayAddress =
     addressData?.addressesByUserId[currentAddressNumber] || {};
+  const totalPrice = productArray[0].productPrice;
+  localStorage.setItem('TotalPurchasePrice', totalPrice);
+  localStorage.setItem('ProductId', productId);
   const makePayment = async () => {
     const stripe = await loadStripe(
       'pk_test_51PvFPH1adOqTPZqxtt6RZyDNusEZez3sNi8rv3Lb1PXVXf0vQrEjxK4TiAgh12fOmIVGy5f0eLQygl96ldRRrBap00op42RAX4'
@@ -82,7 +85,7 @@ const OrderItem = () => {
       'Content-Type': 'application/json',
     };
     const response = await fetch(
-      'http://localhost:7000/api/create-checkout-session',
+      'http://localhost:7001/api/create-checkout-session',
       {
         method: 'POST',
         headers: headers,
@@ -95,7 +98,7 @@ const OrderItem = () => {
     const result = await stripe.redirectToCheckout({
       sessionId: session.id,
     });
-    navigate('/checkout');
+    navigate('/checkout-item');
     if (result.error) {
       console.log(result.error);
     }

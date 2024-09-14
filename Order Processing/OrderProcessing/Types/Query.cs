@@ -182,5 +182,19 @@ public class Query
             .Include(o => o.Shipment)
             .ToListAsync();
     }
-    
+
+    public async Task<List<Product>> GetProductByIdList([Service] IRetailApplication<Product> productItemRepository, List<int> productids)
+    {
+        List<Product> products = new List<Product>();
+        foreach (var productid in productids)
+        {
+            products.Add(await productItemRepository.GetByIdAsync(productid));
+        }
+        return products;
+    }
+    public async Task<IEnumerable<Product>> GetProductById([Service] IRetailApplication<Product> productRepository, int productId)
+    {
+        return await productRepository.GetAll().Where(p => p.ProductId == productId).Include(p=>p.Inventory).Include(p=>p.Supplier).ToListAsync();
+            
+    }
 }

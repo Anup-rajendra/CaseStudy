@@ -208,7 +208,6 @@ export const ADD_SHIPMENT = gql`
       shipmentDate
       orderId
       trackingNumber
-      deliveryDate
     }
   }
 `;
@@ -246,6 +245,7 @@ export const GET_PRODUCT_BY_ID = gql`
       productId
       name
       price
+      photoUrl
     }
   }
 `;

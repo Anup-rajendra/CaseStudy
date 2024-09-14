@@ -23,6 +23,7 @@ import Categories from './components/Categories';
 import ForgotPassword from './components/ForgotPassword';
 import VerifyOtp from './components/VerifyOtp';
 import ResetPassword from './components/ResetPassword';
+import CheckoutItem from './components/CheckoutItem';
 function App() {
   const location = useLocation();
   const [progress, setProgress] = useState(0);
@@ -75,6 +76,7 @@ function App() {
             path="/order-details/:orderId"
             element={<OrderDetailsPage />}
           />
+          <Route path="/checkout-item" element={<CheckoutItem />} />
           <Route path="/customer-support" element={<CustomerSupportPage />} />
           <Route path="/Searches" element={<SearchedProducts />} />
           <Route path="/Categories" element={<Categories />} />

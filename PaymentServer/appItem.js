@@ -48,7 +48,7 @@ app.post("/api/create-checkout-session", async (req, res) => {
       payment_method_types: ["card"],
       line_items: lineItems,
       mode: "payment",
-      success_url: "http://localhost:3000/checkout",
+      success_url: "http://localhost:3000/checkout-item",
       cancel_url: "http://localhost:3000/cancel",
     });
 
@@ -59,6 +59,6 @@ app.post("/api/create-checkout-session", async (req, res) => {
   }
 });
 
-app.listen(7000, () => {
-  console.log("Server started on port 7000");
+app.listen(7001, () => {
+  console.log("Server started on port 7001");
 });
