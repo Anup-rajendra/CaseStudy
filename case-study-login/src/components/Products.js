@@ -48,7 +48,7 @@ const Products = () => {
             <Toaster />
             <h2 style={{ paddingBottom: 60, paddingTop: 20 }}>Products</h2>
             <div>
-                <button class="fixed-button" onClick={()=>navigate('/Cart')}>Go To Cart</button>
+                <button className="fixed-button" onClick={()=>navigate('/Cart')}>Go To Cart</button>
             </div>
             <div className='product-card'>
                 {productsData.products.map((product) => (

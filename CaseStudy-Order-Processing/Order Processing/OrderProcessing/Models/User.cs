@@ -29,6 +29,10 @@ public partial class User
 
     public string? ProfilePicture { get; set; }
 
+    public string? Otpcode { get; set; }
+
+    public bool? Otpverified { get; set; }
+
     public virtual ICollection<Address> Addresses { get; set; } = new List<Address>();
 
     public virtual ICollection<Cart> Carts { get; set; } = new List<Cart>();

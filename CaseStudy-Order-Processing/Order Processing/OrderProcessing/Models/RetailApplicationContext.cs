@@ -307,6 +307,13 @@ public partial class RetailApplicationContext : DbContext
             entity.Property(e => e.Lastname)
                 .HasMaxLength(255)
                 .IsUnicode(false);
+            entity.Property(e => e.Otpcode)
+                .HasMaxLength(10)
+                .IsUnicode(false)
+                .HasColumnName("OTPCode");
+            entity.Property(e => e.Otpverified)
+                .HasDefaultValue(false)
+                .HasColumnName("OTPVerified");
             entity.Property(e => e.PhoneNumber)
                 .HasMaxLength(50)
                 .IsUnicode(false);

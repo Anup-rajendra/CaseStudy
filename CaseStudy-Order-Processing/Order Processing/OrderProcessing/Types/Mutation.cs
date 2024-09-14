@@ -5,6 +5,7 @@ using RepositoryLayer.Models;
 using System.Threading.Tasks;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
 
 
 
@@ -90,4 +91,5 @@ public class Mutation
         await userRepository.UpdateAsync(user);
         return user;
     }
+
 }

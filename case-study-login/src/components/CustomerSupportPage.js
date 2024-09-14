@@ -15,7 +15,7 @@ const CustomerSupportPage = () => {
     { id: 'q1', text: 'How do I reset my password?' },
     { id: 'q2', text: 'Where can I update my email address?' },
     { id: 'q3', text: 'How do I track my order?' },
-    { id: 'q4', text: 'What is the return policy?' },
+    { id: 'q4', text: '' },
     { id: 'q5', text: 'How can I contact customer support?' },
     { id: 'q6', text: 'How do I change my shipping address?' },
     { id: 'q7', text: 'Where can I find my order history?' },

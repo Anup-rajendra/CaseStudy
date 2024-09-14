@@ -10,10 +10,13 @@ import Signing from './components/signing';
 import ChangeAddress from './components/ChangeAddress';
 import AddAddress from './components/AddAddress';
 import Checkout from './components/Checkout';
-import Profile from './components/ProfilePage'; // Import the ProfilePage component
+import Profile from './components/ProfilePage';
 import OrderHistoryPage from './components/OrderHistoryPage';
 import OrderDetailsPage from './components/OrderDetailsPage';
 import CustomerSupportPage from './components/CustomerSupportPage'; 
+import ForgotPassword from './components/ForgotPassword'; 
+import VerifyOtp from './components/VerifyOtp';
+import ResetPassword from './components/ResetPassword';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 
@@ -23,20 +26,24 @@ function App() {
             <div>
                 <Routes>
                     <Route path="/signing" element={<Signing />} />
-                    <Route path="*" element={<Login />}/>
+                    <Route path="*" element={<Login />} />
                     {/* Wrap protected routes with ProtectedRoute */}
                     <Route element={<ProtectedRoute><Layout /></ProtectedRoute>}>
                         <Route path="/products" element={<Products />} />
-                        <Route path="/cart" element={<Cart/>}/>
-                        <Route path="/order" element={<Order/>}/>
+                        <Route path="/cart" element={<Cart />} />
+                        <Route path="/order" element={<Order />} />
                         <Route path="/add-address" element={<AddAddress />} />
-                        <Route path="/changeaddress" element={<ChangeAddress/>}/>
-                        <Route path="/checkout" element={<Checkout/>}/>
-                        <Route path="/profile" element={<Profile/>}/> {/* Add Profile route */}
-                        <Route path="/order-history" element={<OrderHistoryPage/>}/>
+                        <Route path="/changeaddress" element={<ChangeAddress />} />
+                        <Route path="/checkout" element={<Checkout />} />
+                        <Route path="/profile" element={<Profile />} />
+                        <Route path="/order-history" element={<OrderHistoryPage />} />
                         <Route path="/order-details/:orderId" element={<OrderDetailsPage />} />
-                        <Route path="/customer-support" element={<CustomerSupportPage />} /> {/* New Customer Support route */}
+                        <Route path="/customer-support" element={<CustomerSupportPage />} />
                     </Route>
+                    {/* Public routes */}
+                    <Route path="/forgot-password" element={<ForgotPassword />} />
+                    <Route path="/verify-otp" element={<VerifyOtp />} />
+                    <Route path="/reset-password" element={<ResetPassword />} />
                 </Routes>
             </div>
         </Router>
