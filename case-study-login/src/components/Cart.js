@@ -138,10 +138,10 @@ const Cart = () => {
   };
 
   return (
-    <div className="flex items-center gap-10 justify-evenly">
-      <div className="flex flex-col gap-10">
+    <div className="flex items-center gap-10 justify-evenly ">
+      <div className="flex flex-col gap-10 flex-grow pl-20">
         <div className="text-left font-bold text-2xl pt-10">Cart Items</div>
-        <div className="flex gap-6 w-[1000px]">
+        <div className="flex gap-6 w-[1000px] bg-white flex-grow">
           <Table>
             <TableHeader>
               <TableRow className="font-extrabold bg-gradient-to-r from-primary to-blue-400 animated-background transition">
@@ -219,17 +219,17 @@ const Cart = () => {
             </TableFooter>
           </Table>
         </div>
-        <div className="flex justify-end pr-3">
+        <div className="flex justify-end pr-3 fixed right-10 bottom-10">
           <Button
             onClick={handleOrder}
-            className="bg-gradient-to-r from-primary to-blue-400 animated-background transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 hover:bg-indigo-500 duration-300"
+            className="bg-gradient-to-r from-primary to-blue-400 animated-background transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 hover:bg-indigo-500 duration-300 px-6"
           >
             Order Now
           </Button>
         </div>
       </div>
-
-      <div className="pl-5">
+      <div className="w-[300px]"></div>
+      <div className="fixed right-12 top-[210px]">
         <Card className="w-[300px]">
           <CardHeader className="border-b bg-gradient-to-r from-primary to-blue-400 animated-background">
             <CardTitle className="text-white">Summary</CardTitle>

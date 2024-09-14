@@ -21,16 +21,14 @@ import {
 } from './ui/card';
 import { Trash2 } from 'lucide-react';
 import { Button } from './ui/button';
-import { toast } from 'react-toastify';
-
+import { Toaster, toast } from 'sonner';
 const Wishlist = () => {
   const [user, setUser] = useState(null);
   const [wishlistItemsArray, setWishlistItemsArray] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
-  const [error, setError] = useState("");
+  const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-
   useEffect(() => {
     const userId = localStorage.getItem('userData');
     if (userId) {
@@ -39,18 +37,27 @@ const Wishlist = () => {
         let retries = 3;
         while (retries > 0) {
           try {
-            setError("");
+            setError('');
             setLoading(true);
-            const response = await axios.get(`http://localhost:5120/api/WishlistItems/${userId}`);
+            const response = await axios.get(
+              `http://localhost:5120/api/WishlistItems/${userId}`
+            );
             setWishlistItemsArray(response.data);
-            const total = response.data.reduce((acc, item) => acc + item.price, 0);
+            const total = response.data.reduce(
+              (acc, item) => acc + item.price,
+              0
+            );
             setTotalPrice(total);
             break; // Exit loop if successful
           } catch (err) {
             retries -= 1;
             if (retries === 0) {
-              setError('Failed to fetch wishlist items after multiple attempts');
-              toast.error('Failed to fetch wishlist items after multiple attempts');
+              setError(
+                'Failed to fetch wishlist items after multiple attempts'
+              );
+              toast.error(
+                'Failed to fetch wishlist items after multiple attempts'
+              );
             }
           } finally {
             setLoading(false);
@@ -60,36 +67,43 @@ const Wishlist = () => {
       fetchItem();
     }
   }, []);
-
   const handleRemoveItem = async (productId) => {
     if (!user) return; // Ensure user is defined
     try {
-      await axios.delete(`http://localhost:5120/api/WishlistItems?wishlistid=${user}&productid=${productId}`);
-      setWishlistItemsArray(wishlistItemsArray.filter(item => item.productId !== productId));
+      await axios.delete(
+        `http://localhost:5120/api/WishlistItems?wishlistid=${user}&productid=${productId}`
+      );
+      setWishlistItemsArray(
+        wishlistItemsArray.filter((item) => item.productId !== productId)
+      );
       toast.success('Removed from wishlist');
     } catch (err) {
       toast.error('Error removing item');
     }
   };
-
   const handleOrder = () => {
     navigate('/orders');
   };
-
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
-
   return (
     <div className="flex items-center gap-10 justify-evenly">
+      <Toaster />
       <div className="flex flex-col gap-10">
         <div className="text-left font-bold text-2xl pt-10">Wishlist Items</div>
         <div className="flex gap-6 w-[1000px]">
           <Table>
             <TableHeader>
               <TableRow className="font-extrabold bg-gradient-to-r from-primary to-blue-400 animated-background transition">
-                <TableHead className="w-[200px] font-extrabold text-white">Item</TableHead>
-                <TableHead className="font-extrabold text-white">Price</TableHead>
-                <TableHead className="font-extrabold text-white">Remove</TableHead>
+                <TableHead className="w-[200px] font-extrabold text-white">
+                  Item
+                </TableHead>
+                <TableHead className="font-extrabold text-white">
+                  Price
+                </TableHead>
+                <TableHead className="font-extrabold text-white">
+                  Remove
+                </TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -105,7 +119,9 @@ const Wishlist = () => {
                   </TableCell>
                   <TableCell>{wishlistItem.price}</TableCell>
                   <TableCell className="pl-8 text-primary">
-                    <button onClick={() => handleRemoveItem(wishlistItem.productId)}>
+                    <button
+                      onClick={() => handleRemoveItem(wishlistItem.productId)}
+                    >
                       <Trash2 />
                     </button>
                   </TableCell>
@@ -129,12 +145,13 @@ const Wishlist = () => {
           </Button>
         </div>
       </div>
-
       <div className="pl-5">
         <Card className="w-[300px]">
           <CardHeader className="border-b bg-gradient-to-r from-primary to-blue-400 animated-background">
             <CardTitle className="text-white">Summary</CardTitle>
-            <CardDescription className="text-white">Price Details</CardDescription>
+            <CardDescription className="text-white">
+              Price Details
+            </CardDescription>
           </CardHeader>
           <CardContent className="flex flex-col gap-5 pt-4 border-b">
             <div className="flex gap-4">
@@ -155,5 +172,4 @@ const Wishlist = () => {
     </div>
   );
 };
-
 export default Wishlist;

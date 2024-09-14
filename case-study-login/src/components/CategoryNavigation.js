@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { ChevronDown } from 'lucide-react';
+import { useQuery} from '@apollo/client';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -9,7 +10,9 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from './ui/navigation-menu';
+
 import { Link } from 'react-router-dom';
+import { GET_CATEGORIES } from '../Apollo/queries';
 const components = [
   {
     title: 'Alert Dialog',
@@ -48,58 +51,32 @@ const components = [
   },
 ];
 
+
 const CategoryNavigation = () => {
+
+  const {
+    loading: categoriesLoading,
+    error: categoriesError,
+    data: categoriesData,
+  } = useQuery(GET_CATEGORIES);
+  console.log(categoriesData);
+
+  if(categoriesError) return(<h1>error</h1>);
+  if(categoriesLoading) return (<h1>loading</h1>)
   return (
     <NavigationMenu>
       <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
-                <NavigationMenuLink asChild>
-                  <a
-                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                    href="/"
-                  >
-                    <ChevronDown className="h-6 w-6" />
-                    <div className="mb-2 mt-4 text-lg font-medium">
-                      shadcn/ui
-                    </div>
-                    <p className="text-sm leading-tight text-muted-foreground">
-                      Beautifully designed components that you can copy and
-                      paste into your apps. Accessible. Customizable. Open
-                      Source.
-                    </p>
-                  </a>
-                </NavigationMenuLink>
-              </li>
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Components</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {components.map((component) => (
-                <ul
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                >
-                  {component.description}
-                </ul>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link to="/cart" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Documentation
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
+        {categoriesData.categories.map((category) => (
+          <NavigationMenuItem key={category.id}> {/* Add a key to each list item */}
+            <Link to="/categories" state={{category}}
+            
+            > {/* Use react-router-dom Link */}
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                {category.categoryName}
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+        ))}
       </NavigationMenuList>
     </NavigationMenu>
   );
