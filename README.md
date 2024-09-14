@@ -91,3 +91,11 @@ To enable live notifications from the admin, run the following command to start 
 docker run -d --hostname my-rabbit --name ecomm-rabbit -p 15672:15672 -p 5672:5672 rabbitmq:3-management
 
 This command sets up RabbitMQ with the management plugin enabled, allowing you to manage queues and exchanges via a web interface.
+
+
+
+
+# Pending Issues !!!
+
+1. Wishlist Items Cannot Be bought
+2. Ashish's Forgot Password Not merged + The Profile UI must be better.
