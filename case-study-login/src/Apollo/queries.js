@@ -22,6 +22,14 @@ export const GET_PRODUCTS = gql`
     }
   }
 `;
+export const GET_CATEGORIES = gql`
+  query {
+    categories {
+      categoryId
+      categoryName
+    }
+  }
+`;
 export const GET_PRODUCTS_BY_CATEGORY = gql`
   query GetProductsByCategory($categoryId: Int!) {
     productsByCategory(categoryId: $categoryId) {

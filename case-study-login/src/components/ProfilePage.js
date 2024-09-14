@@ -5,12 +5,14 @@ import { GET_USER_PROFILE, UPDATE_PROFILE } from '../Apollo/queries'; // Ensure 
 import '../css/ProfilePage.css';
 
 const ProfilePage = () => {
-  const userId = 1; // Set user ID dynamically based on login
+  // Set user ID dynamically based on login
   const navigate = useNavigate(); // Add navigate for routing
+  const [userId, setUserId] = useState(null);
 
   // Fetch the user profile using the GraphQL query
   const { data, loading, error, refetch } = useQuery(GET_USER_PROFILE, {
     variables: { userId },
+    skip: !userId,
   });
 
   const [updateProfile] = useMutation(UPDATE_PROFILE);
@@ -22,8 +24,10 @@ const ProfilePage = () => {
     email: '',
     phoneNumber: '',
   });
-
+  console.log(userId);
   useEffect(() => {
+    const userId = parseInt(localStorage.getItem('userData'), 10);
+    setUserId(userId);
     if (data) {
       const user = data.userById;
       setFormData({

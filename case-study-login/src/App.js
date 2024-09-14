@@ -19,6 +19,7 @@ import OrderHistoryPage from './components/OrderHistoryPage';
 import OrderDetailsPage from './components/OrderDetailsPage';
 import CustomerSupportPage from './components/CustomerSupportPage';
 import SearchedProducts from './components/SearchedProducts';
+import Categories from './components/Categories';
 function App() {
   const location = useLocation();
   const [progress, setProgress] = useState(0);
@@ -73,6 +74,7 @@ function App() {
           />
           <Route path="/customer-support" element={<CustomerSupportPage />} />
           <Route path="/Searches" element={<SearchedProducts />} />
+          <Route path="/Categories" element={<Categories />} />
         </Route>
       </Routes>
     </div>

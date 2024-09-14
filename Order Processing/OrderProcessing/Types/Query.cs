@@ -14,6 +14,38 @@ public class Query
                                 .Include(p => p.Supplier)
                                 .Include(p => p.Inventory);
     }
+    public IQueryable<Category> GetCategories([Service] IRetailApplication<Category> categoryRepository)
+    {
+        return categoryRepository.GetAll();
+    }
+
+    public IQueryable<Product> GetProductsByCategory(int categoryId, [Service] IRetailApplication<Product> productRepository)
+    {
+        return productRepository.GetAll()
+                                .Where(p => p.CategoryId == categoryId) // Filter by the given category ID
+                                .Include(p => p.Category)  // Include related Category entity
+                                .Include(p => p.Supplier)  // Include related Supplier entity
+                                .Include(p => p.Inventory); // Include related Inventory entity
+    }
+    public IEnumerable<Product> GetProductsByMatchingString(string searchString, [Service] IRetailApplication<Product> productRepository)
+    {
+        if (searchString.Length < 3)
+        {
+            throw new ArgumentException("Search string must be at least 3 characters long.");
+        }
+
+        // Get all possible 3-character substrings
+        var substrings = new List<string>();
+        for (int i = 0; i <= searchString.Length - 3; i++)
+        {
+            substrings.Add(searchString.Substring(i, 3));
+        }
+
+        // Query the database to find products where any of these substrings match
+        return productRepository.GetAll()
+                                .Where(p => substrings.Any(substring => p.Name.Contains(substring)))
+                                .ToList();
+    }
     public IQueryable<Inventory> GetInventory([Service] IRetailApplication<Inventory> inventoryRepository)
     {
         return inventoryRepository.GetAll();
