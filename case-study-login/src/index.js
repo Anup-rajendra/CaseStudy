@@ -5,23 +5,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { AuthProvider } from './context/AuthContext';
 import { ApolloProvider } from '@apollo/client';
-import client from './Apollo/ApolloClient'; 
-import { BrowserRouter as Router  } from 'react-router-dom';
- 
+import client from './Apollo/ApolloClient';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-     
-    <AuthProvider>
+  <AuthProvider>
     <ApolloProvider client={client}>
-    <Router>
+      <Router>
         <App />
-        </Router>
+      </Router>
     </ApolloProvider>
-    </AuthProvider>
-   
-  </React.StrictMode>
+  </AuthProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

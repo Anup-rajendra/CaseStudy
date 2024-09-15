@@ -1,34 +1,39 @@
 import React, { useEffect, useState } from 'react';
 import '../css/Cart.css';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useMutation, useQuery } from '@apollo/client'; // Import Apollo mutation hook
+import {
+  CREATE_OR_UPDATE_CART,
+  UPDATE_CART_ITEM,
+  GET_CART_TABLE,
+} from '../Apollo/queries'; // Adjust the import paths if necessary
+import { Toaster, toast } from 'sonner';
+import { Trash2 } from 'lucide-react';
+import { Button } from './ui/button'; // Assuming you're using a button from the UI library
 import {
   Table,
   TableBody,
   TableCell,
-  TableFooter,
   TableHead,
   TableHeader,
   TableRow,
 } from './ui/table';
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-} from './ui/card';
-import { Trash2 } from 'lucide-react';
-import { Button } from './ui/button';
-import { Toaster, toast } from 'sonner';
+import { ShoppingCart } from 'lucide-react';
 const Wishlist = () => {
   const [user, setUser] = useState(null);
   const [wishlistItemsArray, setWishlistItemsArray] = useState([]);
-  const [totalPrice, setTotalPrice] = useState(0);
-  const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
+  const [error, setError] = useState('');
+
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
+  const [createOrUpdateCart] = useMutation(CREATE_OR_UPDATE_CART);
+  const [updateCartItem] = useMutation(UPDATE_CART_ITEM);
+  const { data: cartData, refetch: refetchCart } = useQuery(GET_CART_TABLE, {
+    skip: !selectedProduct,
+    variables: { userId: user },
+  });
+
   useEffect(() => {
     const userId = localStorage.getItem('userData');
     if (userId) {
@@ -43,11 +48,6 @@ const Wishlist = () => {
               `http://localhost:5120/api/WishlistItems/${userId}`
             );
             setWishlistItemsArray(response.data);
-            const total = response.data.reduce(
-              (acc, item) => acc + item.price,
-              0
-            );
-            setTotalPrice(total);
             break; // Exit loop if successful
           } catch (err) {
             retries -= 1;
@@ -67,6 +67,29 @@ const Wishlist = () => {
       fetchItem();
     }
   }, []);
+
+  const handleCartSubmit = async (productId, productName) => {
+    setSelectedProduct(productId);
+    let cartId;
+
+    if (!cartData?.getCartByUserId) {
+      // If cart does not exist, create it
+      const response = await createOrUpdateCart({
+        variables: { userId: user },
+      });
+      cartId = response.data.createOrUpdateCart.cartId;
+      refetchCart();
+    } else {
+      cartId = cartData.getCartByUserId.cartId;
+    }
+
+    // Once you have the cartId, update the cart item
+    const res = await updateCartItem({ variables: { cartId, productId } });
+    console.log(res);
+    toast.success(`${productName} has been added to Cart`);
+    setSelectedProduct(null);
+  };
+
   const handleRemoveItem = async (productId) => {
     if (!user) return; // Ensure user is defined
     try {
@@ -81,95 +104,83 @@ const Wishlist = () => {
       toast.error('Error removing item');
     }
   };
-  const handleOrder = () => {
-    navigate('/orders');
-  };
+
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
+
   return (
-    <div className="flex items-center gap-10 justify-evenly">
-      <Toaster />
-      <div className="flex flex-col gap-10">
-        <div className="text-left font-bold text-2xl pt-10">Wishlist Items</div>
-        <div className="flex gap-6 w-[1000px]">
-          <Table>
-            <TableHeader>
-              <TableRow className="font-extrabold bg-gradient-to-r from-primary to-blue-400 animated-background transition">
-                <TableHead className="w-[200px] font-extrabold text-white">
-                  Item
-                </TableHead>
-                <TableHead className="font-extrabold text-white">
-                  Price
-                </TableHead>
-                <TableHead className="font-extrabold text-white">
-                  Remove
-                </TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {wishlistItemsArray.map((wishlistItem) => (
-                <TableRow key={wishlistItem.productId}>
-                  <TableCell className="flex gap-5 font-medium w-[200px] items-center">
-                    <img
-                      src={wishlistItem.photoUrl}
-                      alt={wishlistItem.productName}
-                      style={{ width: '60px', height: '60px' }}
-                    />
-                    <div>{wishlistItem.name}</div>
-                  </TableCell>
-                  <TableCell>{wishlistItem.price}</TableCell>
-                  <TableCell className="pl-8 text-primary">
-                    <button
-                      onClick={() => handleRemoveItem(wishlistItem.productId)}
-                    >
-                      <Trash2 />
-                    </button>
-                  </TableCell>
+    <div className="w-full h-auto fixed">
+      <div className="flex flex-col items-center gap-10 justify-center ">
+        <Toaster />
+        <div className="flex flex-col gap-10 ">
+          <div className="text-left font-bold text-2xl pt-10">
+            Wishlist Items
+          </div>
+          <div className="flex gap-6 w-[900px]">
+            <Table>
+              <TableHeader>
+                <TableRow className="font-extrabold bg-gradient-to-r from-primary to-blue-400 animated-background transition">
+                  <TableHead className="w-[200px] font-extrabold text-white">
+                    Item
+                  </TableHead>
+                  <TableHead className="font-extrabold text-white">
+                    Price
+                  </TableHead>
+                  <TableHead className="font-extrabold text-white">
+                    Remove
+                  </TableHead>
+                  <TableHead className="font-extrabold text-white ">
+                    Cart
+                  </TableHead>
                 </TableRow>
-              ))}
-            </TableBody>
-            <TableFooter>
-              <TableRow>
-                {/* <TableCell colSpan={2} className="text-primary font-bold">Total</TableCell>
-                <TableCell className="text-primary">{totalPrice}</TableCell> */}
-              </TableRow>
-            </TableFooter>
-          </Table>
+              </TableHeader>
+              <TableBody>
+                {wishlistItemsArray.map((wishlistItem) => (
+                  <TableRow key={wishlistItem.productId}>
+                    <TableCell className="flex gap-5 font-medium w-[200px] items-center">
+                      <img
+                        src={wishlistItem.photoUrl}
+                        alt={wishlistItem.productName}
+                        style={{ width: '60px', height: '60px' }}
+                      />
+                      <div>{wishlistItem.name}</div>
+                    </TableCell>
+                    <TableCell>{wishlistItem.price}</TableCell>
+                    <TableCell className="pl-8 text-primary">
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleRemoveItem(wishlistItem.productId);
+                        }}
+                      >
+                        <Trash2 />
+                      </button>
+                    </TableCell>
+                    <TableCell>
+                      <Button
+                        variant="outline"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleCartSubmit(
+                            wishlistItem.productId,
+                            wishlistItem.name
+                          );
+                        }}
+                        className="transition ease-in-out delay-150 hover:-translate-y-1 flex items-center gap-2 text-primary"
+                      >
+                        <ShoppingCart size={20} />
+                        Add to Cart
+                      </Button>
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </div>
         </div>
-        <div className="flex justify-end pr-3">
-          <Button
-            onClick={handleOrder}
-            className="bg-gradient-to-r from-primary to-blue-400 animated-background transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 hover:bg-indigo-500 duration-300"
-          >
-            Order Now
-          </Button>
-        </div>
-      </div>
-      <div className="pl-5">
-        <Card className="w-[300px]">
-          <CardHeader className="border-b bg-gradient-to-r from-primary to-blue-400 animated-background">
-            <CardTitle className="text-white">Summary</CardTitle>
-            <CardDescription className="text-white">
-              Price Details
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="flex flex-col gap-5 pt-4 border-b">
-            <div className="flex gap-4">
-              <div className="text-primary font-semibold">Subtotal:</div>
-              <div className="text-black font-normal">{totalPrice}</div>
-            </div>
-            <div className="flex gap-4">
-              <div className="text-primary font-semibold">Delivery fee:</div>
-              <div className="text-black font-normal">Free</div>
-            </div>
-          </CardContent>
-          <CardFooter className="flex flex-row gap-4 pt-4">
-            <div className="text-primary font-semibold">Total Price:</div>
-            <div className="text-black font-normal">{totalPrice}</div>
-          </CardFooter>
-        </Card>
       </div>
     </div>
   );
 };
+
 export default Wishlist;
