@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "tqFeuu6gbHvDxq9dZwgQy68xBfvV0WF9uibNBZvF6YE=",
+  "Source": "Apigateway",
+  "BasePath": "_content/Apigateway",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,41 @@
+.notification-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.notification-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.notification-card {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0; /* Add space between cards */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.notification-card:hover {
+    transform: scale(1.05);
+}
+
+.notification-name {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.notification-image {
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.notification-price {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+}

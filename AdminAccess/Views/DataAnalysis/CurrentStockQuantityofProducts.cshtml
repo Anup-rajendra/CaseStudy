@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Current Stock Quantity Of Products";
+    var productNames = ViewBag.ProductNames as List<string>;
+    var stockQuantities = ViewBag.StockQuantities as List<int>;
+}
+
+<div class="container mt-4">
+    <h1>@ViewData["Title"]</h1>
+    <canvas id="stockChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    var ctx = document.getElementById('stockChart').getContext('2d');
+    var stockChart = new Chart(ctx, {
+        type: 'bar', // You can change this to 'line', 'pie', etc.
+        data: {
+            labels: @Html.Raw(Json.Serialize(productNames)), // X-axis labels (Product Names)
+            datasets: [{
+                label: 'Stock Quantity',
+                data: @Html.Raw(Json.Serialize(stockQuantities)), // Y-axis data (Stock Quantities)
+                backgroundColor: 'rgba(0, 192, 192, 0.8)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
