@@ -61,7 +61,7 @@ const Order = () => {
     }
   }, [userId, currentAddressNumber, refetchAddress, refetchCart]);
 
-  if (addressLoading || cartLoading) return <p>Loading...</p>;
+  if (addressLoading || cartLoading) return <p> </p>;
   if (addressError)
     return <p>Error fetching addresses: {addressError.message}</p>;
   if (cartError) return <p>Error fetching cart details: {cartError.message}</p>;

@@ -192,7 +192,7 @@ const ProductDetails = () => {
           </div>
         </div>
         {isLoading ? (
-          <p className="loading">Loading reviews...</p>
+          <p className="loading"></p>
         ) : (
           <div className="border rounded-sm p-4">
             <div className="font-bold text-3xl border-b pb-3">

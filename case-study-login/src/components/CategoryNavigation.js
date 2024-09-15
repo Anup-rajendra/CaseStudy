@@ -20,7 +20,7 @@ const CategoryNavigation = () => {
   console.log(categoriesData);
 
   if (categoriesError) return <h1>error</h1>;
-  if (categoriesLoading) return <h1>loading</h1>;
+  if (categoriesLoading) return <h1></h1>;
   return (
     <NavigationMenu>
       <NavigationMenuList>

@@ -197,4 +197,10 @@ public class Query
         return await productRepository.GetAll().Where(p => p.ProductId == productId).Include(p=>p.Inventory).Include(p=>p.Supplier).ToListAsync();
             
     }
+    public IQueryable<Review> GetReviews([Service] IRetailApplication<Review> reviewRepository)
+    {
+        return reviewRepository.GetAll()
+                                .Include(r => r.Product);
+                              
+    }
 }

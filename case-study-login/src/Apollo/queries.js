@@ -381,3 +381,13 @@ export const GET_ORDER_DETAILS = gql`
     }
   }
 `;
+export const GET_REVIEWS = gql`
+  query {
+    reviews {
+      productId
+      rating
+      reviewId
+      productId
+    }
+  }
+`;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../css/Products.css'; // Ensure this file contains styles for the card and button
 import { useQuery, useMutation } from '@apollo/client';
 import {
@@ -19,15 +19,23 @@ import { Button } from './ui/button'; // Ensure this is correctly imported
 import { ShoppingCart } from 'lucide-react';
 import axios from 'axios';
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
+import { Star } from 'lucide-react';
+import { GET_REVIEWS } from '../Apollo/queries';
 const SearchedProducts = () => {
   const Navigate = useNavigate();
   const location = useLocation();
   const [likedProducts, setLikedProducts] = useState([]);
   const { suggestions, product } = location.state || {};
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [reviews, setReviews] = useState([]);
   const userId = parseInt(localStorage.getItem('userData'), 10);
   // const navigate = useNavigate();
 
+  const {
+    data: reviewData,
+    loading: reviewLoading,
+    error: reviewError,
+  } = useQuery(GET_REVIEWS);
   const { data: cartData, refetch: refetchCart } = useQuery(GET_CART_TABLE, {
     skip: !selectedProduct,
     variables: { userId },
@@ -35,7 +43,11 @@ const SearchedProducts = () => {
 
   const [createOrUpdateCart] = useMutation(CREATE_OR_UPDATE_CART);
   const [updateCartItem] = useMutation(UPDATE_CART_ITEM);
-
+  useEffect(() => {
+    if (reviewData) {
+      setReviews(reviewData.reviews);
+    }
+  }, [reviewData]);
   const handleCartSubmit = async (productId, productName) => {
     setSelectedProduct(productId);
     let cartId;
@@ -85,6 +97,66 @@ const SearchedProducts = () => {
     };
     Navigate('/OrderItem', { state: data });
   };
+  const getAverageRating = (productId) => {
+    const productReviews = reviews.filter(
+      (review) => review.productId === productId
+    );
+    const totalRatings = productReviews.reduce(
+      (sum, review) => sum + review.rating,
+      0
+    );
+    return productReviews.length
+      ? (totalRatings / productReviews.length).toFixed(1)
+      : 0;
+  };
+  const renderStars = (averageRating) => {
+    const totalStars = 5; // Assume maximum rating is 5 stars
+    const fullStars = Math.floor(averageRating); // Full stars
+    const hasHalfStar = averageRating % 1 !== 0; // Check if there's a half star
+    const emptyStars = totalStars - fullStars - (hasHalfStar ? 1 : 0); // Calculate empty stars
+
+    // Ensure no negative star values
+    if (fullStars < 0 || emptyStars < 0 || totalStars < 0) {
+      console.error('Invalid star calculation', {
+        fullStars,
+        emptyStars,
+        totalStars,
+      });
+      return null;
+    }
+
+    return (
+      <div className="flex items-center">
+        {/* Full Stars */}
+        {[...Array(fullStars)].map((_, index) => (
+          <Star
+            key={`full-${index}`}
+            className="text-primary"
+            fill="currentColor"
+            size={20}
+          />
+        ))}
+        {/* Half Star */}
+        {hasHalfStar && (
+          <div className="relative">
+            <Star className="text-gray-300" size={20} />
+            <Star
+              className="text-primary absolute top-0 left-0 fill-primary"
+              style={{ clipPath: 'inset(0 50% 0 0)' }} // Clip the yellow star to show half
+              size={20}
+            />
+          </div>
+        )}
+        {/* Empty Stars */}
+        {[...Array(emptyStars)].map((_, index) => (
+          <Star key={`empty-${index}`} className="text-gray-300" size={20} />
+        ))}
+      </div>
+    );
+  };
+  if (reviewLoading) return <p></p>;
+  if (reviewError) return <p>Error: {reviewError.message}</p>;
+
   return (
     <div className="h-full">
       <Toaster />
@@ -127,25 +199,26 @@ const SearchedProducts = () => {
                       }}
                     />
                   </div>
-                  <div className="flex flex-col gap-6 justify-center">
-                    <div>
-                      <span className="font-bold text-xl">Price: </span>
-                      <span className="text-black font-semibold pl-1">
-                        Rs.{prod.price.toFixed(2)}
-                      </span>
-                    </div>
-                    <div>
-                      <span className="font-bold text-xl">Category:</span>
-                      <span className="text-black font-semibold pl-1">
-                        {' '}
-                        {prod.category.categoryName}
-                      </span>
-                    </div>
-                    <div>
-                      <span className="font-bold text-xl">Quantity:</span>{' '}
-                      <span className="text-black font-semibold pl-1">
-                        {prod.inventory.stockQuantity}
-                      </span>
+                  <div className="flex flex-col gap-6 ">
+                    {
+                      <div>
+                        {renderStars(getAverageRating(product.productId))}
+                      </div>
+                    }
+                    <div className="pt-4 flex flex-col gap-7">
+                      <div className="flex gap-2">
+                        <span className="font-bold text-xl">Price: </span>
+                        <span className="text-black font-semibold pl-1">
+                          Rs.{product.price.toFixed(2)}
+                        </span>
+                      </div>
+                      <div>
+                        <span className="font-bold text-xl">Category:</span>
+                        <span className="text-black font-semibold pl-1">
+                          {' '}
+                          {product.category.categoryName}
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>

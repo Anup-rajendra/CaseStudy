@@ -85,7 +85,7 @@ const AddressList = ({
     refetch();
   }, [onAddNewAddress]); // Refetch addresses when a new one is added
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <p> </p>;
   if (error) return <p>Error: {error.message}</p>;
 
   const addresses = data?.addressesByUserId || [];

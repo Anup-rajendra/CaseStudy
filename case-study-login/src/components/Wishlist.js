@@ -105,76 +105,85 @@ const Wishlist = () => {
     }
   };
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <p> </p>;
   if (error) return <p>Error: {error}</p>;
 
   return (
     <div className="flex flex-col items-center gap-10 justify-center ">
       <Toaster />
-      <div className="flex flex-col gap-10 ">
-        <div className="text-left font-bold text-2xl pt-10">Wishlist Items</div>
-        <div className="flex gap-6 w-[900px]">
-          <Table>
-            <TableHeader>
-              <TableRow className="font-extrabold bg-gradient-to-r from-primary to-blue-400 animated-background transition">
-                <TableHead className="w-[200px] font-extrabold text-white">
-                  Item
-                </TableHead>
-                <TableHead className="font-extrabold text-white">
-                  Price
-                </TableHead>
-                <TableHead className="font-extrabold text-white">
-                  Remove
-                </TableHead>
-                <TableHead className="font-extrabold text-white ">
-                  Cart
-                </TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {wishlistItemsArray.map((wishlistItem) => (
-                <TableRow key={wishlistItem.productId}>
-                  <TableCell className="flex gap-5 font-medium w-[200px] items-center">
-                    <img
-                      src={wishlistItem.photoUrl}
-                      alt={wishlistItem.productName}
-                      style={{ width: '60px', height: '60px' }}
-                    />
-                    <div>{wishlistItem.name}</div>
-                  </TableCell>
-                  <TableCell>{wishlistItem.price}</TableCell>
-                  <TableCell className="pl-8 text-primary">
-                    <button
-                      onClick={(e) => {
-                        e.preventDefault();
-                        handleRemoveItem(wishlistItem.productId);
-                      }}
-                    >
-                      <Trash2 />
-                    </button>
-                  </TableCell>
-                  <TableCell>
-                    <Button
-                      variant="outline"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        handleCartSubmit(
-                          wishlistItem.productId,
-                          wishlistItem.name
-                        );
-                      }}
-                      className="transition ease-in-out delay-150 hover:-translate-y-1 flex items-center gap-2 text-primary"
-                    >
-                      <ShoppingCart size={20} />
-                      Add to Cart
-                    </Button>
-                  </TableCell>
+      {wishlistItemsArray ? (
+        <div className="flex flex-col gap-10 ">
+          <div className="text-left font-bold text-2xl pt-10">
+            Wishlist Items
+          </div>
+          <div className="flex gap-6 w-[900px]">
+            <Table>
+              <TableHeader>
+                <TableRow className="font-extrabold bg-gradient-to-r from-primary to-blue-400 animated-background transition">
+                  <TableHead className="w-[200px] font-extrabold text-white">
+                    Item
+                  </TableHead>
+                  <TableHead className="font-extrabold text-white">
+                    Price
+                  </TableHead>
+                  <TableHead className="font-extrabold text-white">
+                    Remove
+                  </TableHead>
+                  <TableHead className="font-extrabold text-white">
+                    Cart
+                  </TableHead>
                 </TableRow>
-              ))}
-            </TableBody>
-          </Table>
+              </TableHeader>
+              <TableBody>
+                {wishlistItemsArray.map((wishlistItem) => (
+                  <TableRow key={wishlistItem.productId}>
+                    <TableCell className="flex gap-5 font-medium w-[200px] items-center">
+                      <img
+                        src={wishlistItem.photoUrl}
+                        alt={wishlistItem.productName}
+                        style={{ width: '60px', height: '60px' }}
+                      />
+                      <div>{wishlistItem.name}</div>
+                    </TableCell>
+                    <TableCell>{wishlistItem.price}</TableCell>
+                    <TableCell className="pl-8 text-primary">
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleRemoveItem(wishlistItem.productId);
+                        }}
+                      >
+                        <Trash2 />
+                      </button>
+                    </TableCell>
+                    <TableCell>
+                      <Button
+                        variant="outline"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleCartSubmit(
+                            wishlistItem.productId,
+                            wishlistItem.name
+                          );
+                        }}
+                        className="transition ease-in-out delay-150 hover:-translate-y-1 flex items-center gap-2 text-primary"
+                      >
+                        <ShoppingCart size={20} />
+                        Add to Cart
+                      </Button>
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </div>
         </div>
-      </div>
+      ) : (
+        <div className="flex flex-col items-center justify-center pt-36 gap-16">
+          <div className="font-bold text-6xl">Empty Wishlist</div>
+          <img src="/NoData.svg" alt="Empty WebPage" width={600} />
+        </div>
+      )}
     </div>
   );
 };

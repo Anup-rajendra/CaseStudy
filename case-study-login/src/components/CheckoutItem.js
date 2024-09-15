@@ -133,7 +133,7 @@ const CheckoutItem = () => {
     setDeliveryDate(futureDateStr);
   }, []);
   console.log(productslist);
-  if (productsLoading) return <p>Loading products...</p>;
+  if (productsLoading) return <p> </p>;
   if (productsError)
     return <p>Error loading products: {productsError.message}</p>;
   return (

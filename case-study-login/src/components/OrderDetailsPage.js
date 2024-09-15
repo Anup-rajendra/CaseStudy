@@ -11,8 +11,7 @@ const OrderDetailsPage = () => {
     variables: { orderId: parseInt(orderId, 10) }, // Convert orderId to an integer
   });
 
-  if (loading)
-    return <p className="text-center text-lg text-gray-600">Loading...</p>;
+  if (loading) return <p className="text-center text-lg text-gray-600"> </p>;
   if (error)
     return <p className="text-center text-red-500">Error: {error.message}</p>;
 

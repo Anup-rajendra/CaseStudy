@@ -171,7 +171,7 @@ const Checkout = () => {
     addOrderItem,
   ]);
 
-  if (productsLoading) return <p>Loading products...</p>;
+  if (productsLoading) return <p> </p>;
   if (productsError)
     return <p>Error loading products: {productsError.message}</p>;
 

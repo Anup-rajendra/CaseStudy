@@ -64,7 +64,7 @@ const OrderItem = () => {
     }
   }, [userId, currentAddressNumber, refetchAddress]);
 
-  if (addressLoading) return <p>Loading...</p>;
+  if (addressLoading) return <p> </p>;
   if (addressError)
     return <p>Error fetching addresses: {addressError.message}</p>;
 

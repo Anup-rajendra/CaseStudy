@@ -72,7 +72,7 @@ const Cart = () => {
     setTotalPrice(totalCartPrice);
   }, [cartItemsArray]);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <p></p>;
   if (error) return <p>Error: {error.message}</p>;
 
   const handleQuantityChange = async (cartItemId, change) => {
@@ -137,7 +137,7 @@ const Cart = () => {
     navigate('/orders');
   };
 
-  return (
+  return cartItemsArray.length > 0 && totalPrice > 0 ? (
     <div className="flex items-center gap-10 justify-evenly ">
       <div className="flex flex-col gap-10 flex-grow pl-20">
         <div className="text-left font-bold text-2xl pt-10">Cart Items</div>
@@ -253,6 +253,11 @@ const Cart = () => {
           </CardFooter>
         </Card>
       </div>
+    </div>
+  ) : (
+    <div className="flex flex-col items-center justify-center pt-36 gap-16">
+      <div className="font-bold text-6xl">Empty Cart</div>
+      <img src="/NoData.svg" alt="Empty WebPage" width={600} />
     </div>
   );
 };

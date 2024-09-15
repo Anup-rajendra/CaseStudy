@@ -84,7 +84,7 @@ const SearchBar = () => {
     });
   };
 
-  if (productsLoading) return <h1>Loading...</h1>;
+  if (productsLoading) return <h1> </h1>;
   if (productsError) return <h1>Error fetching products. Please retry.</h1>;
   console.log('Suggestion', suggestions);
 
