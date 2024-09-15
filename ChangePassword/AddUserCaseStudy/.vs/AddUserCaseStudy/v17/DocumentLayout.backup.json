@@ -1,0 +1,113 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\AshishShukla\\Desktop\\CaseStudy-front-end\\CaseStudy-front-end\\AddUserCaseStudy\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6651CB90-5211-49FF-A746-195D32628BBA}|AddUserCaseStudy\\AddUserCaseStudy.csproj|c:\\users\\ashishshukla\\desktop\\casestudy-front-end\\casestudy-front-end\\addusercasestudy\\addusercasestudy\\controllers\\signinapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6651CB90-5211-49FF-A746-195D32628BBA}|AddUserCaseStudy\\AddUserCaseStudy.csproj|solutionrelative:addusercasestudy\\controllers\\signinapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBFA2F95-0EB9-4163-BB1A-E813967698E7}|RepositoryLayer\\RepositoryLayer.csproj|c:\\users\\ashishshukla\\desktop\\casestudy-front-end\\casestudy-front-end\\addusercasestudy\\repositorylayer\\models\\changepasswordrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBFA2F95-0EB9-4163-BB1A-E813967698E7}|RepositoryLayer\\RepositoryLayer.csproj|solutionrelative:repositorylayer\\models\\changepasswordrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6651CB90-5211-49FF-A746-195D32628BBA}|AddUserCaseStudy\\AddUserCaseStudy.csproj|c:\\users\\ashishshukla\\desktop\\casestudy-front-end\\casestudy-front-end\\addusercasestudy\\addusercasestudy\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6651CB90-5211-49FF-A746-195D32628BBA}|AddUserCaseStudy\\AddUserCaseStudy.csproj|solutionrelative:addusercasestudy\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBFA2F95-0EB9-4163-BB1A-E813967698E7}|RepositoryLayer\\RepositoryLayer.csproj|c:\\users\\ashishshukla\\desktop\\casestudy-front-end\\casestudy-front-end\\addusercasestudy\\repositorylayer\\models\\retailapplicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBFA2F95-0EB9-4163-BB1A-E813967698E7}|RepositoryLayer\\RepositoryLayer.csproj|solutionrelative:repositorylayer\\models\\retailapplicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6651CB90-5211-49FF-A746-195D32628BBA}|AddUserCaseStudy\\AddUserCaseStudy.csproj|c:\\users\\ashishshukla\\desktop\\casestudy-front-end\\casestudy-front-end\\addusercasestudy\\addusercasestudy\\models\\retailapplicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6651CB90-5211-49FF-A746-195D32628BBA}|AddUserCaseStudy\\AddUserCaseStudy.csproj|solutionrelative:addusercasestudy\\models\\retailapplicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChangePasswordRequest.cs",
+              "DocumentMoniker": "C:\\Users\\AshishShukla\\Desktop\\CaseStudy-front-end\\CaseStudy-front-end\\AddUserCaseStudy\\RepositoryLayer\\Models\\ChangePasswordRequest.cs",
+              "RelativeDocumentMoniker": "RepositoryLayer\\Models\\ChangePasswordRequest.cs",
+              "ToolTip": "C:\\Users\\AshishShukla\\Desktop\\CaseStudy-front-end\\CaseStudy-front-end\\AddUserCaseStudy\\RepositoryLayer\\Models\\ChangePasswordRequest.cs*",
+              "RelativeToolTip": "RepositoryLayer\\Models\\ChangePasswordRequest.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T08:32:18.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SignInApi.cs",
+              "DocumentMoniker": "C:\\Users\\AshishShukla\\Desktop\\CaseStudy-front-end\\CaseStudy-front-end\\AddUserCaseStudy\\AddUserCaseStudy\\Controllers\\SignInApi.cs",
+              "RelativeDocumentMoniker": "AddUserCaseStudy\\Controllers\\SignInApi.cs",
+              "ToolTip": "C:\\Users\\AshishShukla\\Desktop\\CaseStudy-front-end\\CaseStudy-front-end\\AddUserCaseStudy\\AddUserCaseStudy\\Controllers\\SignInApi.cs",
+              "RelativeToolTip": "AddUserCaseStudy\\Controllers\\SignInApi.cs",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAswKcAAAB4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T08:27:25.134Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\AshishShukla\\Desktop\\CaseStudy-front-end\\CaseStudy-front-end\\AddUserCaseStudy\\AddUserCaseStudy\\appsettings.json",
+              "RelativeDocumentMoniker": "AddUserCaseStudy\\appsettings.json",
+              "ToolTip": "C:\\Users\\AshishShukla\\Desktop\\CaseStudy-front-end\\CaseStudy-front-end\\AddUserCaseStudy\\AddUserCaseStudy\\appsettings.json",
+              "RelativeToolTip": "AddUserCaseStudy\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-15T07:06:57.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RetailApplicationContext.cs",
+              "DocumentMoniker": "C:\\Users\\AshishShukla\\Desktop\\CaseStudy-front-end\\CaseStudy-front-end\\AddUserCaseStudy\\RepositoryLayer\\Models\\RetailApplicationContext.cs",
+              "RelativeDocumentMoniker": "RepositoryLayer\\Models\\RetailApplicationContext.cs",
+              "ToolTip": "C:\\Users\\AshishShukla\\Desktop\\CaseStudy-front-end\\CaseStudy-front-end\\AddUserCaseStudy\\RepositoryLayer\\Models\\RetailApplicationContext.cs",
+              "RelativeToolTip": "RepositoryLayer\\Models\\RetailApplicationContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T07:06:50.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RetailApplicationContext.cs",
+              "DocumentMoniker": "C:\\Users\\AshishShukla\\Desktop\\CaseStudy-front-end\\CaseStudy-front-end\\AddUserCaseStudy\\AddUserCaseStudy\\Models\\RetailApplicationContext.cs",
+              "RelativeDocumentMoniker": "AddUserCaseStudy\\Models\\RetailApplicationContext.cs",
+              "ToolTip": "C:\\Users\\AshishShukla\\Desktop\\CaseStudy-front-end\\CaseStudy-front-end\\AddUserCaseStudy\\AddUserCaseStudy\\Models\\RetailApplicationContext.cs",
+              "RelativeToolTip": "AddUserCaseStudy\\Models\\RetailApplicationContext.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T07:05:59.635Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
