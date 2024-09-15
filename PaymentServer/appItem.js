@@ -26,11 +26,11 @@ app.post("/api/create-checkout-session", async (req, res) => {
       console.log(imageUrl);
 
       console.log(
-        `Product: ${product.productName}, Price: ${product.productPrice}, Unit Amount (cents): ${unitAmountCents}`
+        `Product: ${product.productName}, Price: ${product.productPrice}, Unit Amount : ${unitAmountCents}`
       );
       return {
         price_data: {
-          currency: "USD", // Ensure this matches your intended currency
+          currency: "INR", // Ensure this matches your intended currency
           product_data: {
             name: product.productName,
             images: [imageUrl], // Ensure the image URL is valid

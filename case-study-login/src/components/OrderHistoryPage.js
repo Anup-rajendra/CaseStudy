@@ -30,14 +30,14 @@ const OrderHistoryPage = () => {
     <div className=" py-10">
       <div className="flex flex-col items-center p-4">
         <h1 className="text-4xl font-bold mb-10">Order History</h1>
-        <div className="bg-white shadow-md rounded-xl w-full max-w-4xl">
+        <div className="  rounded-xl w-full max-w-4xl">
           {data?.userOrders.length === 0 ? (
             <p className="text-center py-6 text-gray-600">No orders found.</p>
           ) : (
             data?.userOrders.map((order) => (
               <div
                 key={order.orderId}
-                className="border-b rounded-xl last:border-none p-6 bg-blue-100"
+                className="shadow-lg border-b rounded-xl last:border-none p-6 bg-blue-100 mb-6"
               >
                 <div className="flex justify-between">
                   <div className="mb-2">

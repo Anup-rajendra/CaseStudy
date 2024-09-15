@@ -175,9 +175,9 @@ const Cart = () => {
                         alt={cartItem.productName}
                         style={{ width: '60px', height: '60px' }}
                       />
-                      <div>Rs.{cartItem.productName}</div>
+                      <div>{cartItem.productName}</div>
                     </TableCell>
-                    <TableCell>{cartItem.productPrice}</TableCell>
+                    <TableCell>Rs.{cartItem.productPrice}</TableCell>
                     <TableCell colSpan={2}>
                       <div className="flex gap-3">
                         <button
@@ -197,7 +197,7 @@ const Cart = () => {
                         </button>
                       </div>
                     </TableCell>
-                    <TableCell>{cartItem.totalPrice}</TableCell>
+                    <TableCell>Rs.{cartItem.totalPrice}</TableCell>
                     <TableCell className="pl-8 text-primary">
                       <button
                         onClick={() => handleRemoveItem(cartItem.cartItemId)}
@@ -214,7 +214,7 @@ const Cart = () => {
                 <TableCell colSpan={4} className="text-primary font-bold">
                   Total
                 </TableCell>
-                <TableCell className="text-primary">{totalPrice}</TableCell>
+                <TableCell className="text-primary">Rs.{totalPrice}</TableCell>
               </TableRow>
             </TableFooter>
           </Table>

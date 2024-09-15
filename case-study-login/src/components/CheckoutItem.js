@@ -77,7 +77,6 @@ const CheckoutItem = () => {
             variables: { orderId: orderData.addNewOrder.orderId },
           });
           console.log(Shipmentdetails);
-          setDeliveryDate(Shipmentdetails.addShipment.deliveryDate);
 
           try {
             const { data: OrderItem } = await addOrderItem({
@@ -125,75 +124,83 @@ const CheckoutItem = () => {
     };
 
     fetchData();
+    const today = new Date();
+    const futureDate = new Date(today);
+    futureDate.setDate(today.getDate() + 5);
+    const futureDateStr = futureDate.toLocaleDateString();
+
+    // Update the state with the future date string
+    setDeliveryDate(futureDateStr);
   }, []);
+  console.log(productslist);
   if (productsLoading) return <p>Loading products...</p>;
   if (productsError)
     return <p>Error loading products: {productsError.message}</p>;
   return (
-    <section className="checkout">
-      <div className="container py-5">
-        <div className="card">
-          <div className="card-body">
-            <h2 className="title">Purchase Receipt</h2>
+    <section className="flex items-center justify-center ">
+      <div className=" w-full mx-auto px-4 pt-16">
+        <div className="bg-white shadow-lg rounded-lg">
+          <div className="p-6">
+            <h2 className="text-2xl font-bold text-green-700 mb-4">
+              Purchase Receipt
+            </h2>
 
-            <div className="info">
-              <div className="info-item">
-                <span>Date</span>
-                <p>{new Date().toLocaleString()}</p>
+            <div className="mb-6 ">
+              <div className="pb-2 border-b">
+                <span className="block text-gray-600 font-semibold">Date</span>
+                <p className="text-gray-800">
+                  {new Date().toLocaleDateString()}
+                </p>
               </div>
-              <div className="info-item">
-                <span>Order No.</span>
-                <p>{orderId}</p>
+              <div className="border-b pt-2 pb-2">
+                <span className="block text-gray-600 font-semibold">
+                  Order No.
+                </span>
+                <p className="text-gray-800">{orderId}</p>
               </div>
             </div>
 
-            <div className="details">
-              {productslist?.productByIdList?.map((product, index) => (
-                <div className="detail-item" key={index}>
+            <div className="mb-6">
+              {productslist?.productById?.map((product, index) => (
+                <div
+                  className="flex items-center mb-4 border-b pb-4"
+                  key={index}
+                >
                   <img
                     src={product.photoUrl}
                     alt={product.name}
-                    className="checkout-product-image"
+                    className="w-24 h-24 object-cover rounded-md border border-gray-300 mr-4"
                   />
-                  <span>{product.name}</span>
-                  <p>1</p>
-                  <p>£{product.price.toFixed(2)}</p>
+                  <div className="flex-1 pl-8">
+                    <span className="block text-lg font-semibold text-green-700">
+                      {product.name}
+                    </span>
+                    <p className="text-green-700">
+                      Rs.{product.price.toFixed(2)}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>
 
-            <div className="total">
-              <p>£{totalPrice.toFixed(2)}</p>
+            <div className="mb-6">
+              <p className="text-xl font-bold text-green-700">
+                Total: Rs.{totalPrice.toFixed(2)}
+              </p>
             </div>
 
-            <h3 className="tracking-title">Tracking Order</h3>
-
-            <ul className="timeline">
-              <li className="ordered">Ordered</li>
-              <li className="shipped">Shipped</li>
-              <li className="on-the-way">On the way</li>
-              <li className="delivered text-end">Delivered</li>
-            </ul>
-
-            <div>
-              <p>Delivery Date: {deliveryDate}</p>
+            <div className="mt-6">
+              <p className="text-gray-800">Delivery Date: {deliveryDate}</p>
             </div>
 
-            <div className="button-container">
+            <div className="mt-6 text-center">
               <button
-                className="continue-shopping"
+                className="bg-gradient-to-r from-primary to-blue-400 animated-background text-white px-4 py-2 rounded hover:bg-green-700 transition duration-300"
                 onClick={() => navigate('/products')}
               >
                 Continue Shopping
               </button>
             </div>
-
-            <p className="contact">
-              Want any help?{' '}
-              <a href="#!" className="contact-link">
-                Please contact us
-              </a>
-            </p>
           </div>
         </div>
       </div>
