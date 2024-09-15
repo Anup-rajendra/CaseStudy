@@ -90,6 +90,50 @@ namespace AddUserCaseStudy.Controllers
         {
             return _interfaceUser2.GetAllAsync();
         }
+        [HttpPost("reset-password")]
+        public async Task<IActionResult> ResetPassword([FromBody] RepositoryLayer.Models.ResetPasswordRequest request)
+        {
+            if (request == null)
+            {
+                return BadRequest("Invalid request.");
+            }
+            // Log incoming request
+            Console.WriteLine($"ResetPassword request: Email = {request.Email}, Otp = {request.Otp}, NewPassword = {request.NewPassword}");
+
+            var user = await _interfaceUser2.GetByEmailAsync(request.Email);
+            if (user == null || user.Otpcode != request.Otp)
+            {
+                return BadRequest("Invalid OTP or user not found.");
+            }
+
+            var hashedPassword = BCrypt.Net.BCrypt.HashPassword(request.NewPassword);
+            user.Upassword = hashedPassword;
+            user.Otpverified = true;  // Mark OTP as used
+            await _interfaceUser2.UpdateAsync(user);
+
+            return Ok("Password has been reset successfully.");
+
+        }
+        [HttpPost("forgot-password")]
+        public async Task<IActionResult> ForgotPassword([FromBody] RepositoryLayer.Models.ForgotPasswordRequest request)
+        {
+            var user = await _interfaceUser2.GetByEmailAsync(request.Email);
+            if (user == null)
+            {
+                return NotFound("User not found.");
+            }
+
+            var otp = new Random().Next(1000, 9999).ToString();
+            user.Otpcode = otp;
+            user.Otpverified = false;
+            await _interfaceUser2.UpdateAsync(user);
+
+            var emailBody = $"<h1>Forgot Password</h1><br /><h3>Your OTP is: {otp}</h3>";
+            _emailService.SendEmail(request.Email, "Password Reset OTP", emailBody);
+
+            return Ok("OTP sent to your email.");
+        }
+
 
         [HttpPost("update-passwords")] // Distinguishing endpoint for updating passwords
         public IActionResult UpdatePasswordToHash()

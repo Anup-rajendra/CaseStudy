@@ -78,6 +78,10 @@ const Login = () => {
     navigate('/signing');
   };
 
+  const handleForgotPassword = () => {
+    navigate('/forgot-password');
+  };
+
   return (
     <div
       className="flex items-center justify-center h-screen -z-10"
@@ -129,16 +133,28 @@ const Login = () => {
                 <div>Login</div>
               )}
             </Button>
-            <div>
-              <Button
-                type="button"
-                onClick={handleSignUpRedirect}
-                variant="link"
-                className="pl-0 flex gap-3"
-              >
-                <div>Don&apos;t Have An Account?</div>
-                <div>Click here</div>
-              </Button>
+            <div className="flex justify-between">
+              <div className="flex items-center gap-1">
+                <div className="text-black text-sm">New User?</div>
+                <Button
+                  type="button"
+                  onClick={handleSignUpRedirect}
+                  variant="link"
+                  className="pl-0 flex gap-3"
+                >
+                  <div className="font-medium">SignUp</div>
+                </Button>
+              </div>
+              <div>
+                <Button
+                  type="button"
+                  onClick={handleForgotPassword}
+                  variant="link"
+                  className="pl-0 flex gap-3"
+                >
+                  <div>Forgot password?</div>
+                </Button>
+              </div>
             </div>
           </form>
         </Form>
