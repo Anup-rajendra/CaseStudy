@@ -133,6 +133,16 @@ namespace AddUserCaseStudy.Controllers
 
             return Ok("OTP sent to your email.");
         }
+        [HttpGet("get-email-by-user/{userId}")]
+        public async Task<IActionResult> GetEmailByUserId(int userId)
+        {
+            var user = await _interfaceUser2.GetByIdAsync(userId); // Make sure this method exists in your repository
+            if (user == null)
+            {
+                return NotFound("User not found.");
+            }
+            return Ok(new { email = user.Email });
+        }
 
 
         [HttpPost("update-passwords")] // Distinguishing endpoint for updating passwords
@@ -150,7 +160,28 @@ namespace AddUserCaseStudy.Controllers
                 return StatusCode(500, "Internal server error.");
             }
         }
+        [HttpPost("change-password")]
+        public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordRequest request)
+        {
+            if (request == null)
+            {
+                return BadRequest("Invalid request.");
+            }
+            // Log incoming request
+            Console.WriteLine($"ChangePassword request: UserId = {request.UserId}, CurrentPassword = {request.CurrentPassword}, NewPassword = {request.NewPassword}");
 
+            var user = await _interfaceUser2.GetByIdAsync(request.UserId);
+            if (user == null || !BCrypt.Net.BCrypt.Verify(request.CurrentPassword, user.Upassword))
+            {
+                return BadRequest("Invalid current password or user not found.");
+            }
+
+            var hashedPassword = BCrypt.Net.BCrypt.HashPassword(request.NewPassword);
+            user.Upassword = hashedPassword;
+            await _interfaceUser2.UpdateAsync(user);
+
+            return Ok("Password has been changed successfully.");
+        }
 
 
 

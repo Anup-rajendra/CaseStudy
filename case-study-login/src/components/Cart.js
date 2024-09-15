@@ -72,7 +72,7 @@ const Cart = () => {
     setTotalPrice(totalCartPrice);
   }, [cartItemsArray]);
 
-  if (loading) return <p></p>;
+  if (loading) return <p>Loading ...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
   const handleQuantityChange = async (cartItemId, change) => {

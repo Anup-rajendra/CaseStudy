@@ -15,6 +15,7 @@ import { Input } from './ui/input';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 
 // Zod schema for form validation
 const formSchema = z.object({
@@ -41,6 +42,7 @@ const formSchema = z.object({
 });
 
 const ProfilePage = () => {
+  const navigate = useNavigate();
   const [userId, setUserId] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
   const [originalValues, setOriginalValues] = useState(null); // To store the original values
@@ -84,7 +86,7 @@ const ProfilePage = () => {
     }
   }, [data, form]);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <p> </p>;
   if (error) return <p>Error fetching profile data.</p>;
 
   // Handle form submission
@@ -117,7 +119,9 @@ const ProfilePage = () => {
     form.reset(originalValues); // Reset the form to the original values
     setIsEditing(false); // Turn off edit mode
   };
-
+  const handleChangePassword = () => {
+    navigate('/change-password');
+  };
   return (
     <div className="w-full flex justify-center pt-12">
       <div className="flex flex-col border bg-white space-y-3 w-1/3 p-6 rounded-lg shadow-2xl z-10">
@@ -231,7 +235,10 @@ const ProfilePage = () => {
                 </Button>
               </div>
             ) : (
-              <Button onClick={handleEditClick}>Edit Profile</Button>
+              <div className="flex justify-between">
+                <Button onClick={handleEditClick}>Edit Profile</Button>
+                <Button onClick={handleChangePassword}>Change Password</Button>
+              </div>
             )}
           </form>
         </Form>

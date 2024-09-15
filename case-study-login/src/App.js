@@ -14,7 +14,7 @@ import Checkout from './components/Checkout';
 import OrderItem from './components/OrderItem';
 import ProductDetails from './components/ProductDetails';
 import Wishlist from './components/Wishlist';
-import Profile from './components/ProfilePage'; // Import the ProfilePage component
+import Profile from './components/ProfilePage';
 import OrderHistoryPage from './components/OrderHistoryPage';
 import OrderDetailsPage from './components/OrderDetailsPage';
 import CustomerSupportPage from './components/CustomerSupportPage';
@@ -24,6 +24,7 @@ import ForgotPassword from './components/ForgotPassword';
 import VerifyOtp from './components/VerifyOtp';
 import ResetPassword from './components/ResetPassword';
 import CheckoutItem from './components/CheckoutItem';
+import ChangePassword from './components/ChangePassword';
 function App() {
   const location = useLocation();
   const [progress, setProgress] = useState(0);
@@ -80,6 +81,7 @@ function App() {
           <Route path="/customer-support" element={<CustomerSupportPage />} />
           <Route path="/Searches" element={<SearchedProducts />} />
           <Route path="/Categories" element={<Categories />} />
+          <Route path="/change-password" element={<ChangePassword />} />
         </Route>
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/verify-otp" element={<VerifyOtp />} />
