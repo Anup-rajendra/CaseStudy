@@ -1,0 +1,23 @@
+{
+
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser",
+      "ecmaVersion": 12,
+      "sourceType": "module",
+      "requireConfigFile": false
+    },
+    "plugins": ["react","jsx"],
+    "rules": {
+      "react/prop-types": "off",
+      "react/no-unknown-property": "off"
+    }
+  }
+  
