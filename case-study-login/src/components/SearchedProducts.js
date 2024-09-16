@@ -156,7 +156,7 @@ const SearchedProducts = () => {
   };
   if (reviewLoading) return <p></p>;
   if (reviewError) return <p>Error: {reviewError.message}</p>;
-
+  console.log(suggestions, product);
   return (
     <div className="h-full">
       <Toaster />
@@ -200,23 +200,19 @@ const SearchedProducts = () => {
                     />
                   </div>
                   <div className="flex flex-col gap-6 ">
-                    {
-                      <div>
-                        {renderStars(getAverageRating(product.productId))}
-                      </div>
-                    }
+                    {<div>{renderStars(getAverageRating(prod.productId))}</div>}
                     <div className="pt-4 flex flex-col gap-7">
                       <div className="flex gap-2">
                         <span className="font-bold text-xl">Price: </span>
                         <span className="text-black font-semibold pl-1">
-                          Rs.{product.price.toFixed(2)}
+                          {/* Rs.{product.price.toFixed(2)} */}
                         </span>
                       </div>
                       <div>
                         <span className="font-bold text-xl">Category:</span>
                         <span className="text-black font-semibold pl-1">
                           {' '}
-                          {product.category.categoryName}
+                          {prod.category.categoryName}
                         </span>
                       </div>
                     </div>
@@ -230,7 +226,7 @@ const SearchedProducts = () => {
                     onClick={(e) => {
                       e.preventDefault();
                       e.stopPropagation(); // Prevent link navigation
-                      handleCartSubmit(product.productId, product.name);
+                      handleCartSubmit(prod.productId, prod.name);
                     }}
                     className="transition ease-in-out delay-150 hover:-translate-y-1 flex items-center gap-2"
                   >
@@ -244,10 +240,10 @@ const SearchedProducts = () => {
                       e.preventDefault();
                       e.stopPropagation(); // Prevent link navigation
                       handleBuyNow(
-                        product.productId,
-                        product.name,
-                        product.price,
-                        product.photoUrl
+                        prod.productId,
+                        prod.name,
+                        prod.price,
+                        prod.photoUrl
                       );
                     }}
                     className="bg-gradient-to-r from-primary to-blue-400 animated-background w-full transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 hover:bg-indigo-500 duration-300"

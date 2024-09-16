@@ -16,6 +16,7 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import { Toaster, toast } from 'sonner';
 
 // Zod schema for form validation
 const formSchema = z.object({
@@ -86,12 +87,13 @@ const ProfilePage = () => {
     }
   }, [data, form]);
 
-  if (loading) return <p> </p>;
+  if (loading) return <p>Loading...</p>;
   if (error) return <p>Error fetching profile data.</p>;
 
   // Handle form submission
   const onSubmit = async (formData) => {
     console.log('Form Data:', formData);
+    toast.success('The User Details are updating');
     try {
       await updateProfile({
         variables: {
@@ -119,131 +121,147 @@ const ProfilePage = () => {
     form.reset(originalValues); // Reset the form to the original values
     setIsEditing(false); // Turn off edit mode
   };
+
   const handleChangePassword = () => {
     navigate('/change-password');
   };
-  return (
-    <div className="w-full flex justify-center pt-12">
-      <div className="flex flex-col border bg-white space-y-3 w-1/3 p-6 rounded-lg shadow-2xl z-10">
-        <div className="font-bold text-xl ">User Profile</div>
 
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-            {/* Username Field */}
-            <FormField
-              control={form.control}
-              name="username"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Username</FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder="Username"
-                      {...field}
-                      disabled={!isEditing}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
+  return (
+    <>
+      <Toaster />
+      <div className="w-full flex justify-center pt-12">
+        <div className="flex flex-col border bg-white space-y-3 w-1/3 p-6 rounded-lg shadow-2xl z-10">
+          <div className="font-bold text-xl">User Profile</div>
+
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+              {/* Username Field */}
+              <FormField
+                control={form.control}
+                name="username"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Username</FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder="Username"
+                        {...field}
+                        disabled={!isEditing}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              {/* Email Field */}
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Email</FormLabel>
+                    <FormControl>
+                      <Input
+                        type="email"
+                        placeholder="Email"
+                        {...field}
+                        disabled={!isEditing}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              {/* First Name Field */}
+              <FormField
+                control={form.control}
+                name="firstName"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>First Name</FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder="First Name"
+                        {...field}
+                        disabled={!isEditing}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              {/* Last Name Field */}
+              <FormField
+                control={form.control}
+                name="lastName"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Last Name</FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder="Last Name"
+                        {...field}
+                        disabled={!isEditing}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              {/* Phone Number Field */}
+              <FormField
+                control={form.control}
+                name="phoneNumber"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Phone Number</FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder="Phone Number"
+                        {...field}
+                        disabled={!isEditing}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              {/* Edit/Save and Cancel Buttons */}
+              {isEditing ? (
+                <div className="flex space-x-4">
+                  <Button type="submit" className="w-full">
+                    Save
+                  </Button>
+                  <Button
+                    type="button" // Ensure this does not submit the form
+                    onClick={handleCancelClick}
+                    className="w-full"
+                  >
+                    Cancel
+                  </Button>
+                </div>
+              ) : (
+                <div className="flex justify-between">
+                  <Button
+                    type="button"
+                    onClick={handleEditClick}
+                    // Ensure this does not submit the form
+                  >
+                    Edit Profile
+                  </Button>
+                  <Button
+                    onClick={handleChangePassword}
+                    type="button" // Ensure this does not submit the form
+                  >
+                    Change Password
+                  </Button>
+                </div>
               )}
-            />
-            {/* Email Field */}
-            <FormField
-              control={form.control}
-              name="email"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Email</FormLabel>
-                  <FormControl>
-                    <Input
-                      type="email"
-                      placeholder="Email"
-                      {...field}
-                      disabled={!isEditing}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            {/* First Name Field */}
-            <FormField
-              control={form.control}
-              name="firstName"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>First Name</FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder="First Name"
-                      {...field}
-                      disabled={!isEditing}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            {/* Last Name Field */}
-            <FormField
-              control={form.control}
-              name="lastName"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Last Name</FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder="Last Name"
-                      {...field}
-                      disabled={!isEditing}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            {/* Phone Number Field */}
-            <FormField
-              control={form.control}
-              name="phoneNumber"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Phone Number</FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder="Phone Number"
-                      {...field}
-                      disabled={!isEditing}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            {/* Edit/Save and Cancel Buttons */}
-            {isEditing ? (
-              <div className="flex space-x-4">
-                <Button type="submit" className="w-full">
-                  Save
-                </Button>
-                <Button
-                  type="button"
-                  onClick={handleCancelClick}
-                  className="w-full"
-                >
-                  Cancel
-                </Button>
-              </div>
-            ) : (
-              <div className="flex justify-between">
-                <Button onClick={handleEditClick}>Edit Profile</Button>
-                <Button onClick={handleChangePassword}>Change Password</Button>
-              </div>
-            )}
-          </form>
-        </Form>
+            </form>
+          </Form>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
