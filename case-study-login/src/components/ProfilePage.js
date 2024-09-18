@@ -16,7 +16,6 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
-
 // Zod schema for form validation
 const formSchema = z.object({
   username: z
@@ -40,13 +39,11 @@ const formSchema = z.object({
     .length(10, 'The number must be exactly 10 characters long')
     .regex(/^\d+$/, 'The number must contain only digits'),
 });
-
 const ProfilePage = () => {
   const navigate = useNavigate();
   const [userId, setUserId] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
   const [originalValues, setOriginalValues] = useState(null); // To store the original values
-
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -57,20 +54,16 @@ const ProfilePage = () => {
       phoneNumber: '',
     },
   });
-
   // Fetch user profile using GraphQL query
   const { data, loading, error, refetch } = useQuery(GET_USER_PROFILE, {
     variables: { userId },
     skip: !userId,
   });
-
   const [updateProfile] = useMutation(UPDATE_PROFILE);
-
   // Fetch user ID from local storage and update form values based on the fetched profile
   useEffect(() => {
     const userId = parseInt(localStorage.getItem('userData'), 10);
     setUserId(userId);
-
     if (data) {
       const user = data.userById;
       const userData = {
@@ -80,15 +73,12 @@ const ProfilePage = () => {
         lastName: user.lastname || '',
         phoneNumber: user.phoneNumber || '',
       };
-
       setOriginalValues(userData); // Save original values for cancellation
       form.reset(userData); // Update form values
     }
   }, [data, form]);
-
   if (loading) return <p> </p>;
   if (error) return <p>Error fetching profile data.</p>;
-
   // Handle form submission
   const onSubmit = async (formData) => {
     console.log('Form Data:', formData);
@@ -102,18 +92,18 @@ const ProfilePage = () => {
           phoneNumber: formData.phoneNumber,
         },
       });
+      console.log("im going back to unedit",);
       setIsEditing(false); // Turn off edit mode
       refetch(); // Refetch profile data after saving
     } catch (err) {
       console.error('Error updating profile:', err);
     }
   };
-
   // Handle edit button click
   const handleEditClick = () => {
+    console.log("Entering Edit Mode");
     setIsEditing(true); // Turn on edit mode
   };
-
   // Handle cancel button click
   const handleCancelClick = () => {
     form.reset(originalValues); // Reset the form to the original values
@@ -126,7 +116,6 @@ const ProfilePage = () => {
     <div className="w-full flex justify-center pt-12">
       <div className="flex flex-col border bg-white space-y-3 w-1/3 p-6 rounded-lg shadow-2xl z-10">
         <div className="font-bold text-xl ">User Profile</div>
-
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
             {/* Username Field */}
@@ -223,7 +212,9 @@ const ProfilePage = () => {
             {/* Edit/Save and Cancel Buttons */}
             {isEditing ? (
               <div className="flex space-x-4">
-                <Button type="submit" className="w-full">
+                <Button type="button"
+                onClick={form.handleSubmit(onSubmit)}
+                className="w-full">
                   Save
                 </Button>
                 <Button
@@ -246,5 +237,4 @@ const ProfilePage = () => {
     </div>
   );
 };
-
 export default ProfilePage;

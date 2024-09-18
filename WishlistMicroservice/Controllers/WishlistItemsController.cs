@@ -54,8 +54,8 @@ namespace WishlistMicroservice.Controllers
                 ProductId = dto.ProductId,
                 // Map other properties if needed
             };
-            //Random random = new Random();
-            //wishlistItem.WishlistItemId= random.Next(0, 1000);
+            Random random = new Random();
+            wishlistItem.WishlistitemId= random.Next(0, 1000);
             _context.WishlistItems.Add(wishlistItem);
             _context.SaveChanges();
 

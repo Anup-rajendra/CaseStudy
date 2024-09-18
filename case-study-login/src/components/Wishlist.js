@@ -45,7 +45,13 @@ const Wishlist = () => {
             setError('');
             setLoading(true);
             const response = await axios.get(
-              `http://localhost:5120/api/WishlistItems/${userId}`
+              `http://localhost:5170/gateway/WishlistItems/${userId}`,
+              {
+                headers: {
+                  Authorization: `Bearer ${localStorage.getItem('token')}`, // Attach JWT token to headers
+                },
+              }
+
             );
             setWishlistItemsArray(response.data);
             break; // Exit loop if successful
@@ -94,7 +100,12 @@ const Wishlist = () => {
     if (!user) return; // Ensure user is defined
     try {
       await axios.delete(
-        `http://localhost:5120/api/WishlistItems?wishlistid=${user}&productid=${productId}`
+        `http://localhost:5170/gateway/WishlistItems?wishlistid=${user}&productid=${productId}`,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem('token')}`, // Attach JWT token to headers
+          },
+        }
       );
       setWishlistItemsArray(
         wishlistItemsArray.filter((item) => item.productId !== productId)

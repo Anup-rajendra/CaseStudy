@@ -52,8 +52,8 @@ namespace ReviewWishlistMicroService.Controllers
             {
                 return "user doesnot exist";
             }
-           // Random rand= new Random();
-           // r.ReviewId = rand.Next(0, 1000);
+            Random rand= new Random();
+            r.ReviewId = rand.Next(0, 1000);
             _context.Reviews.Add(r);
             _context.SaveChanges();
             return "Successfully reviewed";

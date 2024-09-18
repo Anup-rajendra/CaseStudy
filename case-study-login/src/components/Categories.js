@@ -61,7 +61,12 @@ const Categories = () => {
     const fetchLikedProducts = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5120/api/WishlistItems/${userId}`
+          `http://localhost:5170/gateway/WishlistItems/${userId}`,
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem('token')}`, // Attach JWT token to headers
+            },
+          }
         );
         const likedProductIds = response.data.map((item) => item.productId);
         setLikedProducts(likedProductIds);
@@ -116,16 +121,27 @@ const Categories = () => {
       if (likedProducts.includes(productId)) {
         // Remove from wishlist
         await axios.delete(
-          `http://localhost:5120/api/WishlistItems?wishlistid=${userId}&productid=${productId}`
+          `http://localhost:5170/gateway/WishlistItems?wishlistid=${userId}&productid=${productId}`,
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem('token')}`, // Attach JWT token to headers
+            },
+          }
         );
         setLikedProducts((prev) => prev.filter((id) => id !== productId));
         toast.success('Removed from wishlist');
       } else {
         // Add to wishlist
-        await axios.post(`http://localhost:5120/api/WishlistItems`, {
+        await axios.post(`http://localhost:5170/gateway/WishlistItems`, {
           wishlistId: userId,
           productId,
-        });
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem('token')}`, // Attach JWT token to headers
+          },
+        }
+      );
         setLikedProducts((prev) => [...prev, productId]);
         toast.success('Added to wishlist');
       }

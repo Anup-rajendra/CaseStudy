@@ -8014,23 +8014,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\RohithKV\\.nuget\\packages\\": {},
+    "C:\\Users\\MusthaffaShaik\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\RohithKV\\Desktop\\FinalCase3\\CaseStudy\\ReviewWishlistMicroService\\ReviewWishlistMicroService.csproj",
+      "projectUniqueName": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\iii\\CaseStudy\\ReviewWishlistMicroService\\ReviewWishlistMicroService.csproj",
       "projectName": "ReviewWishlistMicroService",
-      "projectPath": "C:\\Users\\RohithKV\\Desktop\\FinalCase3\\CaseStudy\\ReviewWishlistMicroService\\ReviewWishlistMicroService.csproj",
-      "packagesPath": "C:\\Users\\RohithKV\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\RohithKV\\Desktop\\FinalCase3\\CaseStudy\\ReviewWishlistMicroService\\obj\\",
+      "projectPath": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\iii\\CaseStudy\\ReviewWishlistMicroService\\ReviewWishlistMicroService.csproj",
+      "packagesPath": "C:\\Users\\MusthaffaShaik\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\iii\\CaseStudy\\ReviewWishlistMicroService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\RohithKV\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MusthaffaShaik\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

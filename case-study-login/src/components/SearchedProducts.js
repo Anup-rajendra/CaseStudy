@@ -30,7 +30,6 @@ const SearchedProducts = () => {
   const [reviews, setReviews] = useState([]);
   const userId = parseInt(localStorage.getItem('userData'), 10);
   // const navigate = useNavigate();
-
   const {
     data: reviewData,
     loading: reviewLoading,
@@ -40,7 +39,6 @@ const SearchedProducts = () => {
     skip: !selectedProduct,
     variables: { userId },
   });
-
   const [createOrUpdateCart] = useMutation(CREATE_OR_UPDATE_CART);
   const [updateCartItem] = useMutation(UPDATE_CART_ITEM);
   useEffect(() => {
@@ -51,7 +49,6 @@ const SearchedProducts = () => {
   const handleCartSubmit = async (productId, productName) => {
     setSelectedProduct(productId);
     let cartId;
-
     if (!cartData?.getCartByUserId) {
       const response = await createOrUpdateCart({ variables: { userId } });
       cartId = response.data.createOrUpdateCart.cartId;
@@ -59,7 +56,6 @@ const SearchedProducts = () => {
     } else {
       cartId = cartData.getCartByUserId.cartId;
     }
-
     const res = await updateCartItem({ variables: { cartId, productId } });
     toast.success(`${productName} has been added to Cart`);
     console.log(res);
@@ -70,7 +66,8 @@ const SearchedProducts = () => {
       if (likedProducts.includes(productId)) {
         // Remove from wishlist
         await axios.delete(
-          `http://localhost:5120/api/WishlistItems?wishlistid=${userId}&productid=${productId}`,{
+          `http://localhost:5170/gateway/WishlistItems?wishlistid=${userId}&productid=${productId}`,
+          {
             headers: {
               Authorization: `Bearer ${localStorage.getItem('token')}`, // Attach JWT token to headers
             },
@@ -80,14 +77,16 @@ const SearchedProducts = () => {
         toast.success('Removed from wishlist');
       } else {
         // Add to wishlist
-        await axios.post(`http://localhost:5120/api/WishlistItems`, {
+        await axios.post(`http://localhost:5170/gateway/WishlistItems`, {
           wishlistId: userId,
           productId,
-        },{
+        },
+        {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('token')}`, // Attach JWT token to headers
           },
-        });
+        }
+      );
         setLikedProducts((prev) => [...prev, productId]);
         toast.success('Added to wishlist');
       }
@@ -122,7 +121,6 @@ const SearchedProducts = () => {
     const fullStars = Math.floor(averageRating); // Full stars
     const hasHalfStar = averageRating % 1 !== 0; // Check if there's a half star
     const emptyStars = totalStars - fullStars - (hasHalfStar ? 1 : 0); // Calculate empty stars
-
     // Ensure no negative star values
     if (fullStars < 0 || emptyStars < 0 || totalStars < 0) {
       console.error('Invalid star calculation', {
@@ -132,7 +130,6 @@ const SearchedProducts = () => {
       });
       return null;
     }
-
     return (
       <div className="flex items-center">
         {/* Full Stars */}
@@ -164,7 +161,7 @@ const SearchedProducts = () => {
   };
   if (reviewLoading) return <p></p>;
   if (reviewError) return <p>Error: {reviewError.message}</p>;
-
+  console.log(suggestions, product);
   return (
     <div className="h-full">
       <Toaster />
@@ -208,23 +205,19 @@ const SearchedProducts = () => {
                     />
                   </div>
                   <div className="flex flex-col gap-6 ">
-                    {
-                      <div>
-                        {renderStars(getAverageRating(product.productId))}
-                      </div>
-                    }
+                    {<div>{renderStars(getAverageRating(prod.productId))}</div>}
                     <div className="pt-4 flex flex-col gap-7">
                       <div className="flex gap-2">
                         <span className="font-bold text-xl">Price: </span>
                         <span className="text-black font-semibold pl-1">
-                          Rs.{product.price.toFixed(2)}
+                          {/* Rs.{product.price.toFixed(2)} */}
                         </span>
                       </div>
                       <div>
                         <span className="font-bold text-xl">Category:</span>
                         <span className="text-black font-semibold pl-1">
                           {' '}
-                          {product.category.categoryName}
+                          {prod.category.categoryName}
                         </span>
                       </div>
                     </div>
@@ -238,7 +231,7 @@ const SearchedProducts = () => {
                     onClick={(e) => {
                       e.preventDefault();
                       e.stopPropagation(); // Prevent link navigation
-                      handleCartSubmit(product.productId, product.name);
+                      handleCartSubmit(prod.productId, prod.name);
                     }}
                     className="transition ease-in-out delay-150 hover:-translate-y-1 flex items-center gap-2"
                   >
@@ -252,10 +245,10 @@ const SearchedProducts = () => {
                       e.preventDefault();
                       e.stopPropagation(); // Prevent link navigation
                       handleBuyNow(
-                        product.productId,
-                        product.name,
-                        product.price,
-                        product.photoUrl
+                        prod.productId,
+                        prod.name,
+                        prod.price,
+                        prod.photoUrl
                       );
                     }}
                     className="bg-gradient-to-r from-primary to-blue-400 animated-background w-full transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 hover:bg-indigo-500 duration-300"
@@ -271,5 +264,4 @@ const SearchedProducts = () => {
     </div>
   );
 };
-
 export default SearchedProducts;

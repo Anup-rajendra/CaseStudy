@@ -33,7 +33,7 @@ const OrderHistoryPage = () => {
         <div className="  rounded-xl w-full max-w-4xl">
           {data?.userOrders.length === 0 ? (
             <div className="flex flex-col items-center justify-center pt-36 gap-16">
-              <div className="font-bold text-6xl">Empty Wishlist</div>
+              <div className="font-bold text-6xl">No Orders Placed</div>
               <img src="/NoData.svg" alt="Empty WebPage" width={600} />
             </div>
           ) : (

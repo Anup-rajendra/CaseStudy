@@ -8150,23 +8150,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\RohithKV\\.nuget\\packages\\": {},
+    "C:\\Users\\MusthaffaShaik\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\RohithKV\\Desktop\\FinalCase3\\CaseStudy\\NotificationService\\NotificationService\\NotificationService.csproj",
+      "projectUniqueName": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\iii\\CaseStudy\\NotificationService\\NotificationService\\NotificationService.csproj",
       "projectName": "NotificationService",
-      "projectPath": "C:\\Users\\RohithKV\\Desktop\\FinalCase3\\CaseStudy\\NotificationService\\NotificationService\\NotificationService.csproj",
-      "packagesPath": "C:\\Users\\RohithKV\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\RohithKV\\Desktop\\FinalCase3\\CaseStudy\\NotificationService\\NotificationService\\obj\\",
+      "projectPath": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\iii\\CaseStudy\\NotificationService\\NotificationService\\NotificationService.csproj",
+      "packagesPath": "C:\\Users\\MusthaffaShaik\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\iii\\CaseStudy\\NotificationService\\NotificationService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\RohithKV\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MusthaffaShaik\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -8182,8 +8182,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\RohithKV\\Desktop\\FinalCase3\\CaseStudy\\NotificationService\\RepositoryLayer\\RepositoryLayer.csproj": {
-              "projectPath": "C:\\Users\\RohithKV\\Desktop\\FinalCase3\\CaseStudy\\NotificationService\\RepositoryLayer\\RepositoryLayer.csproj"
+            "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\iii\\CaseStudy\\NotificationService\\RepositoryLayer\\RepositoryLayer.csproj": {
+              "projectPath": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\iii\\CaseStudy\\NotificationService\\RepositoryLayer\\RepositoryLayer.csproj"
             }
           }
         }
