@@ -1,0 +1,745 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\controllers\\products1controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:controllers\\products1controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\products1\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\products1\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\products\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\products\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\products1\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\products1\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\models\\retailapplicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:models\\retailapplicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\dataanalysis\\mostorderingusers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\dataanalysis\\mostorderingusers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\controllers\\dataanalysiscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:controllers\\dataanalysiscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:models\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\controllers\\inventoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:controllers\\inventoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\categories\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\categories\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\categories\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\categories\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\inventories\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\inventories\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\dataanalysis\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\dataanalysis\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\users\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\users\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\dataanalysis\\currentstockquantityofproducts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\dataanalysis\\currentstockquantityofproducts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\dataanalysis\\mostorderedproducts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\dataanalysis\\mostorderedproducts.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\users\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\users\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\users\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\users\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\users\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\users\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\inventories\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\inventories\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\inventories\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\inventories\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\inventories\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\inventories\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\inventories\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\inventories\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\categories\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\categories\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\categories\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\categories\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\categories\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\categories\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\products\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\products\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\products\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\products\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\products\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\products\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|c:\\users\\musthaffashaik\\finalbranch\\theend\\adminaccess\\adminaccess.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{62F1458A-F30C-489D-9906-44D4E9748309}|AdminAccess.csproj|solutionrelative:adminaccess.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RetailApplicationContext.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Models\\RetailApplicationContext.cs",
+              "RelativeDocumentMoniker": "Models\\RetailApplicationContext.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Models\\RetailApplicationContext.cs",
+              "RelativeToolTip": "Models\\RetailApplicationContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T05:57:40.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Categories\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Categories\\Create.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Categories\\Create.cshtml",
+              "RelativeToolTip": "Views\\Categories\\Create.cshtml",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAswCUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T12:10:11.989Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Products\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Products\\Create.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Products\\Create.cshtml",
+              "RelativeToolTip": "Views\\Products\\Create.cshtml",
+              "ViewState": "AQIAABIAAAAAAAAAAAAQwFEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T11:56:41.765Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T05:59:01.064Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Products\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Products\\Index.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Products\\Index.cshtml",
+              "RelativeToolTip": "Views\\Products\\Index.cshtml",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAD0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T06:02:15.885Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwBwAAACBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T14:49:02.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MostOrderingUsers.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\DataAnalysis\\MostOrderingUsers.cshtml",
+              "RelativeDocumentMoniker": "Views\\DataAnalysis\\MostOrderingUsers.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\DataAnalysis\\MostOrderingUsers.cshtml",
+              "RelativeToolTip": "Views\\DataAnalysis\\MostOrderingUsers.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T15:17:37.572Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Products1Controller.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Controllers\\Products1Controller.cs",
+              "RelativeDocumentMoniker": "Controllers\\Products1Controller.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Controllers\\Products1Controller.cs",
+              "RelativeToolTip": "Controllers\\Products1Controller.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4AAACVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T13:06:08.122Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-15T18:31:09.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T16:15:49.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CategoriesController.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "Controllers\\CategoriesController.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAAAkwD0AAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T12:10:04.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Controllers\\ProductsController.cs",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAUwF4AAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T05:58:36.699Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Products1\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Products1\\Create.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Products1\\Create.cshtml",
+              "RelativeToolTip": "Views\\Products1\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-15T13:09:50.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-12T05:59:00.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Products1\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Products1\\Index.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Products1\\Index.cshtml",
+              "RelativeToolTip": "Views\\Products1\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-15T13:09:41.186Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "Models\\Product.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Models\\Product.cs",
+              "RelativeToolTip": "Models\\Product.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T09:49:48.759Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DataAnalysisController.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Controllers\\DataAnalysisController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DataAnalysisController.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Controllers\\DataAnalysisController.cs",
+              "RelativeToolTip": "Controllers\\DataAnalysisController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBQAAABaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T14:39:39.212Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "InventoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Controllers\\InventoriesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\InventoriesController.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Controllers\\InventoriesController.cs",
+              "RelativeToolTip": "Controllers\\InventoriesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T14:16:29.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Home\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Login.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Home\\Login.cshtml",
+              "RelativeToolTip": "Views\\Home\\Login.cshtml",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAcwFgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T16:27:56.473Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Users\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Users\\Index.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Users\\Index.cshtml",
+              "RelativeToolTip": "Views\\Users\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T14:29:43.626Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Supplier.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Models\\Supplier.cs",
+              "RelativeDocumentMoniker": "Models\\Supplier.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Models\\Supplier.cs",
+              "RelativeToolTip": "Models\\Supplier.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-14T20:55:29.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Controllers\\UsersController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T14:21:41.256Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Categories\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Categories\\Index.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Categories\\Index.cshtml",
+              "RelativeToolTip": "Views\\Categories\\Index.cshtml",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAgwCQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T12:10:52.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Inventories\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Inventories\\Index.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Inventories\\Index.cshtml",
+              "RelativeToolTip": "Views\\Inventories\\Index.cshtml",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAgwCYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T14:19:55.135Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\DataAnalysis\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\DataAnalysis\\Index.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\DataAnalysis\\Index.cshtml",
+              "RelativeToolTip": "Views\\DataAnalysis\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T14:40:27.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Users\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Users\\Create.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Users\\Create.cshtml",
+              "RelativeToolTip": "Views\\Users\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T14:21:52.023Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T11:50:41.413Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "CurrentStockQuantityofProducts.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\DataAnalysis\\CurrentStockQuantityofProducts.cshtml",
+              "RelativeDocumentMoniker": "Views\\DataAnalysis\\CurrentStockQuantityofProducts.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\DataAnalysis\\CurrentStockQuantityofProducts.cshtml",
+              "RelativeToolTip": "Views\\DataAnalysis\\CurrentStockQuantityofProducts.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T15:47:20.409Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "MostOrderedProducts.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\DataAnalysis\\MostOrderedProducts.cshtml",
+              "RelativeDocumentMoniker": "Views\\DataAnalysis\\MostOrderedProducts.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\DataAnalysis\\MostOrderedProducts.cshtml",
+              "RelativeToolTip": "Views\\DataAnalysis\\MostOrderedProducts.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T16:08:42.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Inventories\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Inventories\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Inventories\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Inventories\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T14:19:17.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Inventories\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Inventories\\Details.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Inventories\\Details.cshtml",
+              "RelativeToolTip": "Views\\Inventories\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T14:18:31.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Inventories\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Inventories\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Inventories\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Inventories\\Delete.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T14:17:41.713Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Inventories\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Inventories\\Create.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Inventories\\Create.cshtml",
+              "RelativeToolTip": "Views\\Inventories\\Create.cshtml",
+              "ViewState": "AQIAAAQAAAAAAAAAAADwvysAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T14:16:39.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Users\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Users\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Users\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Users\\Delete.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T14:23:41.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Users\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Users\\Details.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Users\\Details.cshtml",
+              "RelativeToolTip": "Views\\Users\\Details.cshtml",
+              "ViewState": "AQIAADUAAAAAAAAAAAAQwF4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T14:25:18.106Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Users\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Users\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Users\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Users\\Edit.cshtml",
+              "ViewState": "AQIAADgAAAAAAAAAAAAQwGMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T14:28:34.126Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Views\\_ViewStart.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T11:50:17.944Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Categories\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Categories\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Categories\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Categories\\Delete.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T12:14:25.612Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Categories\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Categories\\Details.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Categories\\Details.cshtml",
+              "RelativeToolTip": "Views\\Categories\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T12:13:44.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Categories\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Categories\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Categories\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Categories\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T12:12:32.36Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Products\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Products\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Products\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Products\\Delete.cshtml",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwCYAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T11:55:25.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Products\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Products\\Details.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Products\\Details.cshtml",
+              "RelativeToolTip": "Views\\Products\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T11:54:31.794Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Products\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Products\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\Products\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Products\\Edit.cshtml",
+              "ViewState": "AQIAACUAAAAAAAAAAAAkwEYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T11:52:42.465Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "AdminAccess.csproj",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\AdminAccess.csproj",
+              "RelativeDocumentMoniker": "AdminAccess.csproj",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\AdminAccess.csproj",
+              "RelativeToolTip": "AdminAccess.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-12T05:55:01.13Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\finalbranch\\theend\\AdminAccess\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Views\\_ViewImports.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-12T11:50:19.788Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\iii\\CaseStudy\\ReviewWishlistMicroService\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{798BCEA3-1244-4A8A-854E-02BB5E030CD5}|ReviewWishlistMicroService.csproj|c:\\users\\musthaffashaik\\onedrive - planview, inc\\desktop\\iii\\casestudy\\reviewwishlistmicroservice\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{798BCEA3-1244-4A8A-854E-02BB5E030CD5}|ReviewWishlistMicroService.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{798BCEA3-1244-4A8A-854E-02BB5E030CD5}|ReviewWishlistMicroService.csproj|c:\\users\\musthaffashaik\\onedrive - planview, inc\\desktop\\iii\\casestudy\\reviewwishlistmicroservice\\models\\retailapplicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{798BCEA3-1244-4A8A-854E-02BB5E030CD5}|ReviewWishlistMicroService.csproj|solutionrelative:models\\retailapplicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{798BCEA3-1244-4A8A-854E-02BB5E030CD5}|ReviewWishlistMicroService.csproj|c:\\users\\musthaffashaik\\onedrive - planview, inc\\desktop\\iii\\casestudy\\reviewwishlistmicroservice\\controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{798BCEA3-1244-4A8A-854E-02BB5E030CD5}|ReviewWishlistMicroService.csproj|solutionrelative:controllers\\reviewscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{798BCEA3-1244-4A8A-854E-02BB5E030CD5}|ReviewWishlistMicroService.csproj|c:\\users\\musthaffashaik\\onedrive - planview, inc\\desktop\\iii\\casestudy\\reviewwishlistmicroservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{798BCEA3-1244-4A8A-854E-02BB5E030CD5}|ReviewWishlistMicroService.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\iii\\CaseStudy\\ReviewWishlistMicroService\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\iii\\CaseStudy\\ReviewWishlistMicroService\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAmwCcAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T15:17:03.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\iii\\CaseStudy\\ReviewWishlistMicroService\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\iii\\CaseStudy\\ReviewWishlistMicroService\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-15T14:15:40.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RetailApplicationContext.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\iii\\CaseStudy\\ReviewWishlistMicroService\\Models\\RetailApplicationContext.cs",
+              "RelativeDocumentMoniker": "Models\\RetailApplicationContext.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\iii\\CaseStudy\\ReviewWishlistMicroService\\Models\\RetailApplicationContext.cs",
+              "RelativeToolTip": "Models\\RetailApplicationContext.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAuwDUAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-14T19:36:28.562Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ReviewsController.cs",
+              "DocumentMoniker": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\iii\\CaseStudy\\ReviewWishlistMicroService\\Controllers\\ReviewsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ReviewsController.cs",
+              "ToolTip": "C:\\Users\\MusthaffaShaik\\OneDrive - Planview, Inc\\Desktop\\iii\\CaseStudy\\ReviewWishlistMicroService\\Controllers\\ReviewsController.cs",
+              "RelativeToolTip": "Controllers\\ReviewsController.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAA+wDgAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-14T17:49:17.212Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

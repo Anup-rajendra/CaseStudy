@@ -1,0 +1,14 @@
+/* src/css/OrderHistory.css */
+.order-history-container {
+  padding: 20px;
+}
+
+.order-summary {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.order-summary {
+  margin: 5px 0;
+}

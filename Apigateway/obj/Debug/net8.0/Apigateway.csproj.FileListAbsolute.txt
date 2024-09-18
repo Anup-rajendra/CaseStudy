@@ -1,0 +1,86 @@
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\bin\Debug\net8.0\appsettings.json
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\bin\Debug\net8.0\ocelot.json
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\bin\Debug\net8.0\Apigateway.exe
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\bin\Debug\net8.0\Apigateway.deps.json
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\bin\Debug\net8.0\Apigateway.runtimeconfig.json
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\bin\Debug\net8.0\Apigateway.dll
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\bin\Debug\net8.0\Apigateway.pdb
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\bin\Debug\net8.0\IPAddressRange.dll
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\bin\Debug\net8.0\Microsoft.AspNetCore.MiddlewareAnalysis.dll
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\bin\Debug\net8.0\Microsoft.Extensions.DiagnosticAdapter.dll
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\bin\Debug\net8.0\Ocelot.dll
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\obj\Debug\net8.0\Apigateway.csproj.AssemblyReference.cache
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\obj\Debug\net8.0\Apigateway.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\obj\Debug\net8.0\Apigateway.AssemblyInfoInputs.cache
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\obj\Debug\net8.0\Apigateway.AssemblyInfo.cs
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\obj\Debug\net8.0\Apigateway.csproj.CoreCompileInputs.cache
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\obj\Debug\net8.0\Apigateway.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\obj\Debug\net8.0\Apigateway.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\obj\Debug\net8.0\Apigateway.sourcelink.json
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\obj\Debug\net8.0\staticwebassets\msbuild.Apigateway.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\obj\Debug\net8.0\staticwebassets\msbuild.build.Apigateway.props
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Apigateway.props
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Apigateway.props
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\obj\Debug\net8.0\scopedcss\bundle\Apigateway.styles.css
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\obj\Debug\net8.0\Apigateway.csproj.Up2Date
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\obj\Debug\net8.0\Apigateway.dll
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\obj\Debug\net8.0\refint\Apigateway.dll
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\obj\Debug\net8.0\Apigateway.pdb
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\obj\Debug\net8.0\Apigateway.genruntimeconfig.cache
+C:\Users\RohithKV\Desktop\case\CaseStudy\Apigateway\obj\Debug\net8.0\ref\Apigateway.dll
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\bin\Debug\net8.0\appsettings.json
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\bin\Debug\net8.0\ocelot.json
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\bin\Debug\net8.0\Apigateway.exe
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\bin\Debug\net8.0\Apigateway.deps.json
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\bin\Debug\net8.0\Apigateway.runtimeconfig.json
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\bin\Debug\net8.0\Apigateway.dll
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\bin\Debug\net8.0\Apigateway.pdb
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\bin\Debug\net8.0\IPAddressRange.dll
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\bin\Debug\net8.0\Microsoft.AspNetCore.MiddlewareAnalysis.dll
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\bin\Debug\net8.0\Microsoft.Extensions.DiagnosticAdapter.dll
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\bin\Debug\net8.0\Ocelot.dll
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\obj\Debug\net8.0\Apigateway.csproj.AssemblyReference.cache
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\obj\Debug\net8.0\Apigateway.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\obj\Debug\net8.0\Apigateway.AssemblyInfoInputs.cache
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\obj\Debug\net8.0\Apigateway.AssemblyInfo.cs
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\obj\Debug\net8.0\Apigateway.csproj.CoreCompileInputs.cache
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\obj\Debug\net8.0\Apigateway.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\obj\Debug\net8.0\Apigateway.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\obj\Debug\net8.0\Apigateway.sourcelink.json
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\obj\Debug\net8.0\staticwebassets\msbuild.Apigateway.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\obj\Debug\net8.0\staticwebassets\msbuild.build.Apigateway.props
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Apigateway.props
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Apigateway.props
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\obj\Debug\net8.0\scopedcss\bundle\Apigateway.styles.css
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\obj\Debug\net8.0\Apigateway.csproj.Up2Date
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\obj\Debug\net8.0\Apigateway.dll
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\obj\Debug\net8.0\refint\Apigateway.dll
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\obj\Debug\net8.0\Apigateway.pdb
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\obj\Debug\net8.0\Apigateway.genruntimeconfig.cache
+C:\Users\MusthaffaShaik\OneDrive - Planview, Inc\Desktop\iii\CaseStudy\Apigateway\obj\Debug\net8.0\ref\Apigateway.dll

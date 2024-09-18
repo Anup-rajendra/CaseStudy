@@ -1,0 +1,31 @@
+.cart-card {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap:12px;
+}
+.cart-item{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right:20px;
+    padding: 10px 10px 10px 10px;
+    
+}
+.cart-heading{
+    text-align: center;
+    font-weight: bold;
+}
+.card-component{
+    display: flex;
+    flex-direction: column;
+    height:100vh; 
+    gap:100px;
+    
+}
+.order-button{
+    display: flex;
+    justify-content:end;
+    padding-right: 10px;
+}
+ 

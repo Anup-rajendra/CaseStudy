@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Most Ordered Products";
+    var productNames = ViewBag.ProductNames as List<string>;
+    var orderCounts = ViewBag.OrderCounts as List<int>;
+}
+
+<div class="container mt-4">
+    <h1>@ViewData["Title"]</h1>
+    <canvas id="orderChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    var ctx = document.getElementById('orderChart').getContext('2d');
+    var orderChart = new Chart(ctx, {
+        type: 'bar', // You can change this to 'line', 'pie', etc.
+        data: {
+            labels: @Html.Raw(Json.Serialize(productNames)), // X-axis labels (Product Names)
+            datasets: [{
+                label: 'Order Count',
+                data: @Html.Raw(Json.Serialize(orderCounts)), // Y-axis data (Order Counts)
+                backgroundColor: 'rgba(12, 12, 192, 0.8)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>

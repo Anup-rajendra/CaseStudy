@@ -1,0 +1,30 @@
+﻿@model IEnumerable<AdminAccess.Controllers.Card>
+
+@{
+    ViewData["Title"] = "Data Analysis";
+}
+<head>
+    <style>
+        .button-color {
+            background-color: green
+        }
+
+    </style>
+</head>
+
+<div class="container mt-4">
+    <div class="row">
+        @foreach (var card in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">@card.Title</h5>
+                        <p class="card-text">@card.Description</p>
+                        <a href="@Url.Action(@card.Method, new { id = card.Id })" class="btn btn-primary button-color">View Details</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
