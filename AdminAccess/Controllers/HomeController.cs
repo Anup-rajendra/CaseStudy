@@ -22,11 +22,11 @@ namespace AdminAccessService.Controllers
         {
             var cards = new List<Card>
             {
-                new Card { Id = 1, Title = "Data Analysis", Description = "Analyze various data aspects", Method = "http://localhost:5170/DataAnalysis/Index" },
-                new Card { Id = 2, Title = "Products", Description = "View and manage products", Method = "http://localhost:5170/Products/Index" },
-                new Card { Id = 3, Title = "Users", Description = "Manage user accounts", Method = "http://localhost:5170/Users/Index" },
-                new Card { Id = 4, Title = "Inventories", Description = "Check inventory levels", Method = "http://localhost:5170/Inventories/Index" },
-                new Card { Id = 5, Title = "Categories", Description = "Manage product categories", Method = "http://localhost:5170/Categories/Index" }
+                new Card { Id = 1, Title = "Data Analysis", Description = "Analyze various data aspects", Method = "http://localhost:5270/DataAnalysis/Index" },
+                new Card { Id = 2, Title = "Products", Description = "View and manage products", Method = "http://localhost:5270/Products/Index" },
+                new Card { Id = 3, Title = "Users", Description = "Manage user accounts", Method = "http://localhost:5270/Users/Index" },
+                new Card { Id = 4, Title = "Inventories", Description = "Check inventory levels", Method = "http://localhost:5270/Inventories/Index" },
+                new Card { Id = 5, Title = "Categories", Description = "Manage product categories", Method = "http://localhost:5270/Categories/Index" }
             };
 
             return View(cards);
